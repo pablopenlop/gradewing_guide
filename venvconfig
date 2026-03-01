@@ -1,0 +1,8 @@
+# venvconfig for Gradewing Guide
+
+[venv]
+python = 3.13
+path = .venv
+requirements = requirements.txt
+
+# Add additional configuration options below as needed

@@ -1,0 +1,38 @@
+site_name: Gradewing Guide
+#site_url: http://127.0.0.1:8000/docs123
+
+theme:
+  favicon: assets/images/gradewing_icon.png
+  logo: assets/images/gradewing_icon_white.png
+  name: material
+  font:
+    text: Nunito
+  palette:
+    primary: teal
+    accent: indigo
+  features:
+    - navigation.instant
+    - navigation.tabs # Top-level categories
+    - navigation.sections # Sidebar organization
+    - search.suggest
+    - content.code.copy
+
+nav:
+  - Gradewing: index.md
+  - Data Manager's Guide:
+      - Quick Start – The Core Workflow: data-manager/quick-start.md
+      - Set up: data-manager/setup.md
+      - Gradebooks & Reports: data-manager/gradebook.md
+      
+  - Teacher's Guide:
+      - Getting Started: teacher/getting-started.md
+      - Gradebooks & Reports: teacher/gradebook.md
+      - Student & Learner Records: teacher/record.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - pymdownx.blocks.caption
+  
