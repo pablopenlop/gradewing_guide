@@ -36,4 +36,3 @@ Refer to the documentation in the `docs/` folder for usage instructions.
 - `.venv/` — Python virtual environment
 - `requirements.txt` — Python dependencies
 - `docs/` — Project documentation
-

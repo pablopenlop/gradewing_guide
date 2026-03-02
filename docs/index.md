@@ -12,7 +12,7 @@ Gradewing is a modern platform fr educators and students, designed to simplify g
 
 ## Getting Started
 
-- **Data Managers**: Visit [Getting Started](data-manager/quick-start.md) for a quick introduction.
+- **Data Managers**: Visit [Getting Started](data-manager/operational-roadmap.md) for a quick introduction.
 - **Teachers**: Visit [Teacher Guide](teacher/getting-started.md) for a quick introduction and usage tips.
 
 ## Features
