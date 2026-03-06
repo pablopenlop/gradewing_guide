@@ -167,6 +167,8 @@ Gradewing provides a chances table via GEM (Grades Expectations Model) a data-gr
 
 ### 3.3  Internal Grading Moments & Gradebooks
 
+Navigate to: `Setup > Grading moments` to create and manage internal grading moments.
+Internal grading moments are custom assessment points defined by the school, such as mock exams, end-of-term assessments, or any other internal evaluation.
 ### 3.4  Grade Entry & Management
 
 ## Phase 4: Reporting 
