@@ -62,6 +62,9 @@ Student creation includes:
 - group tags and learner statuses for enhanced analysis and tracking.
 - guardian contact information to enable effective report sharing.
 
+!!! danger "Critical setup task you should master"
+    We recommend you read the [Student Setup Guide](data-manager/student-setup.md) to ensure a smooth and efficient setup process. 
+
 
 For guidance and tips on managing students, please refer to the [Student Setup Guide](data-manager/student-setup.md).
 
@@ -114,18 +117,53 @@ Navigate to: `Admin > Users` to manage user accounts and permissions.
 User accounts are required for staff to access the system and perform their roles.
 Permissions are automatically assigned based on the user’s role (Teacher, Leadership, Data Manager or Admin).
 
-!!! success "User & Teacher linkage"
-    Each User account should be linked to a unique Teacher record to ensure proper access and responsibility for academic data. Deleting a Teacher record will not deactivate the linked User account, and vice versa.
+Each User account should be **linked to a unique Teacher record** to ensure proper access and responsibility for academic data. Deleting a Teacher record will not deactivate the linked User account, and vice versa.
+
+<!-- !!! success "User & Teacher linkage"
+    Each User account should be linked to a unique Teacher record to ensure proper access and responsibility for academic data. Deleting a Teacher record will not deactivate the linked User account, and vice versa. -->
 
 
 !!! danger "Data Manager accounts"
-    Data Manager access should be granted only to a limited number of trusted staff members. Users with this permission have **full editing and deletion access** to all data within the system.
+    Data Manager access should be granted only to a limited number of trusted staff members. Users with this permission have **full editing and deletion access** within the system.
 
 ## Phase 3: Grading
 
+There are three distinct grading environments in Gradewing, each with its own setup and management process:
+Examination results, Expected grades, and Internal grading moments.
+
 ### 3.1  Examination Results 
+Navigate to: `Setup > Examinations` to record official examination results.
+
+Examination results can be recorded for any subject found in our Subject Qualification Repository.
+The Examination Gradebook meets the specific grading needs of each subject, including the recording of component / unit results for linear and modular qualifications.
+
+
+!!! question "Why record Examination Results?"
+    Recording exam grades in Gradewing allows you to:
+
+    1. **Run (Value-Added) Analysis**: Evaluate examination outcomes against Expected Grades,  internal grades and standard benchmarks.
+    2. **Confidently Set Expected Grades**: Gradewing automatically suggests Expected Grades for KS5 (A-level or IB DP) subjects based on KS4 exam data.
+    3. **Maintain a Structured Examination Record**: At no extra cost.
+
+
 
 ### 3.2  Expected Grades 
+Navigate to: `Setup > Expected grades` to set up and manage expected grades.
+
+Expected grades are **statistical predictions** of student (final) attainment, based on **prior attainment or baseline assessments**.
+Expected grades are typically set at the start of the academic year.
+
+Gradewing provides a chances table via GEM (Grades Expectations Model) a data-grounded setting for KS5 (A-level or IB DP) subjects based on KS4 exam results. AI analyst to help you set the correct expected grade
+
+
+
+
+
+!!! question "Why record Expected Grades?"
+    They serve as benchmarks for student performance and form the baseline of **Value-Added** analysis.
+     Progress vs. Expected grades can also be showcased in Student Progress reports.
+  
+
 
 ### 3.3  Internal Grading Moments & Gradebooks
 
