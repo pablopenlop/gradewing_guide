@@ -6,7 +6,7 @@ Student creation includes:
 - group tags and learner statuses for enhanced analysis and tracking
 - guardian contact information to enable effective report sharing
 
-# Student Registration Process
+## Student Registration Process
 
 ```mermaid
 graph TD
@@ -19,19 +19,15 @@ graph TD
     G --> H[+ Add Subject]
 ```
 
-## Add student
+### Add student
+
+
 ### Edit profile
+*   **Personal data**: Rellena la información básica del alumno.
+*   **Guardians**: Haz clic en `+ Add Guardian` para vincular familiares.
+*   **Permanent group tags**: Asigna etiquetas de análisis (SEN, Scholarship, etc.).
 
-
-
-#### Personal data
-
-#### Guardians: + Add Guardian
-
-#### Permanent group tags
-
-#### Academic Year: + Enrol
-
-#### Academic Enrolments: + Add programme
-
-##### + Add subeject
+### Enrolment Process
+1.  **Academic Year**: Haz clic en `+ Enrol` para el año actual.
+2.  **Academic Enrolments**: Selecciona `+ Add programme`.
+3.  **Subjects**: Añade las asignaturas finales con `+ Add subject`.
