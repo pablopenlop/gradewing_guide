@@ -26,7 +26,7 @@ Register a new student by entering their First Name and Last Name. You may also 
 
 ### Enrolment Process
 
-![Setup Students](../assets/images/Setup_Students.png){ width="400" }
+![Setup Students](../assets/images/Setup_Students.png){ width="100%" }
 /// caption
 Image caption
 ///
