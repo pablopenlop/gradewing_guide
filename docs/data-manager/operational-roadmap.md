@@ -63,7 +63,7 @@ Student creation includes:
 - guardian contact information to enable effective report sharing.
 
 !!! danger "Critical setup task you should master"
-    We recommend you read the [Student Setup Guide](data-manager/student-setup.md) to ensure a smooth and efficient setup process. 
+    We recommend you read the [Student Setup Guide](student-setup.md) to ensure a smooth and efficient setup process. 
 
 
 For guidance and tips on managing students, please refer to the [Student Setup Guide](data-manager/student-setup.md).
