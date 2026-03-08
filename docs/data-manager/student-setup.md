@@ -17,6 +17,7 @@ graph TD
     B --> F[Academic Year: + Enrol]
     F --> G[Academic Enrolments: + Add Programme]
     G --> H[+ Add Subject]
+```
 
 ## Add student
 ### Edit profile
