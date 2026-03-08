@@ -2,7 +2,7 @@
 
 
 ## Phase 1: Initial Setup
-Initial setup tasks required before the start of the academic cycle
+Initial setup tasks required before the start of the academic cycle.
 ### 1.1 School Details
 
 ### 1.2 Year Groups
