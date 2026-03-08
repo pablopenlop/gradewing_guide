@@ -22,7 +22,8 @@ nav:
   - Data Manager's Guide:
       - Getting Started: data-manager/getting-started.md
       - The Operational Roadmap: data-manager/operational-roadmap.md
-      - Set up: data-manager/setup.md
+      - Set up:
+          - Overview: data-manager/setup.md
           - The Student Setup: data-manager/student-setup.md
       - Gradebooks & Reports: data-manager/gradebook.md
       
