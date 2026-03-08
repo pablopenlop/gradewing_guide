@@ -35,7 +35,7 @@ Gradewing supports the creation of additional consecutive academic years at any 
 Navigate to: `Setup > Custom subjects` to create or manage custom subjects.
 
  Any subject that is **not** included in our **Subject Qualification Repository** should be set up as a custom subject.
- For additional guidance and best practices, please refer to the [Custom Subjects Guide](custom-subjects.md).  
+ For additional guidance and best practices, please refer to the [Custom Subjects Guide](data-manager/custom-subjects.md).  
 
 <!-- !!! question "What is a custom subject?"
     Custom subjects are subjects that are not included in our default subject repository.
@@ -63,7 +63,7 @@ Student creation includes:
 - guardian contact information to enable effective report sharing.
 
 !!! danger "Critical setup task you should master"
-    We recommend you read the [Student Setup Guide](student-setup.md) to ensure a smooth and efficient setup process. 
+    We recommend you read the [Student Setup Guide](data-manager/student-setup.md) to ensure a smooth and efficient setup process. 
 
 
 For guidance and tips on managing students, please refer to the [Student Setup Guide](student-setup.md).
@@ -91,7 +91,7 @@ Only students assigned to teaching groups are eligible to receive internal grade
 
 A student may be assigned to multiple teaching groups for a given subject.
 A teaching group can be co-taught by multiple teachers, and include students from different year groups.
-For additional guidance and best practices, please refer to the [Teaching Groups Setup Guide](teaching-groups-setup.md).
+For additional guidance and best practices, please refer to the [Teaching Groups Setup Guide](data-manager/teaching-groups-setup.md).
 
 
 
@@ -108,7 +108,7 @@ Pastoral Groups link students with their assigned Pastoral Teachers, and allow t
     Teaching groups are formally associated to a subject with grading, whereas Pastoral Groups are not. 
 
 A student may be assigned to multiple pastoral groups.
-For guidance and best practices, please refer to the [Pastoral Groups Setup Guide](teaching-groups-setup.md).
+For guidance and best practices, please refer to the [Pastoral Groups Setup Guide](data-manager/teaching-groups-setup.md).
 
 ### 2.5 User Accounts & Permissions
 
