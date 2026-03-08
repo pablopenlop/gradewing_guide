@@ -25,6 +25,12 @@ Register a new student by entering their First Name and Last Name. You may also 
 !!! note "Tags must be previously created in `Setup > Students > Tags`"
 
 ### Enrolment Process
+
+![Image title](assets/images/Setup_Students.png){ width="400" }
+/// caption
+Image caption
+///
+
 1.  **Academic Year**: Click on `+ Enrol` to associate the student with a specific Academic Year. This step is required to activate the student's record for the current cycle and enables their inclusion in specific year groups.
 !!! success "Student must be enrolled in an Academic Year before assigning a Programme"
 !!! warning "Review before saving"
