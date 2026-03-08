@@ -66,7 +66,7 @@ Student creation includes:
     We recommend you read the [Student Setup Guide](student-setup.md) to ensure a smooth and efficient setup process. 
 
 
-For guidance and tips on managing students, please refer to the [Student Setup Guide](data-manager/student-setup.md).
+For guidance and tips on managing students, please refer to the [Student Setup Guide](student-setup.md).
 
 ### 2.2 Teachers
 
