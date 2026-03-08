@@ -1,11 +1,5 @@
 # The Student Setup Guide
 
-Student creation includes:
-
-- academic year enrolments and subject enrolments
-- group tags and learner statuses for enhanced analysis and tracking
-- guardian contact information to enable effective report sharing
-
 ## Student Registration Process
 
 ```mermaid
@@ -21,11 +15,13 @@ graph TD
 
 ### Add student
 
+Register a new student by entering their First Name and Last Name. You may also provide their Gender, Date of Birth, and Email Address as optional fields.
 
 ### Edit profile
-*   **Personal data**: Rellena la información básica del alumno.
-*   **Guardians**: Haz clic en `+ Add Guardian` para vincular familiares.
-*   **Permanent group tags**: Asigna etiquetas de análisis (SEN, Scholarship, etc.).
+*   **Personal data**: This section allows you to review and update the student's core information previously entered during registration.
+*   **Guardians**: This section allows you to register one or multiple guardians by providing their Full Name and Email Address.
+*   **Permanent group tags**: Assign one or multiple permanent tags to the student. Tags assigned here are permanent and will apply across all enrolment years.
+!!! note "Tags must be previously created in `Setup > Students > Tags`"
 
 ### Enrolment Process
 1.  **Academic Year**: Haz clic en `+ Enrol` para el año actual.
