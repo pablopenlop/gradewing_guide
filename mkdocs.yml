@@ -36,10 +36,10 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
-    custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.mermaid_format
+      custom_fences:
+          - name: mermaid
+            class: mermaid
+            format: !!python/name:pymdownx.superfences.mermaid_format
   - attr_list
   - pymdownx.blocks.caption
 
