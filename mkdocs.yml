@@ -44,7 +44,7 @@ markdown_extensions:
   - pymdownx.blocks.caption
 
 extra_javascript:
-  - [https://unpkg.com]
+  - https://unpkg.com
 
 extra_css:
-  - [https://cdnjs.cloudflare.com]
+  - https://cdnjs.cloudflare.com
