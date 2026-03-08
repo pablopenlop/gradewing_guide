@@ -35,13 +35,12 @@ nav:
 markdown_extensions:
   - admonition
   - pymdownx.details
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.mermaid_format
+  - pymdownx.superfences
   - attr_list
   - pymdownx.blocks.caption
 
 extra_javascript:
   - https://unpkg.com
+
+extra_css:
+  - https://cdnjs.cloudflare.com
