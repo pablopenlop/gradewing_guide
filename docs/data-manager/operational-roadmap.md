@@ -59,8 +59,8 @@ Navigate to: `Setup > Students` to create student records and manage enrolments.
 Student creation includes:
 
 - academic year enrolments and subject enrolments
-- group tags and learner statuses for enhanced analysis and tracking.
-- guardian contact information to enable effective report sharing.
+- group tags and learner statuses for enhanced analysis and tracking
+- guardian contact information to enable effective report sharing
 
 !!! danger "Critical setup task you should master"
     We recommend you read the [Student Setup Guide](student-setup.md) to ensure a smooth and efficient setup process. 
