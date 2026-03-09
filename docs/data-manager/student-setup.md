@@ -48,7 +48,7 @@ Enrolment Process Flow
     Please ensure the **Academic Year** and **Year Group** are correct. **These fields cannot be modified** once the enrolment is created.
     
 !!! info "Annual Group Tags"
-You can assign one or multiple tags to a student for a specific academic year. Unlike permanent tags, these are used to group students for academic purposes that may change from year to year.
+    You can assign one or multiple tags to a student for a specific academic year. Unlike permanent tags, these are used to group students for academic purposes that may change from year to year.
 
 2.  **Academic Enrolments**: Select `+ Add programme` to assign the student to a programme and enable subject enrolment.
 
