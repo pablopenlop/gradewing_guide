@@ -45,16 +45,27 @@ Enrolment Process Flow
 !!! warning "Review before saving"
     Please ensure the **Academic Year** and **Year Group** are correct. **These fields cannot be modified** once the enrolment is created.
 2.  **Academic Enrolments**: Select `+ Add programme` to assign the student to a programme and enable subject enrolment.
-3.  **Subjects**: To add subjects, open the Programme view and click the `+ Add subject` button. The following form will appear:
+3.  **Subjects**: Locate the specific Programme section and click its corresponding `+ Add subject` button. The following form will appear:
+
 ![Setup Students](../assets/images/Setup_Students_Add_Subject.png){ width="550" }
 /// caption
 Adding Subject
 ///
 
-Use the form to select the desired subject from the chosen programme's dropdown list, the enrolment type, and the academic year for the enrolment.
+Use the dropdown to select the required subject. Each option in the list is a **unique entry** that already includes its specific **Examination Board** and **Curriculum System** (e.g., **Cambridge**, **Pearson/Edexcel**, **Oxford/AQA**, or **International Baccalaureate**).
 
-!!! info "Exam Only"
-    This option allows exam results to be recorded ***without creating an internal enrolment record***. It is an efficient way to manage subject qualifications earned outside the institution by incoming students.
+After completing the selection, click the **Next** button to proceed to the final configuration form:
+
+![Setup Students](../assets/images/Setup_Students_Add_Subject_Conf.png){ width="550" }
+/// caption
+Adding Subject
+///
+
+Use this form to select the **Academic Year** and the **Enrolment Type**:
+
+!!! info "Enrolment Types"
+    *   **Standard Enrolment**: For students following the regular internal course.
+    *   **Exam Only**: This option allows exam results to be recorded ***without creating an internal enrolment record***. It is an efficient way to manage subject qualifications earned outside the institution by incoming students.
 
 !!! note "Multi-Year Enrolment"
     Multiple academic years can be assigned to a single subject. This is useful when a subject spans two years or if a student requires additional time to complete the course.

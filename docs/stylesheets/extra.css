@@ -14,7 +14,6 @@ img {
   border-radius: 4px;
   display: block;
   margin: 0 auto;
-  filter: contrast(1.05) brightness(0.98); /* Oscurece un pelín el texto para que resalte */
 }
 
 #img {
