@@ -1,0 +1,31 @@
+/* docs/stylesheets/extra.css */
+
+/* 1. Mejora la nitidez de las imágenes (Capturas de pantalla) */
+img {
+  image-rendering: -webkit-optimize-contrast; /* Chrome, Safari, Edge */
+  image-rendering: crisp-edges;               /* Firefox */
+  image-rendering: pixelated;                 /* Chrome/Edge moderno */
+  border-radius: 4px;
+}
+
+/* 2. Estilo para los botones en el texto (como `+ Add subject`) */
+code {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 2px 4px;
+  color: #009688; /* Color teal a juego con tu tema */
+  font-family: var(--md-code-font-family);
+}
+
+/* 3. Centrar imágenes con subtítulos */
+figure {
+  text-align: center;
+  margin: 1.5em auto;
+}
+
+figcaption {
+  font-style: italic;
+  font-size: 0.85em;
+  color: #666;
+}
