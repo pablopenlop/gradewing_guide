@@ -46,7 +46,7 @@ Enrolment Process Flow
     Please ensure the **Academic Year** and **Year Group** are correct. **These fields cannot be modified** once the enrolment is created.
 2.  **Academic Enrolments**: Select `+ Add programme` to assign the student to a programme and enable subject enrolment.
 3.  **Subjects**: To add subjects, open the Programme view and click the `+ Add subject` button. The following form will appear:
-![Setup Students](../assets/images/Setup_Students_Add_Subject.png){ width="450" }
+![Setup Students](../assets/images/Setup_Students_Add_Subject.png){ width="393" }
 /// caption
 Adding Subject
 ///
