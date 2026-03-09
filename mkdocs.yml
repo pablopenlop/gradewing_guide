@@ -1,6 +1,14 @@
 site_name: Gradewing Guide
 #site_url: http://127.0.0.1:8000/docs123
 
+plugins:
+  - search
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      zoomable: true
+      draggable: true
+
 theme:
   favicon: assets/images/gradewing_icon.png
   logo: assets/images/gradewing_icon_white.png
@@ -47,4 +55,6 @@ extra_javascript:
   - https://unpkg.com
 
 extra_css:
-  - https://cdnjs.cloudflare.com
+  #- https://cdnjs.cloudflare.com
+  - stylesheets/extra.css
+
