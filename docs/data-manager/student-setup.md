@@ -3,16 +3,26 @@
 ## Student Registration Process
 
 ```mermaid
-graph TD
-    A[Add Student] --> B[Edit Profile]
-    B --> C[Personal Data]
-    B --> D[Guardians]
-    B --> E[Permanent Tags]
-    B --> F[Academic Year]
-    F --> G[Programme]
-    G --> H[Subjects]
-    C & D & E & H --> Z((DONE))
-    style Z fill:#009688,color:#fff
+graph LR
+    A([Add Student]) --> B[Edit Profile]
+    
+    subgraph Setup [Profile Details]
+        B -.-> C(Personal Data)
+        B -.-> D(Guardians)
+        B -.-> E(Permanent Tags)
+    end
+
+    subgraph Enrolment [Enrolment Process]
+        B --> F(Academic Year)
+        F --> G(Programme)
+        G --> H(Subjects)
+    end
+
+    C & D & E & H --- Z((Done))
+    
+    style Z fill:#fafafa,stroke:#bbb,stroke-width:1px,stroke-dasharray: 5 5
+    style Setup fill:#f9f9f9,stroke:#eee,stroke-dasharray: 2 2
+    style Enrolment fill:#fff,stroke:#eee
 ```
 ### Add student
 
@@ -49,7 +59,7 @@ Use the form to select the desired subject from the chosen programme's dropdown 
 !!! note "Multi-Year Enrolment"
     Multiple academic years can be assigned to a single subject. This is useful when a subject spans two years or if a student requires additional time to complete the course.
 
-!!! info "Finalizing the Profile"
+!!! warning "Finalizing the Profile"
     After completing all sections—including **Personal Data**, **Guardians**, **Tags**, and **Enrolments**—you must click the **Done** button to save and synchronize the entire student record.
 
 
