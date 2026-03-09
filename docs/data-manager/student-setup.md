@@ -37,15 +37,13 @@ Register a new student by entering their First Name and Last Name. You may also 
 
 #### Enrolment Process
 ![Setup Students](../assets/images/Setup_Students.png){ width="710" }
-/// caption
-Enrolment Process Flow
-///
+
 1.  **Academic Years**: Click on `+ Enrol` to associate the student with a specific Academic Year. This step is required to activate the student's record for the current cycle and enables their inclusion in specific year groups.
 
     !!! success "Student must be enrolled in an Academic Year before assigning a Programme"
 
     !!! warning "Review before saving"
-    Please ensure the **Academic Year** and **Year Group** are correct. **These fields cannot be modified** once the enrolment is created.
+        Please ensure the **Academic Year** and **Year Group** are correct. **These fields cannot be modified** once the enrolment is created.
     
     !!! info "Annual Group Tags"
         You can assign one or multiple tags to a student for a specific academic year. Unlike permanent tags, these are used to group students for academic purposes that may change from year to year.
@@ -55,9 +53,6 @@ Enrolment Process Flow
 3.  **Subjects**: Locate the specific Programme section and click its corresponding `+ Add subject` button. The following form will appear:
 
 ![Setup Students](../assets/images/Setup_Students_Add_Subject.png){ width="550" }
-/// caption
-Adding Subject
-///
 
 Use the dropdown to select the required subject. Each option in the list is a **unique entry** that already includes its specific **Examination Board** and **Curriculum System** (e.g., **Cambridge**, **Pearson/Edexcel**, **Oxford/AQA**, or **International Baccalaureate**).
 
