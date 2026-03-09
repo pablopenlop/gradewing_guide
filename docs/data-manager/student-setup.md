@@ -25,6 +25,7 @@ graph LR
     style Enrolment fill:#fff,stroke:#eee
 ```
 ### Add student
+![Setup Students](../assets/images/Setup_Students.png){ width="710" }
 
 Register a new student by entering their First Name and Last Name. You may also provide their Gender, Date of Birth, and Email Address as optional fields.
 
@@ -36,7 +37,7 @@ Register a new student by entering their First Name and Last Name. You may also 
 !!! note "Tags must be previously created in `Setup > Students > Tags`, clicking the `Group tags` button"
 
 #### Enrolment Process
-![Setup Students](../assets/images/Setup_Students.png){ width="710" }
+![Setup Students](../assets/images/Setup_Students_Enrolment.png){ width="710" }
 
 1.  **Academic Years**: Click on `+ Enrol` to associate the student with a specific Academic Year. This step is required to activate the student's record for the current cycle and enables their inclusion in specific year groups.
 
@@ -74,6 +75,8 @@ Use this form to select the **Academic Year** and the **Enrolment Type**:
 
 !!! warning "Finalizing the Profile"
     After completing all sections—including **Personal Data**, **Guardians**, **Group Tags**, and **Enrolments**—you must click the `Done` button to save and synchronize the entire student record.
+
+### Group tags
 
 
 
