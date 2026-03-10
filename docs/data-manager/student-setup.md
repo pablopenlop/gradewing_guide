@@ -2,6 +2,7 @@
 
 ## Student Registration Process
 
+
 ```mermaid
 graph LR
     A([Add Student]) --> B[Edit Profile]
@@ -28,7 +29,8 @@ graph LR
 
 ![Setup Students](../assets/images/Setup_Students.png){ width="700" }
 
-Click the Add button to begin the registration process. Enter the student's First Name and Last Name into the corresponding form to create the record. You may also provide their Gender, Date of Birth, and Email Address as optional fields.
+
+Click the `Add student` button to begin the registration process. Enter the student's First Name and Last Name into the corresponding form to create the record. You may also provide their Gender, Date of Birth, and Email Address as optional fields.
 
 ### Edit profile
 *   **Personal data**: This section allows you to review and update the student's core information previously entered during registration.
@@ -49,6 +51,15 @@ Click the Add button to begin the registration process. Enter the student's Firs
     
     !!! info "Annual Group Tags"
         You can assign one or multiple tags to a student for a specific academic year. Unlike permanent tags, these are used to group students for academic purposes that may change from year to year.
+
+    !!! info "Learner Statuses (Flags)"
+    Assign one or multiple specific educational profiles to the student. These "flags" allow teachers and Data Managers to immediately identify and support specific student needs:
+    *   **SEN (Special Educational Needs)**: The student has a learning difficulty or disability that requires special educational provision.
+    *   **EAL (English as an Additional Language)**: The student's first language is not English and they may need support to access the curriculum.
+    *   **LA (Low Attainer)**: The student is currently struggling to achieve the minimum expected academic standards for their level.
+    *   **G&T (Gifted & Talented)**: The student demonstrates high ability in one or more academic, creative, or practical areas.
+    *   **MP (Mobile Pupil)**: The student has joined the school outside the standard admission cycle or intake times.
+    *   **OAGC (Out of Age Group Cohort)**: The student is not in the expected year group based on their chronological age.     
 
 2.  **Academic Enrolments**: Select `+ Add programme` to assign the student to a programme and enable subject enrolment.
 
@@ -83,6 +94,20 @@ In the final form, select the **Academic Year** and the **Enrolment Type**:
 
 ### Group tags
 
+![Setup Students](../assets/images/Setup_Students.png){ width="700" }
 
 
+Click the `Group tags` button to create the specific tags required for your school. You can select one or multiple tags from the provided list or add your own custom labels. The standard categories include:
 
+**Educational Needs**
+*   **EAL**: English as an Additional Language.
+*   **G&T / GIFTED**: Gifted and Talented students.
+*   **IEP**: Individualized Education Program.
+*   **SEN**: Special Educational Needs.
+
+**Other Demographics**
+*   **MOBILE**: Mobile Pupil (students joining outside the standard admission cycle).
+*   **OAGC**: Out of Age Group Cohort.
+
+!!! tip "Global Tags Setup"
+    Setting up these **Group Tags** in `Setup > Students > Tags` ensures they are available as dropdown options when editing individual student profiles later.
