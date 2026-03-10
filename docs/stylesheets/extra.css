@@ -47,6 +47,6 @@ figcaption {
 
 .mermaid {
   margin-top: 0;
-  margin-bottom: 1em !important;
+  margin-bottom: 0.5em !important;
   display: block;
 }
