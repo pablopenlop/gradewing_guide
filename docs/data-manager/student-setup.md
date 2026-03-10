@@ -148,7 +148,6 @@ This case represents a common Key Stage 5 (KS5) academic profile, combining a co
 #### **Application Enrollment View**
 
 **2025/2026**
-
 *   **Year 13**
 *   **Group Tags:** `G&T`
 
