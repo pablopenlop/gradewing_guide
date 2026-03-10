@@ -62,9 +62,28 @@ Click the `Add student` button to begin the registration process. Enter the stud
         *   **MP (Mobile Pupil)**: The student has joined the school outside the standard admission cycle or intake times.
         *   **OAGC (Out of Age Group Cohort)**: The student is not in the expected year group based on their chronological age.     
 
-2.  **Academic Enrolments**: Select `+ Add programme` to assign the student to a programme and enable subject enrolment.
+2.  **Academic Enrolments**: Select `+ Add programme` to assign the student to a programme and enable subject enrolment. Within the form, you can select the most appropriate program for each student from the following options, organized by educational level:
 
+**Final Secondary (KS5)**
 
+*   **IB Diploma Programme**
+*   **GCE AS & A levels**
+*   **Level 3 Extended Project Qualifications**
+*   **International AS & A levels**
+*   **International Project Qualifications**
+*   **Other Pre-university (KS5) Programmes**
+
+**Upper Secondary (KS4)**
+
+*   **IB Middle Years Programme (Years 4–5)**
+*   **GCSEs**
+*   **Level 1 & 2 Project Qualifications**
+*   **International GCSEs**
+*   **O Levels**
+
+**Lower Secondary (KS3)**
+
+*   **International Lower Secondary Programme**
 
 3.  **Subjects**: Locate the specific Programme section and click its corresponding `+ Add subject` button.
 
