@@ -151,6 +151,7 @@ This case represents a common Key Stage 5 (KS5) academic profile, combining a co
 *   **Year 13**
 *   **Group Tags:** `G&T`
 *   **GCE AS & A levels (3)**
+
     *   `7408` | AQA Level 3 Advanced GCE in Physics
     *   `9MA0` | Pearson Edexcel Level 3 Advanced GCE in Mathematics
     *   `H446` | OCR Level 3 Advanced GCE in Computer Science
@@ -160,6 +161,7 @@ This case represents a common Key Stage 5 (KS5) academic profile, combining a co
 **2024/25**
 *   **Year 12**
 *   **GCE AS & A levels (4)**
+
     *   `7408` | AQA Level 3 Advanced GCE in Physics
     *   `9MA0` | Pearson Edexcel Level 3 Advanced GCE in Mathematics
     *   `H446` | OCR Level 3 Advanced GCE in Computer Science
@@ -169,6 +171,7 @@ This case represents a common Key Stage 5 (KS5) academic profile, combining a co
 
 **Exam Only**
 *   **GCE AS & A levels (1)**
+
     *   `7692` | AQA Level 3 Advanced GCE in Spanish
 
 ---
