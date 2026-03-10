@@ -64,6 +64,8 @@ Click the `Add student` button to begin the registration process. Enter the stud
 
 2.  **Academic Enrolments**: Select `+ Add programme` to assign the student to a programme and enable subject enrolment.
 
+
+
 3.  **Subjects**: Locate the specific Programme section and click its corresponding `+ Add subject` button.
 
 <table style="border: none; border-collapse: collapse; width: 100%; table-layout: fixed;">
@@ -113,3 +115,60 @@ Click the `Group tags` button to create the specific tags required for your scho
 
 !!! tip "Global Tags Setup"
     Setting up these **Group Tags** in `Setup > Students > Tags` ensures they are available as dropdown options when editing individual student profiles later.
+
+---
+
+## Practical Case Studies
+
+Accurate student enrollment is the cornerstone of effective data management. Ensuring each student is correctly registered in the system is essential not only for assigning them to the appropriate **Teaching Groups** but also for:
+
+1. **Academic Tracking:** Enabling the generation of **Expected Grades** and the scheduling of **Internal Grades**, including **Predicted**, **Attainment**, and **Target** grades.
+2. **Examinations:** Managing the formal registration and recording of **Official Exam Results** once they are released by the awarding bodies.
+
+The consistent effort of maintaining accurate student data—both personal details and enrollment—combined with the regular input of internal and external grades, empowers the school to:
+
+*   **Deliver high-quality Progress Reports:** Generate automated and professional reports for students and parents.
+*   **Track Individual Performance:** Analyze the current status and progress of every student in real-time.
+*   **Monitor Subject & Cohort Trends:** Evaluate the evolution and academic health of specific subjects, year groups, or key stages.
+*   **Measure Value-Added:** Analyze the progress made by students relative to their starting points and benchmark the school's performance against national or program averages.
+
+---
+
+### Case Study 1: Standard GCE AS & A-Level Pathway
+*“Tracking linear subjects across multiple Exam Boards (AQA, Pearson, OCR) including a completed AS-Level and an independent research project (EPQ).”*
+
+#### **Profile Overview**
+This case represents a common Key Stage 5 (KS5) academic profile, combining a core set of linear subjects with elective components that conclude at different stages of the two-year cycle.
+
+*   **Curriculum:** 3 Linear A-Levels (2-year duration).
+*   **Modular Component:** 1 AS-Level completed in Year 12 (Further Mathematics).
+*   **Independent Study:** 1 Extended Project Qualification (EPQ) completed in Year 13.
+*   **External Accreditation:** 1 Language A-Level (Spanish) sat as "Exam Only" (Native speaker, non-taught).
+
+#### **Application Enrollment View**
+
+**2025/2026**
+*   **Year 13**
+*   **Group Tags:** `G&T`
+*   **GCE AS & A levels (3)**
+    *   `7408` | AQA Level 3 Advanced GCE in Physics
+    *   `9MA0` | Pearson Edexcel Level 3 Advanced GCE in Mathematics
+    *   `H446` | OCR Level 3 Advanced GCE in Computer Science
+*   **Other Pre-university (KS5) Programmes (1)**
+    *   `EPQ` | Extended Project Qualification
+
+**2024/25**
+*   **Year 12**
+*   **GCE AS & A levels (4)**
+    *   `7408` | AQA Level 3 Advanced GCE in Physics
+    *   `9MA0` | Pearson Edexcel Level 3 Advanced GCE in Mathematics
+    *   `H446` | OCR Level 3 Advanced GCE in Computer Science
+    *   `8FM0` | Pearson Edexcel Level 3 Advanced Subsidiary GCE in Further Mathematics
+*   **Other Pre-university (KS5) Programmes (1)**
+    *   `EPQ` | Extended Project Qualification
+
+**Exam Only**
+*   **GCE AS & A levels (1)**
+    *   `7692` | AQA Level 3 Advanced GCE in Spanish
+
+---
