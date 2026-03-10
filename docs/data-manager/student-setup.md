@@ -148,28 +148,36 @@ This case represents a common Key Stage 5 (KS5) academic profile, combining a co
 #### **Application Enrollment View**
 
 **2025/2026**
+
 *   **Year 13**
 *   **Group Tags:** `G&T`
+
 *   **GCE AS & A levels (3)**
 
     *   `7408` | AQA Level 3 Advanced GCE in Physics
     *   `9MA0` | Pearson Edexcel Level 3 Advanced GCE in Mathematics
     *   `H446` | OCR Level 3 Advanced GCE in Computer Science
+
 *   **Other Pre-university (KS5) Programmes (1)**
+
     *   `EPQ` | Extended Project Qualification
 
 **2024/25**
 *   **Year 12**
+
 *   **GCE AS & A levels (4)**
 
     *   `7408` | AQA Level 3 Advanced GCE in Physics
     *   `9MA0` | Pearson Edexcel Level 3 Advanced GCE in Mathematics
     *   `H446` | OCR Level 3 Advanced GCE in Computer Science
     *   `8FM0` | Pearson Edexcel Level 3 Advanced Subsidiary GCE in Further Mathematics
+
 *   **Other Pre-university (KS5) Programmes (1)**
+
     *   `EPQ` | Extended Project Qualification
 
 **Exam Only**
+
 *   **GCE AS & A levels (1)**
 
     *   `7692` | AQA Level 3 Advanced GCE in Spanish
