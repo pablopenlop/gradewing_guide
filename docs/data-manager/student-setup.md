@@ -53,13 +53,13 @@ Click the `Add student` button to begin the registration process. Enter the stud
         You can assign one or multiple tags to a student for a specific academic year. Unlike permanent tags, these are used to group students for academic purposes that may change from year to year.
 
     !!! info "Learner Statuses (Flags)"
-    Assign one or multiple specific educational profiles to the student. These "flags" allow teachers and Data Managers to immediately identify and support specific student needs:
-    *   **SEN (Special Educational Needs)**: The student has a learning difficulty or disability that requires special educational provision.
-    *   **EAL (English as an Additional Language)**: The student's first language is not English and they may need support to access the curriculum.
-    *   **LA (Low Attainer)**: The student is currently struggling to achieve the minimum expected academic standards for their level.
-    *   **G&T (Gifted & Talented)**: The student demonstrates high ability in one or more academic, creative, or practical areas.
-    *   **MP (Mobile Pupil)**: The student has joined the school outside the standard admission cycle or intake times.
-    *   **OAGC (Out of Age Group Cohort)**: The student is not in the expected year group based on their chronological age.     
+        Assign one or multiple specific educational profiles to the student. These "flags" allow teachers and Data Managers to immediately identify and support specific student needs:
+        *   **SEN (Special Educational Needs)**: The student has a learning difficulty or disability that requires special educational provision.
+        *   **EAL (English as an Additional Language)**: The student's first language is not English and they may need support to access the curriculum.
+        *   **LA (Low Attainer)**: The student is currently struggling to achieve the minimum expected academic standards for their level.
+        *   **G&T (Gifted & Talented)**: The student demonstrates high ability in one or more academic, creative, or practical areas.
+        *   **MP (Mobile Pupil)**: The student has joined the school outside the standard admission cycle or intake times.
+        *   **OAGC (Out of Age Group Cohort)**: The student is not in the expected year group based on their chronological age.     
 
 2.  **Academic Enrolments**: Select `+ Add programme` to assign the student to a programme and enable subject enrolment.
 
