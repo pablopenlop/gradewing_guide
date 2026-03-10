@@ -54,6 +54,7 @@ Click the `Add student` button to begin the registration process. Enter the stud
 
     !!! info "Learner Statuses (Flags)"
         Assign one or multiple specific educational profiles to the student. These "flags" allow teachers and Data Managers to immediately identify and support specific student needs:
+
         *   **SEN (Special Educational Needs)**: The student has a learning difficulty or disability that requires special educational provision.
         *   **EAL (English as an Additional Language)**: The student's first language is not English and they may need support to access the curriculum.
         *   **LA (Low Attainer)**: The student is currently struggling to achieve the minimum expected academic standards for their level.
@@ -100,12 +101,14 @@ In the final form, select the **Academic Year** and the **Enrolment Type**:
 Click the `Group tags` button to create the specific tags required for your school. You can select one or multiple tags from the provided list or add your own custom labels. The standard categories include:
 
 **Educational Needs**
+
 *   **EAL**: English as an Additional Language.
 *   **G&T / GIFTED**: Gifted and Talented students.
 *   **IEP**: Individualized Education Program.
 *   **SEN**: Special Educational Needs.
 
 **Other Demographics**
+
 *   **MOBILE**: Mobile Pupil (students joining outside the standard admission cycle).
 *   **OAGC**: Out of Age Group Cohort.
 
