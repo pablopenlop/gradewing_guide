@@ -57,12 +57,10 @@ Click the Add button to begin the registration process. Enter the student's Firs
 <table style="border: none; border-collapse: collapse; width: 100%; table-layout: fixed;">
   <tr style="border: none;">
     <td style="border: none; width: 50%; padding: 10px; text-align: center; vertical-align: top;">
-      <img src="../../assets/images/Setup_Students_Add_Subject.png" style="width: 100%; border-radius: 4px; border: 1px solid #eee;" />
-      <p style="font-size: 0.85em; font-style: italic; color: #666; margin-top: 8px;">1. Subject Selection</p>
+      <img src="../../assets/images/Setup_Students_Add_Subject.png" class="glightbox" style="width: 100%; border-radius: 4px; border: 1px solid #eee;" alt="Subject Selection">
     </td>
     <td style="border: none; width: 50%; padding: 10px; text-align: center; vertical-align: top;">
-      <img src="../../assets/images/Setup_Students_Add_Subject_Conf.png" style="width: 100%; border-radius: 4px; border: 1px solid #eee;" />
-      <p style="font-size: 0.85em; font-style: italic; color: #666; margin-top: 8px;">2. Enrolment Details</p>
+      <img src="../../assets/images/Setup_Students_Add_Subject_Conf.png" class="glightbox" style="width: 100%; border-radius: 4px; border: 1px solid #eee;" alt="Enrolment Details">
     </td>
   </tr>
 </table>
