@@ -44,3 +44,9 @@ figcaption {
   font-size: 0.85em;
   color: #666;
 }
+
+.mermaid {
+  margin-top: 0;
+  margin-bottom: 1em !important;
+  display: block;
+}
