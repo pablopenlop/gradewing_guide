@@ -170,7 +170,7 @@ This case represents a common Key Stage 5 (KS5) academic profile, combining a co
 
 #### **Application Enrollment View**
 
-**2025/2026**
+**2025/26**
 *   **Year 13**
 *   **Group Tags:** `G&T`
 
@@ -204,4 +204,57 @@ This case represents a common Key Stage 5 (KS5) academic profile, combining a co
 
     *   `7692` | AQA Level 3 Advanced GCE in Spanish
 
+#### **Analysis & Reporting Impact**
+
+!!! info "Linear Subject Tracking"
+    For linear subjects (`7408`, `9MA0`, `H446`), all grades recorded in the application (**Internal and Expected**) refer to the **entire qualification**. Since there is only one final exam, the system compares all grades against each other and against a **single Final Exam Grade**. This allows the application to track the student's overall progress and calculate the **Value-Added** provided by the school.
+
+!!! example "Cohort Filtering"
+    By using the `G&T` flag during enrollment, you can instantly filter your reports to compare this student's performance against the rest of the year group or subject cohort.
+
 ---
+
+### Case Study 2: Cambridge International (CIE) Pathway
+*“Managing a mix of Staged Assessment (AS + A2), Linear subjects, and External Exam-only registrations.”*
+
+#### **Profile Overview**
+This case represents the **"Staged Assessment"** model typical of international schools. It tracks how AS-level marks from Year 12 are "carried forward" to Year 13, alongside subjects that follow a strictly linear two-year path.
+
+*   **Curriculum:** 4 Cambridge International A-Levels.
+*   **Assessment Mode:** Mixed (Staged and Linear).
+*   **Modular Component:** 1 AS-Level completed and closed in Year 12 (Further Mathematics).
+*   **External Accreditation:** 1 A-Level studied independently (Law) where the school acts as the Exam Centre only.
+
+#### **Application Enrollment View**
+
+**2025/26 Year 13**
+
+*   **International AS & A levels (4)**
+
+    *   `9618` | Cambridge International GCE A level in Computer Science
+    *   `9709` | Cambridge International GCE A level in Mathematics
+    *   `9701` | Cambridge International GCE A level in Chemistry
+    *   `9716` | Cambridge International GCE A level in French
+
+**2024/25 Year 12**
+
+*   **International AS & A levels (5)**
+
+    *   `9618` | Cambridge International GCE AS level in Computer Science
+    *   `9231` | Cambridge International GCE AS level in Further Mathematics
+    *   `9709` | Cambridge International GCE AS level in Mathematics
+    *   `9701` | Cambridge International GCE AS level in Chemistry
+    *   `9716` | Cambridge International GCE A level in French (Year 1)
+
+**Exam Only**
+
+*   **International AS & A levels (1)**
+    *   `9084` | Cambridge International GCE A level in Law
+
+#### **Analysis & Reporting Impact**
+
+!!! info "Staged vs. Linear Tracking"
+    For **Staged** subjects (`9618`, `9709`, `9701`), the application tracks **Year 12** and **Year 13** as two distinct academic events because each results in an official **Exam Grade**. The system benchmarks Year 12 internal grades against the **AS Exam Grade**, and Year 13 internal grades against the final **A-Level Exam Grade**.
+
+!!! example "Linear & External Reporting"
+    For the **Linear** subject (`9716`) and the **External** subject (`9084`), all grades (Internal and Expected) refer to the **entire qualification**, comparing them against a **single Final Exam Grade** at the end of the two-year cycle.
