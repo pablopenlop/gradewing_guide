@@ -173,9 +173,7 @@ This case represents a high-standard academic profile in the UK curriculum. It d
 #### **Application Enrollment View**
 
 **GCE AS & A levels**
-
-*Final Secondary (KS5) | Subject-based qualifications programme*
-
+<samll>Final Secondary (KS5) | Subject-based qualifications programme</small>
 
 | Subject title | Enrolled in |
 | :--- | :--- |
@@ -188,7 +186,6 @@ This case represents a high-standard academic profile in the UK curriculum. It d
 **Level 3 Extended Project Qualifications**
 
 *Final Secondary (KS5) | Subject-based qualifications programme*
-
 
 | Subject title | Enrolled in |
 | :--- | :--- |
