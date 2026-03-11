@@ -170,10 +170,6 @@ This case represents a high-standard academic profile in the UK curriculum. It d
 
 #### **Application Enrollment View**
 
-**GCE AS & A levels**
-
-#### **Application Enrollment View**
-
 | Subject title | Enrolled in |
 | :--- | :--- |
 | **GCE AS & A levels** | |
