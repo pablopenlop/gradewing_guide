@@ -314,3 +314,42 @@ This case serves as a master reference for international centers. It demonstrate
     For **Law (9084)** and the **IPQ**, the system focuses on final outcome reporting. While the IPQ is a taught component, Law is excluded from internal Value-Added calculations to reflect its status as an external accreditation.
 
 ---
+
+### Case Study 3: International Baccalaureate (IB) Diploma Pathway
+*“Recording a full IB Diploma profile using numerical grading (1-7), HL/SL distinctions, and Core (A–E) components.”*
+
+#### **Profile Overview**
+This case represents the IB Diploma route. It demonstrates the system's ability to host numerical assessment scales and the specific grading requirements of the IB curriculum over a continuous two-year cycle.
+
+*   **IB Diploma Structure:** 3 subjects at **Higher Level (HL)** and 3 subjects at **Standard Level (SL)**.
+*   **Numerical Grading:** Attainment and Predicted grades are recorded on the **1–7 scale**.
+*   **The Core:** Integration of the **Extended Essay (EE)** and **Theory of Knowledge (TOK)**, which follow a separate **A–E scale**.
+*   **Linear Assessment:** All internal data is tracked against a final exam series at the end of Year 13.
+
+#### **Application Enrollment View**
+
+
+| Subject title | Enrolled in |
+| :--- | :--- |
+| **IB Diploma Programme** | |
+| IB DP English A: Lang & Lit HL (Group 1) | 2025/26 – Year 13 <br> 2024/25 – Year 12 |
+| IB DP Spanish B SL (Group 2) | 2025/26 – Year 13 <br> 2024/25 – Year 12 |
+| IB DP Geography HL (Group 3) | 2025/26 – Year 13 <br> 2024/25 – Year 12 |
+| IB DP Biology SL (Group 4) | 2025/26 – Year 13 <br> 2024/25 – Year 12 |
+| IB DP Mathematics: Analysis and Approaches HL (Group 5) | 2025/26 – Year 13 <br> 2024/25 – Year 12 |
+| IB DP Visual Arts SL (Group 6) | 2025/26 – Year 13 <br> 2024/25 – Year 12 |
+| | |
+| **IB Core Components** | |
+| IB DP Theory of Knowledge (TOK) | 2025/26 – Year 13 <br> 2024/25 – Year 12 |
+| IB DP Extended Essay (EE) | 2025/26 – Year 13 <br> 2024/25 – Year 12 |
+
+#### **Key Considerations**
+
+!!! info "Numerical Grade Tracking"
+    For IB subjects, the **Grades Analysis** module enables a **1–7 numerical scale**. The system tracks the student's trajectory by comparing internal **Attainment** and **Predicted** grades against the final **Exam Grade** achieved at the end of the two-year program.
+
+!!! info "Managing Mixed Scales (1–7 vs. A–E)"
+    The application allows for the coexistence of different grading systems within a single profile. While the six main subjects are graded numerically, the **Core Components (TOK and EE)** use the **A–E scale**, ensuring the student's complete academic record is centralized in one view.
+
+---
+
