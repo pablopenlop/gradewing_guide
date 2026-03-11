@@ -91,16 +91,16 @@ Click the `Add student` button to begin the registration process. Enter the stud
 
 3.  **Subjects**: Locate the specific Programme section and click its corresponding `+ Add subject` button.
 
-<table style="border: none; border-collapse: collapse; width: 100%; table-layout: fixed;">
-  <tr style="border: none;">
-    <td style="border: none; width: 50%; padding: 10px; text-align: center; vertical-align: top;">
-      <img src="../../assets/images/Setup_Students_Add_Subject.png" class="glightbox" style="width: 100%; border-radius: 4px; border: 1px solid #eee;" alt="Subject Selection">
-    </td>
-    <td style="border: none; width: 50%; padding: 10px; text-align: center; vertical-align: top;">
-      <img src="../../assets/images/Setup_Students_Add_Subject_Conf.png" class="glightbox" style="width: 100%; border-radius: 4px; border: 1px solid #eee;" alt="Enrolment Details">
-    </td>
-  </tr>
-</table>
+    <table style="border: none; border-collapse: collapse; width: 100%; table-layout: fixed;">
+      <tr style="border: none;">
+        <td style="border: none; width: 50%; padding: 10px; text-align: center; vertical-align: top;">
+          <img src="../../assets/images/Setup_Students_Add_Subject.png" class="glightbox" style="width: 100%; border-radius: 4px; border: 1px solid #eee;" alt="Subject Selection">
+        </td>
+        <td style="border: none; width: 50%; padding: 10px; text-align: center; vertical-align: top;">
+          <img src="../../assets/images/Setup_Students_Add_Subject_Conf.png" class="glightbox" style="width: 100%; border-radius: 4px; border: 1px solid #eee;" alt="Enrolment Details">
+        </td>
+      </tr>
+    </table>
 
     **Step 1: Selection**  
     Use the dropdown in the first form to select the required subject. Each option in the list is a **unique entry** that already includes its specific **Examination Board** and **Curriculum System** (e.g., **Cambridge**, **Pearson/Edexcel**, **Oxford/AQA**, or **International Baccalaureate**). Click `Next` to proceed.
