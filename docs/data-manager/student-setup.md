@@ -168,12 +168,11 @@ This case represents a high-standard academic profile in the UK curriculum. It d
 *   **Independent Research:** 1 Extended Project Qualification (EPQ) used to enhance the student's academic profile for university entry.
 *   **Native Language Accreditation:** 1 GCE A-Level (Spanish) managed as "Exam Only" to certify existing language proficiency without instructional overhead.
 
----
-
 #### **Application Enrollment View**
 
 **GCE AS & A levels**
 
+<div style="width:100%">
 | Subject title | Enrolled in |
 | :--- | :--- |
 | **AQA Level 3 Advanced GCE in Physics (7408)** | 2025/26 – Year 13 <br> 2024/25 – Year 12 |
@@ -181,14 +180,15 @@ This case represents a high-standard academic profile in the UK curriculum. It d
 | **OCR Level 3 Advanced GCE in Computer Science (H446)** | 2025/26 – Year 13 <br> 2024/25 – Year 12 |
 | **Pearson Edexcel Level 3 Advanced GCE in Mathematics (9MA0)** | 2025/26 – Year 13 <br> 2024/25 – Year 12 |
 | **Pearson Edexcel Level 3 Advanced Subsidiary GCE in Further Mathematics (8FM0)** | 2024/25 – Year 12 |
+</div>
 
+<div style="width:100%">
 **Level 3 Extended Project Qualifications**
 
 | Subject title | Enrolled in |
 | :--- | :--- |
 | **Pearson Edexcel Level 3 Extended Project Qualification** | 2025/26 – Year 13 |
-
----
+</div>
 
 #### **Key Considerations**
 
