@@ -174,8 +174,6 @@ This case represents a high-standard academic profile in the UK curriculum. It d
 
 **GCE AS & A levels**
 
-<small>*Final Secondary (KS5) | Subject-based qualifications programme*</small>
-
 | Subject title | Enrolled in |
 | :--- | :--- |
 | **AQA Level 3 Advanced GCE in Physics (7408)** | 2025/26 – Year 13 <br> 2024/25 – Year 12 |
@@ -185,8 +183,6 @@ This case represents a high-standard academic profile in the UK curriculum. It d
 | **Pearson Edexcel Level 3 Advanced Subsidiary GCE in Further Mathematics (8FM0)** | 2024/25 – Year 12 |
 
 **Level 3 Extended Project Qualifications**
-
-*Final Secondary (KS5) | Subject-based qualifications programme*
 
 | Subject title | Enrolled in |
 | :--- | :--- |
