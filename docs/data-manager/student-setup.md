@@ -173,6 +173,7 @@ This case represents a high-standard academic profile in the UK curriculum. It d
 #### **Application Enrollment View**
 
 **GCE AS & A levels**
+
 *Final Secondary (KS5) | Subject-based qualifications programme*
 
 
@@ -185,6 +186,7 @@ This case represents a high-standard academic profile in the UK curriculum. It d
 | **Pearson Edexcel Level 3 Advanced Subsidiary GCE in Further Mathematics (8FM0)** | 2024/25 – Year 12 |
 
 **Level 3 Extended Project Qualifications**
+
 *Final Secondary (KS5) | Subject-based qualifications programme*
 
 
