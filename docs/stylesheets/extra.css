@@ -51,12 +51,22 @@ figcaption {
   display: block;
 }
 
-.md-typeset table:not([class]) {
-    display: table !important;
+/* Forzar el contenedor de la tabla al 100% */
+.md-typeset__table {
+    display: block;
     width: 100% !important;
-    table-layout: auto !important; /* Permite que las celdas se ajusten al contenido */
+    overflow: auto;
 }
 
-.md-typeset__table {
-    overflow: visible !important;
+/* Forzar la tabla interna al 100% */
+.md-typeset__table table {
+    display: table !important;
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+/* Opcional: ajustar las columnas para que no se amontonen */
+.md-typeset__table table th, 
+.md-typeset__table table td {
+    word-break: normal;
 }
