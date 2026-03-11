@@ -157,7 +157,7 @@ The consistent effort of maintaining accurate student data—both personal detai
 *   **Measure Value-Added:** Analyze the progress made by students relative to their starting points and benchmark the school's performance against national or program averages.
 
 ---
-<!-- 
+
 ### Case Study 1: Standard GCE AS & A-Level Pathway
 *“Integrating linear subject tracking with a completed AS-Level and independent research certification.”*
 
@@ -189,7 +189,7 @@ This case represents a high-standard academic profile in the UK curriculum. It d
     For linear subjects (`7408`, `9MA0`, `H446`), all grades recorded in the application (**Internal and Expected**) refer to the **entire qualification**. Since there is only one final exam, the system compares all grades against each other and against a **single Final Exam Grade**. This allows the application to track the student's overall progress and calculate the **Value-Added** provided by the school.
 
 ---
-
+<!-- 
 ### Case Study 2: Cambridge International (CIE) Pathway
 *“Managing Staged Assessment (AS + A2), Mandatory Linear subjects, and Student-Choice Linear entries.”*
 
