@@ -50,3 +50,16 @@ figcaption {
   margin-bottom: 0.2em !important;
   display: block;
 }
+
+/* Force all Markdown tables to match the width of info boxes */
+.md-typeset table:not([class]) {
+    display: table;
+    width: 100%;
+    word-break: normal;
+}
+
+/* Optional: Improves cell appearance when stretched */
+.md-typeset td, .md-typeset th {
+    padding: 12px;
+    vertical-align: top;
+}
