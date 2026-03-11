@@ -102,21 +102,21 @@ Click the `Add student` button to begin the registration process. Enter the stud
   </tr>
 </table>
 
-**Step 1: Selection**  
-Use the dropdown in the first form to select the required subject. Each option in the list is a **unique entry** that already includes its specific **Examination Board** and **Curriculum System** (e.g., **Cambridge**, **Pearson/Edexcel**, **Oxford/AQA**, or **International Baccalaureate**). Click `Next` to proceed.
+    **Step 1: Selection**  
+    Use the dropdown in the first form to select the required subject. Each option in the list is a **unique entry** that already includes its specific **Examination Board** and **Curriculum System** (e.g., **Cambridge**, **Pearson/Edexcel**, **Oxford/AQA**, or **International Baccalaureate**). Click `Next` to proceed.
 
-**Step 2: Configuration**  
-In the final form, select the **Academic Year** and the **Enrolment Type**:
+    **Step 2: Configuration**  
+    In the final form, select the **Academic Year** and the **Enrolment Type**:
 
-!!! info "Enrolment Types"
-    *   **Standard Enrolment**: For students following the regular internal course.
-    *   **Exam Only**: This option allows exam results to be recorded ***without creating an internal enrolment record***. It is an efficient way to manage subject qualifications earned outside the institution by incoming students.
+    !!! info "Enrolment Types"
+        *   **Standard Enrolment**: For students following the regular internal course.
+        *   **Exam Only**: This option allows exam results to be recorded ***without creating an internal enrolment record***. It is an efficient way to manage subject qualifications earned outside the institution by incoming students.
 
-!!! note "Multi-Year Enrolment"
-    Multiple academic years can be assigned to a single subject. This is useful when a subject spans two years or if a student requires additional time to complete the course.
+    !!! note "Multi-Year Enrolment"
+        Multiple academic years can be assigned to a single subject. This is useful when a subject spans two years or if a student requires additional time to complete the course.
 
-!!! warning "Finalizing the Profile"
-    After completing all sections—including **Personal Data**, **Guardians**, **Group Tags**, and **Enrolments**—you must click the `Done` button to save and synchronize the entire student record.
+    !!! warning "Finalizing the Profile"
+        After completing all sections—including **Personal Data**, **Guardians**, **Group Tags**, and **Enrolments**—you must click the `Done` button to save and synchronize the entire student record.
 
 ### Group tags
 
