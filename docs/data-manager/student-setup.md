@@ -266,16 +266,17 @@ This case represents the modular academic route, offering maximum flexibility in
 
 ---
 
-### Case Study 4: Multi-Board International Pathway (CIE, OxfordAQA & Pearson)
-*“Managing a diverse portfolio across different international boards, including accelerated certifications and the International Project Qualification (IPQ).”*
+### Case Study 4: Advanced Multi-Board International Pathway
+*“A comprehensive summary of international curricula: combining CIE, OxfordAQA, and Pearson Edexcel with accelerated and non-standard assessment routes.”*
 
 #### **Profile Overview**
-This case represents a global academic profile, demonstrating the system's ability to unify data from different international providers and handle early A-level completion.
+This case serves as a master reference for international centers. It demonstrates how the application unifies diverse assessment models (Staged, Modular, and Linear) into a single student record, including early certifications and independent research.
 
-*   **Mixed International Curriculum:** Combines Staged (CIE), Modular (OxfordAQA), and IAL (Pearson) assessment models.
-*   **Accelerated Certification:** 1 IAL (**Spanish**) completed entirely in Year 12, allowing the student to reduce their workload in Year 13.
-*   **Research Focus:** 1 Cambridge International Project Qualification (**IPQ**) completed in Year 13.
-*   **Staged Progression:** Standard two-year tracking for Media and Economics.
+*   **Mixed Board Ecosystem:** Seamless integration of Cambridge (CIE), OxfordAQA, and Pearson Edexcel.
+*   **Accelerated Completion:** 1 IAL (**Spanish**) fully completed in Year 12, providing early A-level achievement.
+*   **Student-Choice Linear Sitting:** 1 A-Level (**IT 9626**) where both AS and A2 components are taken in Year 13.
+*   **External Accreditation:** 1 A-Level (**Law 9084**) managed as an "Exam Only" entry for independent study.
+*   **Research Certification:** 1 Cambridge International Project Qualification (**IPQ**) completed in Year 13.
 
 #### **Application Enrollment View**
 
@@ -291,17 +292,24 @@ This case represents a global academic profile, demonstrating the system's abili
 | Pearson Edexcel International AS level in Mathematics (XMA01) | 2024/25 – Year 12 |
 | **Pearson Edexcel International A level in Spanish (YSP01)** | **2024/25 – Year 12** |
 | **Pearson Edexcel International AS level in Spanish (XSP01)** | **2024/25 – Year 12** |
+| **Cambridge International GCE A level in Information Technology (9626)** | **2025/26 – Year 13** |
+| **Cambridge International GCE AS level in Information Technology (9626)** | **2025/26 – Year 13** |
+| Pearson Edexcel International AS level in Further Mathematics (XFM01) | 2024/25 – Year 12 |
+| Cambridge International GCE A level in Law (9084) | **Exam only** |
+| Cambridge International GCE AS level in Law (9084) | **Exam only** |
 | | |
 | **International Project Qualifications** | |
 | Cambridge International Project Qualification | 2025/26 – Year 13 |
 
 #### **Key Considerations**
 
-!!! info "Accelerated A-Level Completion"
-    For subjects completed early, such as **Spanish (YSP01)** in this example, the application archives the final **Exam Grade** at the end of Year 12. This result remains a permanent part of the student's profile and contributes to the overall school attainment data even while the student is in Year 13.
+!!! info "Mixed Assessment Logic"
+    The application dynamically adapts to the specific board logic:
+    *   **Staged (CIE/OxfordAQA):** Records the transition from Year 12 AS to Year 13 A-Level as linked exam events.
+    *   **Accelerated (Spanish):** Archives final A-Level results achieved in Year 12 for ongoing reporting in Year 13.
+    *   **Student-Choice Linear (IT):** Benchmarks both AS and A2 components against a single target in Year 13.
 
-!!! info "International Project Qualification (IPQ)"
-    The **IPQ** is managed similarly to an A-level in terms of grading (**A*-E**), but it is a standalone research project. The system benchmarks internal progress against a single final submission, providing a clear view of the student's independent research skills.
+!!! info "Exam Only & Independent Projects"
+    For **Law (9084)** and the **IPQ**, the system focuses on final outcome reporting. While the IPQ is a taught component, Law is excluded from internal Value-Added calculations to reflect its status as an external accreditation.
 
 ---
-
