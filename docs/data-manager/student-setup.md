@@ -171,6 +171,7 @@ This case represents a high-standard academic profile in the UK curriculum. It d
 #### **Application Enrollment View**
 
 <center>
+
 | Subject title | Enrolled in |
 | :--- | :--- |
 | **GCE AS & A levels** | |
@@ -182,6 +183,7 @@ This case represents a high-standard academic profile in the UK curriculum. It d
 | | |
 | **Level 3 Extended Project Qualifications** | |
 | Pearson Edexcel Level 3 Extended Project Qualification | 2025/26 – Year 13 |
+
 </center>
 
 #### **Key Considerations**
