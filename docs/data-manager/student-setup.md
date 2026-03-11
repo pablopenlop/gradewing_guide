@@ -315,41 +315,44 @@ This case serves as a master reference for international centers. It demonstrate
 
 ---
 
+
 ### Case Study 3: International Baccalaureate (IB) Diploma Pathway
 *“Recording a full IB Diploma profile using numerical grading (1-7), HL/SL distinctions, and Core (A–E) components.”*
 
 #### **Profile Overview**
-This case represents the IB Diploma route. It demonstrates the system's ability to host numerical assessment scales and the specific grading requirements of the IB curriculum over a continuous two-year cycle.
+This case represents the IB Diploma route. It demonstrates the system's ability to host numerical assessment scales and the specific grading requirements of the IB curriculum over the two-year Diploma Programme (DP).
 
 *   **IB Diploma Structure:** 3 subjects at **Higher Level (HL)** and 3 subjects at **Standard Level (SL)**.
 *   **Numerical Grading:** Attainment and Predicted grades are recorded on the **1–7 scale**.
 *   **The Core:** Integration of the **Extended Essay (EE)** and **Theory of Knowledge (TOK)** (A–E scale), alongside the mandatory **CAS** requirement.
-*   **Linear Assessment:** All internal data is tracked against a final exam series at the end of Year 13.
+*   **Linear Assessment:** All internal data is tracked against a final exam series at the end of Grade 12.
 
 #### **Application Enrollment View**
+
 
 
 | Subject title | Enrolled in |
 | :--- | :--- |
 | **IB Diploma Programme** | |
-| IB DP English A: Lang & Lit HL (Group 1) | 2025/26 – Year 13 <br> 2024/25 – Year 12 |
-| IB DP Spanish B SL (Group 2) | 2025/26 – Year 13 <br> 2024/25 – Year 12 |
-| IB DP Geography HL (Group 3) | 2025/26 – Year 13 <br> 2024/25 – Year 12 |
-| IB DP Biology SL (Group 4) | 2025/26 – Year 13 <br> 2024/25 – Year 12 |
-| IB DP Mathematics: Analysis and Approaches HL (Group 5) | 2025/26 – Year 13 <br> 2024/25 – Year 12 |
-| IB DP Visual Arts SL (Group 6) | 2025/26 – Year 13 <br> 2024/25 – Year 12 |
+| IB DP English A: Lang & Lit HL (Group 1) | 2025/26 – Grade 12 <br> 2024/25 – Grade 11 |
+| IB DP Spanish B SL (Group 2) | 2025/26 – Grade 12 <br> 2024/25 – Grade 11 |
+| IB DP Geography HL (Group 3) | 2025/26 – Grade 12 <br> 2024/25 – Grade 11 |
+| IB DP Biology SL (Group 4) | 2025/26 – Grade 12 <br> 2024/25 – Grade 11 |
+| IB DP Mathematics: Analysis and Approaches HL (Group 5) | 2025/26 – Grade 12 <br> 2024/25 – Grade 11 |
+| IB DP Visual Arts SL (Group 6) | 2025/26 – Grade 12 <br> 2024/25 – Grade 11 |
 | | |
 | **IB Core Components** | |
-| IB DP Theory of Knowledge (TOK) | 2025/26 – Year 13 <br> 2024/25 – Year 12 |
-| IB DP Extended Essay (EE) | 2025/26 – Year 13 <br> 2024/25 – Year 12 |
-| IB DP Creativity, Activity, Service (CAS) | 2025/26 – Year 13 <br> 2024/25 – Year 12 |
+| IB DP Theory of Knowledge (TOK) | 2025/26 – Grade 12 <br> 2024/25 – Grade 11 |
+| IB DP Extended Essay (EE) | 2025/26 – Grade 12 <br> 2024/25 – Grade 11 |
+| IB DP Creativity, Activity, Service (CAS) | 2025/26 – Grade 12 <br> 2024/25 – Grade 11 |
 
 #### **Key Considerations**
 
 !!! info "Numerical Grade Tracking"
-    For IB subjects, the **Grades Analysis** module enables a **1–7 numerical scale**. The system tracks the student's trajectory by comparing internal **Attainment** and **Predicted** grades against the final **Exam Grade** achieved at the end of the two-year program.
+    For IB subjects, the **Grades Analysis** module enables a **1–7 numerical scale**. The system tracks the student's trajectory by comparing internal **Attainment** and **Predicted** grades against the final **Exam Grade** achieved at the end of the two-year program (Grade 12).
 
 !!! info "Managing Mixed Scales & CAS Completion"
     The application allows for the coexistence of different grading systems. While subjects use the **1–7 scale** and the Core (TOK/EE) uses **A–E**, the **CAS** component is tracked as a mandatory **completion requirement** (Pass/Fail) rather than a graded academic subject.
 
 ---
+
