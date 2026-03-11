@@ -157,7 +157,7 @@ The consistent effort of maintaining accurate student data—both personal detai
 *   **Measure Value-Added:** Analyze the progress made by students relative to their starting points and benchmark the school's performance against national or program averages.
 
 ---
-
+<!-- 
 ### Case Study 1: Standard GCE AS & A-Level Pathway
 *“Integrating linear subject tracking with a completed AS-Level and independent research certification.”*
 
@@ -265,8 +265,9 @@ This case represents the modular academic route, offering maximum flexibility in
     The application treats Year 12 and Year 13 as two distinct certification events. Even if the code remains the same (**OxfordAQA**), the system expects an official **AS Exam Grade** at the end of Year 12 and an **A Level Exam Grade** at the end of Year 13 once the "cash-in" is processed.
 
 ---
+-->
 
-### Case Study 4: Advanced Multi-Board International Pathway
+### Case Study 2: Advanced Multi-Board International Pathway
 *“A comprehensive summary of international curricula: combining CIE, OxfordAQA, and Pearson Edexcel with accelerated and non-standard assessment routes.”*
 
 #### **Profile Overview**
