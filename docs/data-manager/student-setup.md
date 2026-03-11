@@ -158,103 +158,44 @@ The consistent effort of maintaining accurate student data—both personal detai
 ---
 
 ### Case Study 1: Standard GCE AS & A-Level Pathway
-*“Tracking linear subjects across multiple Exam Boards (AQA, Pearson, OCR) including a completed AS-Level and an independent research project (EPQ).”*
+*“Integrating linear subject tracking with a completed AS-Level and independent research certification.”*
 
 #### **Profile Overview**
-This case represents a common Key Stage 5 (KS5) academic profile, combining a core set of linear subjects with elective components that conclude at different stages of the two-year cycle.
+This case represents a high-standard academic profile in the UK curriculum. It demonstrates how the application manages a core set of **Linear A-Levels** (concluding in Year 13) alongside specific qualifications that follow different timelines.
 
-*   **Curriculum:** 3 Linear A-Levels (2-year duration).
-*   **Modular Component:** 1 AS-Level completed in Year 12 (Further Mathematics).
-*   **Independent Study:** 1 Extended Project Qualification (EPQ) completed in Year 13.
-*   **External Accreditation:** 1 Language A-Level (Spanish) sat as "Exam Only" (Native speaker, non-taught).
+*   **Core Academic Load:** 3 Linear GCE A-Levels (Physics, Maths, Computer Science) tracking progress over a 24-month cycle.
+*   **Completed AS Level:** 1 Standalone GCE AS-Level (Further Maths) concluded and achieved at the end of Year 12.
+*   **Independent Research:** 1 Extended Project Qualification (EPQ) used to enhance the student's academic profile for university entry.
+*   **Native Language Accreditation:** 1 GCE A-Level (Spanish) managed as "Exam Only" to certify existing language proficiency without instructional overhead.
+
+---
 
 #### **Application Enrollment View**
 
-**2025/26**
-*   **Year 13**
-*   **Group Tags:** `G&T`
+**GCE AS & A levels**
+*Final Secondary (KS5) | Subject-based qualifications programme*
 
-*   **GCE AS & A levels (3)**
 
-    *   `7408` | AQA Level 3 Advanced GCE in Physics
-    *   `9MA0` | Pearson Edexcel Level 3 Advanced GCE in Mathematics
-    *   `H446` | OCR Level 3 Advanced GCE in Computer Science
+| Subject title | Enrolled in |
+| :--- | :--- |
+| **AQA Level 3 Advanced GCE in Physics (7408)** | 2025/26 – Year 13 <br> 2024/25 – Year 12 |
+| **AQA Level 3 Advanced GCE in Spanish (7692)** | **Exam only** |
+| **OCR Level 3 Advanced GCE in Computer Science (H446)** | 2025/26 – Year 13 <br> 2024/25 – Year 12 |
+| **Pearson Edexcel Level 3 Advanced GCE in Mathematics (9MA0)** | 2025/26 – Year 13 <br> 2024/25 – Year 12 |
+| **Pearson Edexcel Level 3 Advanced Subsidiary GCE in Further Mathematics (8FM0)** | 2024/25 – Year 12 |
 
-*   **Other Pre-university (KS5) Programmes (1)**
+**Level 3 Extended Project Qualifications**
+*Final Secondary (KS5) | Subject-based qualifications programme*
 
-    *   `EPQ` | Extended Project Qualification
 
-**2024/25**
-*   **Year 12**
+| Subject title | Enrolled in |
+| :--- | :--- |
+| **Pearson Edexcel Level 3 Extended Project Qualification** | 2025/26 – Year 13 |
 
-*   **GCE AS & A levels (4)**
+---
 
-    *   `7408` | AQA Level 3 Advanced GCE in Physics
-    *   `9MA0` | Pearson Edexcel Level 3 Advanced GCE in Mathematics
-    *   `H446` | OCR Level 3 Advanced GCE in Computer Science
-    *   `8FM0` | Pearson Edexcel Level 3 Advanced Subsidiary GCE in Further Mathematics
-
-*   **Other Pre-university (KS5) Programmes (1)**
-
-    *   `EPQ` | Extended Project Qualification
-
-**Exam Only**
-
-*   **GCE AS & A levels (1)**
-
-    *   `7692` | AQA Level 3 Advanced GCE in Spanish
-
-#### **Analysis & Reporting Impact**
+#### **Key Considerations**
 
 !!! info "Linear Subject Tracking"
     For linear subjects (`7408`, `9MA0`, `H446`), all grades recorded in the application (**Internal and Expected**) refer to the **entire qualification**. Since there is only one final exam, the system compares all grades against each other and against a **single Final Exam Grade**. This allows the application to track the student's overall progress and calculate the **Value-Added** provided by the school.
 
-!!! example "Cohort Filtering"
-    By using the `G&T` flag during enrollment, you can instantly filter your reports to compare this student's performance against the rest of the year group or subject cohort.
-
----
-
-### Case Study 2: Cambridge International (CIE) Pathway
-*“Managing a mix of Staged Assessment (AS + A2), Linear subjects, and External Exam-only registrations.”*
-
-#### **Profile Overview**
-This case represents the **"Staged Assessment"** model typical of international schools. It tracks how AS-level marks from Year 12 are "carried forward" to Year 13, alongside subjects that follow a strictly linear two-year path.
-
-*   **Curriculum:** 4 Cambridge International A-Levels.
-*   **Assessment Mode:** Mixed (Staged and Linear).
-*   **Modular Component:** 1 AS-Level completed and closed in Year 12 (Further Mathematics).
-*   **External Accreditation:** 1 A-Level studied independently (Law) where the school acts as the Exam Centre only.
-
-#### **Application Enrollment View**
-
-**2025/26 Year 13**
-
-*   **International AS & A levels (4)**
-
-    *   `9618` | Cambridge International GCE A level in Computer Science
-    *   `9709` | Cambridge International GCE A level in Mathematics
-    *   `9701` | Cambridge International GCE A level in Chemistry
-    *   `9716` | Cambridge International GCE A level in French
-
-**2024/25 Year 12**
-
-*   **International AS & A levels (5)**
-
-    *   `9618` | Cambridge International GCE AS level in Computer Science
-    *   `9231` | Cambridge International GCE AS level in Further Mathematics
-    *   `9709` | Cambridge International GCE AS level in Mathematics
-    *   `9701` | Cambridge International GCE AS level in Chemistry
-    *   `9716` | Cambridge International GCE A level in French (Year 1)
-
-**Exam Only**
-
-*   **International AS & A levels (1)**
-    *   `9084` | Cambridge International GCE A level in Law
-
-#### **Analysis & Reporting Impact**
-
-!!! info "Staged vs. Linear Tracking"
-    For **Staged** subjects (`9618`, `9709`, `9701`), the application tracks **Year 12** and **Year 13** as two distinct academic events because each results in an official **Exam Grade**. The system benchmarks Year 12 internal grades against the **AS Exam Grade**, and Year 13 internal grades against the final **A-Level Exam Grade**.
-
-!!! example "Linear & External Reporting"
-    For the **Linear** subject (`9716`) and the **External** subject (`9084`), all grades (Internal and Expected) refer to the **entire qualification**, comparing them against a **single Final Exam Grade** at the end of the two-year cycle.
