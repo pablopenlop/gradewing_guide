@@ -227,3 +227,80 @@ This case demonstrates the flexibility of the Cambridge curriculum. It tracks su
 
 !!! info "Staged Tracking"
     For **Staged** subjects (`9701`, `9709`), the application tracks **Year 12** and **Year 13** as two distinct academic events. The system benchmarks Year 12 internal grades against the **AS Exam Grade**, and Year 13 internal grades against the final **A-Level Exam Grade**.
+
+---
+
+### Case Study 3: International Modular Pathway (Pearson & OxfordAQA)
+*“Tracking modular qualifications with multiple exam windows (January/June) and cumulative certification.”*
+
+#### **Profile Overview**
+This case represents the modular academic route, offering maximum flexibility in examination scheduling. It demonstrates how the application manages the transition between AS and A Level across modular boards like Pearson Edexcel and OxfordAQA.
+
+*   **Modular Assessment:** 4 International Advanced Levels (IAL) where exams are completed unit-by-unit.
+*   **Pearson Edexcel Transition:** A clear shift from the AS "X-code" in Year 12 to the A Level "Y-code" in Year 13.
+*   **OxfordAQA Continuity:** A single-code system (`9620`) where the student certifies the AS in Year 12 and the A Level in Year 13 using the same subject identifier.
+*   **Student-Choice Linear Sitting:** 1 IAL (**Spanish**) where the student has chosen to sit both AS and A2 units in a single exam series (Year 13), effectively treating a modular qualification as a linear one.
+*   **Completed AS Level:** 1 Standalone International AS-Level (Further Maths `XFM01`) concluded in Year 12.
+
+#### **Application Enrollment View**
+
+
+| Subject title | Enrolled in |
+| :--- | :--- |
+| **International AS & A levels** | |
+| OxfordAQA International A level in Chemistry (9620) | 2025/26 – Year 13 |
+| OxfordAQA International AS level in Chemistry (9620) | 2024/25 – Year 12 |
+| Pearson Edexcel International A level in Mathematics (YMA01) | 2025/26 – Year 13 |
+| Pearson Edexcel International AS level in Mathematics (XMA01) | 2024/25 – Year 12 |
+| Pearson Edexcel International A level in Physics (YPH11) | 2025/26 – Year 13 |
+| Pearson Edexcel International AS level in Physics (XPH11) | 2024/25 – Year 12 |
+| **Pearson Edexcel International A level in Spanish (YSP01)** | **2025/26 – Year 13** |
+| **Pearson Edexcel International AS level in Spanish (XSP01)** | **2025/26 – Year 13** |
+| Pearson Edexcel International AS level in Further Mathematics (XFM01) | 2024/25 – Year 12 |
+
+#### **Key Considerations**
+
+!!! info "Modular Certification (Cash-in) Tracking"
+    The application treats Year 12 and Year 13 as two distinct certification events. Even if the code remains the same (**OxfordAQA**), the system expects an official **AS Exam Grade** at the end of Year 12 and an **A Level Exam Grade** at the end of Year 13 once the "cash-in" is processed.
+
+---
+
+### Case Study 4: Multi-Board International Pathway (CIE, OxfordAQA & Pearson)
+*“Managing a diverse portfolio across different international boards, including accelerated certifications and the International Project Qualification (IPQ).”*
+
+#### **Profile Overview**
+This case represents a global academic profile, demonstrating the system's ability to unify data from different international providers and handle early A-level completion.
+
+*   **Mixed International Curriculum:** Combines Staged (CIE), Modular (OxfordAQA), and IAL (Pearson) assessment models.
+*   **Accelerated Certification:** 1 IAL (**Spanish**) completed entirely in Year 12, allowing the student to reduce their workload in Year 13.
+*   **Research Focus:** 1 Cambridge International Project Qualification (**IPQ**) completed in Year 13.
+*   **Staged Progression:** Standard two-year tracking for Media and Economics.
+
+#### **Application Enrollment View**
+
+
+| Subject title | Enrolled in |
+| :--- | :--- |
+| **International AS & A levels** | |
+| Cambridge International GCE A level in Media (9607) | 2025/26 – Year 13 |
+| Cambridge International GCE AS level in Media (9607) | 2024/25 – Year 12 |
+| OxfordAQA International A level in Economics (9640) | 2025/26 – Year 13 |
+| OxfordAQA International AS level in Economics (9640) | 2024/25 – Year 12 |
+| Pearson Edexcel International A level in Mathematics (YMA01) | 2025/26 – Year 13 |
+| Pearson Edexcel International AS level in Mathematics (XMA01) | 2024/25 – Year 12 |
+| **Pearson Edexcel International A level in Spanish (YSP01)** | **2024/25 – Year 12** |
+| **Pearson Edexcel International AS level in Spanish (XSP01)** | **2024/25 – Year 12** |
+| | |
+| **International Project Qualifications** | |
+| Cambridge International Project Qualification | 2025/26 – Year 13 |
+
+#### **Key Considerations**
+
+!!! info "Accelerated A-Level Completion"
+    For subjects completed early, such as **Spanish (YSP01)** in this example, the application archives the final **Exam Grade** at the end of Year 12. This result remains a permanent part of the student's profile and contributes to the overall school attainment data even while the student is in Year 13.
+
+!!! info "International Project Qualification (IPQ)"
+    The **IPQ** is managed similarly to an A-level in terms of grading (**A*-E**), but it is a standalone research project. The system benchmarks internal progress against a single final submission, providing a clear view of the student's independent research skills.
+
+---
+
