@@ -170,8 +170,6 @@ This case represents a high-standard academic profile in the UK curriculum. It d
 
 #### **Application Enrollment View**
 
-<center>
-
 | Subject title | Enrolled in |
 | :--- | :--- |
 | **GCE AS & A levels** | |
@@ -184,10 +182,48 @@ This case represents a high-standard academic profile in the UK curriculum. It d
 | **Level 3 Extended Project Qualifications** | |
 | Pearson Edexcel Level 3 Extended Project Qualification | 2025/26 – Year 13 |
 
-</center>
-
 #### **Key Considerations**
 
 !!! info "Linear Subject Tracking"
     For linear subjects (`7408`, `9MA0`, `H446`), all grades recorded in the application (**Internal and Expected**) refer to the **entire qualification**. Since there is only one final exam, the system compares all grades against each other and against a **single Final Exam Grade**. This allows the application to track the student's overall progress and calculate the **Value-Added** provided by the school.
 
+---
+
+### Case Study 2: Cambridge International (CIE) Pathway
+*“Managing Staged Assessment (AS + A2), Mandatory Linear subjects, and Student-Choice Linear entries.”*
+
+#### **Profile Overview**
+This case demonstrates the flexibility of the Cambridge curriculum. It tracks subjects following the standard "Staged" route alongside two types of Linear entries: those forced by the syllabus and those chosen by the student to be taken in a single exam series.
+
+*   **Core Academic Load:** 2 Cambridge International A-Levels (Maths, Chemistry) using the standard **Staged Assessment** route (AS in Y12, A2 in Y13).
+*   **Mandatory Linear Pathway:** 1 International A-Level (**French 9716**) which only allows a single exam sitting at the end of the 24-month cycle.
+*   **Student-Choice Linear Pathway:** 1 International A-Level (**Computer Science 9618**) where the student sits both AS and A2 components in a single series at the end of Year 13.
+*   **Completed AS Level:** 1 Standalone International AS-Level (Further Maths 9231) concluded in Year 12.
+*   **External Accreditation:** 1 International A-Level (Law 9084) managed as "Exam Only."
+
+#### **Application Enrollment View**
+
+
+| Subject title | Enrolled in |
+| :--- | :--- |
+| **International AS & A levels** | |
+| Cambridge International GCE A level in Chemistry (9701) | 2025/26 – Year 13 |
+| Cambridge International GCE AS level in Chemistry (9701) | 2024/25 – Year 12 |
+| **Cambridge International GCE A level in Computer Science (9618)** | 2025/26 – Year 13 |
+| **Cambridge International GCE AS level in Computer Science (9618)** | 2025/26 – Year 13 |
+| Cambridge International GCE A level in Mathematics (9709) | 2025/26 – Year 13 |
+| Cambridge International GCE AS level in Mathematics (9709) | 2024/25 – Year 12 |
+| Cambridge International GCE A level in French (9716) | 2025/26 – Year 13 <br> 2024/25 – Year 12 |
+| Cambridge International GCE AS level in Further Mathematics (9231) | 2024/25 – Year 12 |
+| Cambridge International GCE A level in Law (9084) | **Exam only** |
+| Cambridge International GCE AS level in Law (9084) | **Exam only** |
+
+#### **Key Considerations**
+
+!!! info "Mandatory vs. Choice Linear Tracking"
+    The application handles two Linear scenarios:
+    1. **Mandatory Linear (French 9716):** The student is enrolled across both years, but the system expects a single final exam grade in Year 13.
+    2. **Student-Choice Linear (Computer Science 9618):** Both AS and A-Level components are enrolled in **Year 13 only**. The system treats this as a single "all-in-one" assessment event.
+
+!!! info "Staged Tracking"
+    For **Staged** subjects (`9701`, `9709`), the application tracks **Year 12** and **Year 13** as two distinct academic events. The system benchmarks Year 12 internal grades against the **AS Exam Grade**, and Year 13 internal grades against the final **A-Level Exam Grade**.
