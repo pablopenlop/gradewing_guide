@@ -323,7 +323,7 @@ This case represents the IB Diploma route. It demonstrates the system's ability 
 
 *   **IB Diploma Structure:** 3 subjects at **Higher Level (HL)** and 3 subjects at **Standard Level (SL)**.
 *   **Numerical Grading:** Attainment and Predicted grades are recorded on the **1–7 scale**.
-*   **The Core:** Integration of the **Extended Essay (EE)** and **Theory of Knowledge (TOK)**, which follow a separate **A–E scale**.
+*   **The Core:** Integration of the **Extended Essay (EE)** and **Theory of Knowledge (TOK)** (A–E scale), alongside the mandatory **CAS** requirement.
 *   **Linear Assessment:** All internal data is tracked against a final exam series at the end of Year 13.
 
 #### **Application Enrollment View**
@@ -342,14 +342,14 @@ This case represents the IB Diploma route. It demonstrates the system's ability 
 | **IB Core Components** | |
 | IB DP Theory of Knowledge (TOK) | 2025/26 – Year 13 <br> 2024/25 – Year 12 |
 | IB DP Extended Essay (EE) | 2025/26 – Year 13 <br> 2024/25 – Year 12 |
+| IB DP Creativity, Activity, Service (CAS) | 2025/26 – Year 13 <br> 2024/25 – Year 12 |
 
 #### **Key Considerations**
 
 !!! info "Numerical Grade Tracking"
     For IB subjects, the **Grades Analysis** module enables a **1–7 numerical scale**. The system tracks the student's trajectory by comparing internal **Attainment** and **Predicted** grades against the final **Exam Grade** achieved at the end of the two-year program.
 
-!!! info "Managing Mixed Scales (1–7 vs. A–E)"
-    The application allows for the coexistence of different grading systems within a single profile. While the six main subjects are graded numerically, the **Core Components (TOK and EE)** use the **A–E scale**, ensuring the student's complete academic record is centralized in one view.
+!!! info "Managing Mixed Scales & CAS Completion"
+    The application allows for the coexistence of different grading systems. While subjects use the **1–7 scale** and the Core (TOK/EE) uses **A–E**, the **CAS** component is tracked as a mandatory **completion requirement** (Pass/Fail) rather than a graded academic subject.
 
 ---
-
