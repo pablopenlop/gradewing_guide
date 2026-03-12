@@ -398,3 +398,44 @@ This case study illustrates the application’s ability to manage the transition
 !!! info "Project-Based Learning (HPQ)"
     The **AQA Level 2 HPQ** is recorded as a skills-based qualification. This allows the center to track the development of independent study habits early, serving as a critical data point for predicting success in Year 12/13 research-heavy subjects.
 
+---
+
+### **Case Study 5: The Triple Science Specialist (STEM-Driven Profile)**
+*“A specialized STEM-oriented IGCSE pathway: focusing on independent science disciplines while integrating Cambridge’s numerical Mathematics for a high-rigor foundation.”*
+
+#### **Profile Overview**
+This case demonstrates the application's ability to handle the "Triple Science" route. It rejects the grouped 'Combined' or 'Co-ordinated' models in favor of three distinct reporting streams (Biology, Chemistry, Physics), providing a more granular academic record.
+
+*   **Independent Science Stream:** Three separate Pearson Edexcel IGCSEs (4BI1, 4CH1, 4PH1), explicitly avoiding the Combined (0653) or Co-ordinated (0654) awards.
+*   **Numerical Maths Integration:** Utilization of **Cambridge (0980)** to ensure a 9-1 graded foundation in Mathematics.
+*   **High-Rigor Academic Load:** A 9-qualification portfolio designed for students targeting Medicine, Engineering, or Pure Sciences.
+*   **Technical Breadth:** Inclusion of Computer Science and Geography to complement the scientific analytical framework.
+
+#### **Application Enrollment View**
+
+
+| Subject title | Enrolled in |
+| :--- | :--- |
+| **International GCSEs** | |
+| **Cambridge IGCSE (9-1) in Mathematics (0980)** | **2025/26 – Year 11** |
+| **Pearson Edexcel International GCSE in Biology (4BI1)** | **2025/26 – Year 11** |
+| **Pearson Edexcel International GCSE in Chemistry (4CH1)** | **2025/26 – Year 11** |
+| **Pearson Edexcel International GCSE in Physics (4PH1)** | **2025/26 – Year 11** |
+| Pearson Edexcel International GCSE in English Language A (4EA1) | 2025/26 – Year 11 |
+| Pearson Edexcel International GCSE in Spanish (4SP1) | 2025/26 – Year 11 |
+| Cambridge IGCSE (9-1) in Geography (0976) | 2025/26 – Year 11 |
+| OxfordAQA IGCSE (9-1) in Computer Science (9210) | 2025/26 – Year 11 |
+| | |
+| **Level 1 & 2 Project Qualifications** | |
+| **AQA Level 2 Higher Project Qualification (HPQ)** | **2025/26 – Year 11** |
+
+#### **Key Considerations**
+
+!!! info "Disaggregated Science Logic"
+    By not utilizing **Combined** or **Co-ordinated** sciences, the system tracks three independent grades. This prevents a lower performance in one discipline (e.g., Chemistry) from "diluting" a high performance in another (e.g., Physics), which is a critical distinction for University admissions.
+
+!!! info "Multi-Board Numerical Alignment"
+    The application unifies the **9-1 grading scale** across three different boards (CIE, Edexcel, and OxfordAQA). This ensures that terminal reporting for Mathematics (0980) and Computer Science (9210) is presented on a consistent 100% numerical basis.
+
+!!! info "Advanced Research Foundation"
+    The **HPQ** in this profile is typically used to explore a scientific hypothesis, providing early evidence of the "Super-curricular" engagement required for competitive STEM university applications.
