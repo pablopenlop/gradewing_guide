@@ -140,6 +140,7 @@ Click the `Group tags` button to create the specific tags required for your scho
 !!! tip "Global Tags Setup"
     Setting up these **Group Tags** in `Setup > Students > Tags` ensures they are available as dropdown options when editing individual student profiles later.
 
+
 ---
 
 ## Practical Case Studies
@@ -355,4 +356,45 @@ This case represents the IB Diploma route. It demonstrates the system's ability 
     The application allows for the coexistence of different grading systems. While subjects use the **1–7 scale** and the Core (TOK/EE) uses **A–E**, the **CAS** component is tracked as a mandatory **completion requirement** (Pass/Fail) rather than a graded academic subject.
 
 ---
+
+### **Case Study 4: Multi-Board IGCSE Integration & Science Rationalization**
+*“A strategic demonstration of Key Stage 4 curriculum design: balancing core sciences via the Combined route while unifying dual grading scales (9-1 and A*-G) across three international boards.”*
+
+#### **Profile Overview**
+This case study illustrates the application’s ability to manage the transition between traditional and reformed grading scales at the IGCSE level. It highlights the "Single Award" science logic and the inclusion of Level 2 independent research (HPQ) as a curriculum enhancer.
+
+*   **Science Optimization:** Implementation of **Combined Science (0653)** to provide a broad scientific foundation within a single-credit framework.
+*   **Dual-Scale Calibration:** Simultaneous tracking of **Numerical (9-1)** and **Alphabetic (A*-G)** results in a unified student transcript.
+*   **Breadth & Specialization:** A balanced portfolio covering STEM, Humanities, Languages, and Vocational studies (Business/Media).
+*   **Early Research Skills:** Integration of the **AQA Level 2 HPQ** to bridge the gap between IGCSE and future A-Level/IPQ research requirements.
+
+#### **Application Enrollment View**
+
+
+| Subject title | Enrolled in |
+| :--- | :--- |
+| **International GCSEs** | |
+| Cambridge IGCSE (9-1) in Mathematics (0980) | 2025/26 – Year 11 |
+| Cambridge IGCSE (9-1) in Spanish (7160) | 2025/26 – Year 11 |
+| **Cambridge IGCSE in Combined Science (0653)** | **2025/26 – Year 11** |
+| **Cambridge IGCSE in History (0470)** | **2025/26 – Year 11** |
+| OxfordAQA IGCSE (9-1) in Media Studies (9257) | 2025/26 – Year 11 |
+| Pearson Edexcel International GCSE (9-1) in Business (4BS1) | 2025/26 – Year 11 |
+| Pearson Edexcel International GCSE (9-1) in English Language A (4EA1) | 2025/26 – Year 11 |
+| | |
+| **Level 1 & 2 Project Qualifications** | |
+| **AQA Level 2 Higher Project Qualification (HPQ)** | **2025/26 – Year 11** |
+
+#### **Key Considerations**
+
+!!! info "The 'Combined Science' Logic"
+    Unlike 'Co-ordinated' or 'Triple' routes, **Combined Science (0653)** is treated by the system as a **Single Award (1 IGCSE)**. The application maps Biology, Chemistry, and Physics components into a single terminal grade, optimizing the student's timetable for additional electives like Business and Media.
+
+!!! info "Cross-Board Grading Alignment"
+    The system performs real-time normalization between boards:
+    *   **9-1 Scale (Edexcel/OxfordAQA/CIE):** Standardized for subjects like English and Maths.
+    *   **A*-G Scale (CIE History/Science):** The application retains the legacy alphabetic format for these specific codes (0470/0653) while providing equivalency mapping for internal school reporting and baseline comparisons.
+
+!!! info "Project-Based Learning (HPQ)"
+    The **AQA Level 2 HPQ** is recorded as a skills-based qualification. This allows the center to track the development of independent study habits early, serving as a critical data point for predicting success in Year 12/13 research-heavy subjects.
 
