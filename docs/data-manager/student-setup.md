@@ -172,6 +172,7 @@ This case represents a high-standard academic profile in the UK curriculum. It d
 
 #### **Application Enrollment View**
 
+
 | Subject title | Enrolled in |
 | :--- | :--- |
 | **GCE AS & A levels** | |
@@ -190,83 +191,6 @@ This case represents a high-standard academic profile in the UK curriculum. It d
     For linear subjects (`7408`, `9MA0`, `H446`), all grades recorded in the application (**Internal and Expected**) refer to the **entire qualification**. Since there is only one final exam, the system compares all grades against each other and against a **single Final Exam Grade**. This allows the application to track the student's overall progress and calculate the **Value-Added** provided by the school.
 
 ---
-<!-- 
-### Case Study 2: Cambridge International (CIE) Pathway
-*“Managing Staged Assessment (AS + A2), Mandatory Linear subjects, and Student-Choice Linear entries.”*
-
-#### **Profile Overview**
-This case demonstrates the flexibility of the Cambridge curriculum. It tracks subjects following the standard "Staged" route alongside two types of Linear entries: those forced by the syllabus and those chosen by the student to be taken in a single exam series.
-
-*   **Core Academic Load:** 2 Cambridge International A-Levels (Maths, Chemistry) using the standard **Staged Assessment** route (AS in Y12, A2 in Y13).
-*   **Mandatory Linear Pathway:** 1 International A-Level (**French 9716**) which only allows a single exam sitting at the end of the 24-month cycle.
-*   **Student-Choice Linear Pathway:** 1 International A-Level (**Computer Science 9618**) where the student sits both AS and A2 components in a single series at the end of Year 13.
-*   **Completed AS Level:** 1 Standalone International AS-Level (Further Maths 9231) concluded in Year 12.
-*   **External Accreditation:** 1 International A-Level (Law 9084) managed as "Exam Only."
-
-#### **Application Enrollment View**
-
-
-| Subject title | Enrolled in |
-| :--- | :--- |
-| **International AS & A levels** | |
-| Cambridge International GCE A level in Chemistry (9701) | 2025/26 – Year 13 |
-| Cambridge International GCE AS level in Chemistry (9701) | 2024/25 – Year 12 |
-| **Cambridge International GCE A level in Computer Science (9618)** | 2025/26 – Year 13 |
-| **Cambridge International GCE AS level in Computer Science (9618)** | 2025/26 – Year 13 |
-| Cambridge International GCE A level in Mathematics (9709) | 2025/26 – Year 13 |
-| Cambridge International GCE AS level in Mathematics (9709) | 2024/25 – Year 12 |
-| Cambridge International GCE A level in French (9716) | 2025/26 – Year 13 <br> 2024/25 – Year 12 |
-| Cambridge International GCE AS level in Further Mathematics (9231) | 2024/25 – Year 12 |
-| Cambridge International GCE A level in Law (9084) | **Exam only** |
-| Cambridge International GCE AS level in Law (9084) | **Exam only** |
-
-#### **Key Considerations**
-
-!!! info "Mandatory vs. Choice Linear Tracking"
-    The application handles two Linear scenarios:
-    1. **Mandatory Linear (French 9716):** The student is enrolled across both years, but the system expects a single final exam grade in Year 13.
-    2. **Student-Choice Linear (Computer Science 9618):** Both AS and A-Level components are enrolled in **Year 13 only**. The system treats this as a single "all-in-one" assessment event.
-
-!!! info "Staged Tracking"
-    For **Staged** subjects (`9701`, `9709`), the application tracks **Year 12** and **Year 13** as two distinct academic events. The system benchmarks Year 12 internal grades against the **AS Exam Grade**, and Year 13 internal grades against the final **A-Level Exam Grade**.
-
----
-
-### Case Study 3: International Modular Pathway (Pearson & OxfordAQA)
-*“Tracking modular qualifications with multiple exam windows (January/June) and cumulative certification.”*
-
-#### **Profile Overview**
-This case represents the modular academic route, offering maximum flexibility in examination scheduling. It demonstrates how the application manages the transition between AS and A Level across modular boards like Pearson Edexcel and OxfordAQA.
-
-*   **Modular Assessment:** 4 International Advanced Levels (IAL) where exams are completed unit-by-unit.
-*   **Pearson Edexcel Transition:** A clear shift from the AS "X-code" in Year 12 to the A Level "Y-code" in Year 13.
-*   **OxfordAQA Continuity:** A single-code system (`9620`) where the student certifies the AS in Year 12 and the A Level in Year 13 using the same subject identifier.
-*   **Student-Choice Linear Sitting:** 1 IAL (**Spanish**) where the student has chosen to sit both AS and A2 units in a single exam series (Year 13), effectively treating a modular qualification as a linear one.
-*   **Completed AS Level:** 1 Standalone International AS-Level (Further Maths `XFM01`) concluded in Year 12.
-
-#### **Application Enrollment View**
-
-
-| Subject title | Enrolled in |
-| :--- | :--- |
-| **International AS & A levels** | |
-| OxfordAQA International A level in Chemistry (9620) | 2025/26 – Year 13 |
-| OxfordAQA International AS level in Chemistry (9620) | 2024/25 – Year 12 |
-| Pearson Edexcel International A level in Mathematics (YMA01) | 2025/26 – Year 13 |
-| Pearson Edexcel International AS level in Mathematics (XMA01) | 2024/25 – Year 12 |
-| Pearson Edexcel International A level in Physics (YPH11) | 2025/26 – Year 13 |
-| Pearson Edexcel International AS level in Physics (XPH11) | 2024/25 – Year 12 |
-| **Pearson Edexcel International A level in Spanish (YSP01)** | **2025/26 – Year 13** |
-| **Pearson Edexcel International AS level in Spanish (XSP01)** | **2025/26 – Year 13** |
-| Pearson Edexcel International AS level in Further Mathematics (XFM01) | 2024/25 – Year 12 |
-
-#### **Key Considerations**
-
-!!! info "Modular Certification (Cash-in) Tracking"
-    The application treats Year 12 and Year 13 as two distinct certification events. Even if the code remains the same (**OxfordAQA**), the system expects an official **AS Exam Grade** at the end of Year 12 and an **A Level Exam Grade** at the end of Year 13 once the "cash-in" is processed.
-
----
--->
 
 ### Case Study 2: Advanced Multi-Board International Pathway
 *“A comprehensive summary of international curricula: combining CIE, OxfordAQA, and Pearson Edexcel with accelerated and non-standard assessment routes.”*
@@ -316,7 +240,6 @@ This case serves as a master reference for international centers. It demonstrate
 
 ---
 
-
 ### Case Study 3: International Baccalaureate (IB) Diploma Pathway
 *“Recording a full IB Diploma profile using numerical grading (1-7), HL/SL distinctions, and Core (A–E) components.”*
 
@@ -329,7 +252,6 @@ This case represents the IB Diploma route. It demonstrates the system's ability 
 *   **Linear Assessment:** All internal data is tracked against a final exam series at the end of Grade 12.
 
 #### **Application Enrollment View**
-
 
 
 | Subject title | Enrolled in |
@@ -357,7 +279,7 @@ This case represents the IB Diploma route. It demonstrates the system's ability 
 
 ---
 
-### **Case Study 4: Multi-Board IGCSE Integration & Science Rationalization**
+### Case Study 4: Multi-Board IGCSE Integration & Science Rationalization
 *“A strategic demonstration of Key Stage 4 curriculum design: balancing core sciences via the Combined route while unifying dual grading scales (9-1 and A*-G) across three international boards.”*
 
 #### **Profile Overview**
@@ -374,16 +296,16 @@ This case study illustrates the application’s ability to manage the transition
 | Subject title | Enrolled in |
 | :--- | :--- |
 | **International GCSEs** | |
-| Cambridge IGCSE (9-1) in Mathematics (0980) | 2025/26 – Year 11 |
-| Cambridge IGCSE (9-1) in Spanish (7160) | 2025/26 – Year 11 |
-| **Cambridge IGCSE in Combined Science (0653)** | **2025/26 – Year 11** |
-| **Cambridge IGCSE in History (0470)** | **2025/26 – Year 11** |
-| OxfordAQA IGCSE (9-1) in Media Studies (9257) | 2025/26 – Year 11 |
-| Pearson Edexcel International GCSE (9-1) in Business (4BS1) | 2025/26 – Year 11 |
-| Pearson Edexcel International GCSE (9-1) in English Language A (4EA1) | 2025/26 – Year 11 |
+| Cambridge IGCSE (9-1) in Mathematics (0980) | 2025/26 – Year 11 <br> 2024/25 – Year 10 |
+| Cambridge IGCSE (9-1) in Spanish (7160) | 2025/26 – Year 11 <br> 2024/25 – Year 10 |
+| **Cambridge IGCSE in Combined Science (0653)** | **2025/26 – Year 11 <br> 2024/25 – Year 10** |
+| **Cambridge IGCSE in History (0470)** | **2025/26 – Year 11 <br> 2024/25 – Year 10** |
+| OxfordAQA IGCSE (9-1) in Media Studies (9257) | 2025/26 – Year 11 <br> 2024/25 – Year 10 |
+| Pearson Edexcel International GCSE (9-1) in Business (4BS1) | 2025/26 – Year 11 <br> 2024/25 – Year 10 |
+| Pearson Edexcel International GCSE (9-1) in English Language A (4EA1) | 2025/26 – Year 11 <br> 2024/25 – Year 10 |
 | | |
 | **Level 1 & 2 Project Qualifications** | |
-| **AQA Level 2 Higher Project Qualification (HPQ)** | **2025/26 – Year 11** |
+| **AQA Level 2 Higher Project Qualification (HPQ)** | **2025/26 – Year 11 <br> 2024/25 – Year 10** |
 
 #### **Key Considerations**
 
@@ -393,22 +315,19 @@ This case study illustrates the application’s ability to manage the transition
 !!! info "Cross-Board Grading Alignment"
     The system performs real-time normalization between boards:
     *   **9-1 Scale (Edexcel/OxfordAQA/CIE):** Standardized for subjects like English and Maths.
-    *   **A*-G Scale (CIE History/Science):** The application retains the legacy alphabetic format for these specific codes (0470/0653) while providing equivalency mapping for internal school reporting and baseline comparisons.
-
-!!! info "Project-Based Learning (HPQ)"
-    The **AQA Level 2 HPQ** is recorded as a skills-based qualification. This allows the center to track the development of independent study habits early, serving as a critical data point for predicting success in Year 12/13 research-heavy subjects.
+    *   **A*-G Scale (CIE History/Science):** The application retains the legacy alphabetic format for these specific codes (0470/0653) while providing equivalency mapping for internal school reporting.
 
 ---
 
-### **Case Study 5: The Triple Science Specialist (STEM-Driven Profile)**
+### Case Study 5: The Triple Science Specialist (STEM-Driven Profile)
 *“A specialized STEM-oriented IGCSE pathway: focusing on independent science disciplines while integrating Cambridge’s numerical Mathematics for a high-rigor foundation.”*
 
 #### **Profile Overview**
-This case demonstrates the application's ability to handle the "Triple Science" route. It rejects the grouped 'Combined' or 'Co-ordinated' models in favor of three distinct reporting streams (Biology, Chemistry, Physics), providing a more granular academic record.
+This case demonstrates the application's ability to handle the "Triple Science" route. It rejects grouped models in favor of three distinct reporting streams (Biology, Chemistry, Physics), providing a more granular academic record for future STEM specialization.
 
-*   **Independent Science Stream:** Three separate Pearson Edexcel IGCSEs (4BI1, 4CH1, 4PH1), explicitly avoiding the Combined (0653) or Co-ordinated (0654) awards.
+*   **Independent Science Stream:** Three separate Pearson Edexcel IGCSEs (4BI1, 4CH1, 4PH1), explicitly avoiding the Combined or Co-ordinated awards.
 *   **Numerical Maths Integration:** Utilization of **Cambridge (0980)** to ensure a 9-1 graded foundation in Mathematics.
-*   **High-Rigor Academic Load:** A 9-qualification portfolio designed for students targeting Medicine, Engineering, or Pure Sciences.
+*   **High-Rigor Academic Load:** A 9-qualification portfolio designed for students targeting Medicine, Engineering, or Pure Sciences at Key Stage 5.
 *   **Technical Breadth:** Inclusion of Computer Science and Geography to complement the scientific analytical framework.
 
 #### **Application Enrollment View**
@@ -417,25 +336,22 @@ This case demonstrates the application's ability to handle the "Triple Science" 
 | Subject title | Enrolled in |
 | :--- | :--- |
 | **International GCSEs** | |
-| **Cambridge IGCSE (9-1) in Mathematics (0980)** | **2025/26 – Year 11** |
-| **Pearson Edexcel International GCSE in Biology (4BI1)** | **2025/26 – Year 11** |
-| **Pearson Edexcel International GCSE in Chemistry (4CH1)** | **2025/26 – Year 11** |
-| **Pearson Edexcel International GCSE in Physics (4PH1)** | **2025/26 – Year 11** |
-| Pearson Edexcel International GCSE in English Language A (4EA1) | 2025/26 – Year 11 |
-| Pearson Edexcel International GCSE in Spanish (4SP1) | 2025/26 – Year 11 |
-| Cambridge IGCSE (9-1) in Geography (0976) | 2025/26 – Year 11 |
-| OxfordAQA IGCSE (9-1) in Computer Science (9210) | 2025/26 – Year 11 |
+| **Cambridge IGCSE (9-1) in Mathematics (0980)** | **2025/26 – Year 11 <br> 2024/25 – Year 10** |
+| **Pearson Edexcel International GCSE in Biology (4BI1)** | **2025/26 – Year 11 <br> 2024/25 – Year 10** |
+| **Pearson Edexcel International GCSE in Chemistry (4CH1)** | **2025/26 – Year 11 <br> 2024/25 – Year 10** |
+| **Pearson Edexcel International GCSE in Physics (4PH1)** | **2025/26 – Year 11 <br> 2024/25 – Year 10** |
+| Pearson Edexcel International GCSE (9-1) in English Language A (4EA1) | 2025/26 – Year 11 <br> 2024/25 – Year 10 |
+| Pearson Edexcel International GCSE (9-1) in Spanish (4SP1) | 2025/26 – Year 11 <br> 2024/25 – Year 10 |
+| Cambridge IGCSE (9-1) in Geography (0976) | 2025/26 – Year 11 <br> 2024/25 – Year 10 |
+| OxfordAQA IGCSE (9-1) in Computer Science (9210) | 2025/26 – Year 11 <br> 2024/25 – Year 10 |
 | | |
 | **Level 1 & 2 Project Qualifications** | |
-| **AQA Level 2 Higher Project Qualification (HPQ)** | **2025/26 – Year 11** |
+| **AQA Level 2 Higher Project Qualification (HPQ)** | **2025/26 – Year 11 <br> 2024/25 – Year 10** |
 
 #### **Key Considerations**
 
 !!! info "Disaggregated Science Logic"
-    By not utilizing **Combined** or **Co-ordinated** sciences, the system tracks three independent grades. This prevents a lower performance in one discipline (e.g., Chemistry) from "diluting" a high performance in another (e.g., Physics), which is a critical distinction for University admissions.
-
-!!! info "Multi-Board Numerical Alignment"
-    The application unifies the **9-1 grading scale** across three different boards (CIE, Edexcel, and OxfordAQA). This ensures that terminal reporting for Mathematics (0980) and Computer Science (9210) is presented on a consistent 100% numerical basis.
+    By not utilizing **Combined** or **Co-ordinated** sciences, the system tracks three independent grades. This prevents a lower performance in one discipline from "diluting" the student's overall scientific profile, a critical distinction for highly selective university admissions.
 
 !!! info "Advanced Research Foundation"
-    The **HPQ** in this profile is typically used to explore a scientific hypothesis, providing early evidence of the "Super-curricular" engagement required for competitive STEM university applications.
+    The **HPQ** in this profile is recorded as a skills-based qualification. This allows the center to track the development of independent study habits early, serving as a critical data point for predicting success in Year 12/13 research-heavy subjects.
