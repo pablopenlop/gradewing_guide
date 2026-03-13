@@ -140,38 +140,14 @@ Click the `Group tags` button to create the specific tags required for your scho
 !!! tip "Global Tags Setup"
     Setting up these **Group Tags** in `Setup > Students > Tags` ensures they are available as dropdown options when editing individual student profiles later.
 
-
 ---
 
-## Practical Case Studies
+## Student registration guidelines
 
-Accurate student enrollment is the cornerstone of effective data management. Ensuring each student is correctly registered in the system is essential not only for assigning them to the appropriate **Teaching Groups** but also for:
-
-1. **Academic Tracking:** Enabling the generation of **Expected Grades** and the scheduling of **Internal Grades**, including **Predicted**, **Attainment**, and **Target** grades.
-2. **Examinations:** Managing the formal registration and recording of **Official Exam Results** once they are released by the awarding bodies.
-
-The consistent effort of maintaining accurate student data—both personal details and enrollment—combined with the regular input of internal and external grades, empowers the school to:
-
-*   **Deliver high-quality Progress Reports:** Generate automated and professional reports for students and parents.
-*   **Track Individual Performance:** Analyze the current status and progress of every student in real-time.
-*   **Monitor Subject & Cohort Trends:** Evaluate the evolution and academic health of specific subjects, year groups, or key stages.
-*   **Measure Value-Added:** Analyze the progress made by students relative to their starting points and benchmark the school's performance against national or program averages.
-
----
-
-### Case Study 1: Standard GCE AS & A-Level Pathway
+### GCE AS & A-Level
 *“Integrating linear subject tracking with a completed AS-Level and independent research certification.”*
 
-#### **Profile Overview**
-This case represents a high-standard academic profile in the UK curriculum. It demonstrates how the application manages a core set of **Linear A-Levels** (concluding in Year 13) alongside specific qualifications that follow different timelines.
-
-*   **Core Academic Load:** 3 Linear GCE A-Levels (Physics, Maths, Computer Science) tracking progress over a 24-month cycle.
-*   **Completed AS Level:** 1 Standalone GCE AS-Level (Further Maths) concluded and achieved at the end of Year 12.
-*   **Independent Research:** 1 Extended Project Qualification (EPQ) used to enhance the student's academic profile for university entry.
-*   **Native Language Accreditation:** 1 GCE A-Level (Spanish) managed as "Exam Only" to certify existing language proficiency without instructional overhead.
-
 #### **Application Enrollment View**
-
 
 | Subject title | Enrolled in |
 | :--- | :--- |
@@ -187,25 +163,15 @@ This case represents a high-standard academic profile in the UK curriculum. It d
 
 #### **Key Considerations**
 
-!!! info "Linear Subject Tracking"
-    For linear subjects (`7408`, `9MA0`, `H446`), all grades recorded in the application (**Internal and Expected**) refer to the **entire qualification**. Since there is only one final exam, the system compares all grades against each other and against a **single Final Exam Grade**. This allows the application to track the student's overall progress and calculate the **Value-Added** provided by the school.
+!!! info "Linear Subject"
+    For linear subjects all grades recorded in the application (**Internal and Expected**) refer to the **entire qualification**. Since there is only one final exam, the system compares all grades against each other and against a **single Final Exam Grade**. This allows the application to track the student's overall progress and calculate the **Value-Added** provided by the school.
 
 ---
 
-### Case Study 2: Advanced Multi-Board International Pathway
-*“A comprehensive summary of international curricula: combining CIE, OxfordAQA, and Pearson Edexcel with accelerated and non-standard assessment routes.”*
-
-#### **Profile Overview**
-This case serves as a master reference for international centers. It demonstrates how the application unifies diverse assessment models (Staged, Modular, and Linear) into a single student record, including early certifications and independent research.
-
-*   **Mixed Board Ecosystem:** Seamless integration of Cambridge (CIE), OxfordAQA, and Pearson Edexcel.
-*   **Accelerated Completion:** 1 IAL (**Spanish**) fully completed in Year 12, providing early A-level achievement.
-*   **Student-Choice Linear Sitting:** 1 A-Level (**IT 9626**) where both AS and A2 components are taken in Year 13.
-*   **External Accreditation:** 1 A-Level (**Law 9084**) managed as an "Exam Only" entry for independent study.
-*   **Research Certification:** 1 Cambridge International Project Qualification (**IPQ**) completed in Year 13.
+### International AS & A levels
+*“A comprehensive summary of international curricula: combining CIE, OxfordAQA, and Pearson Edexcel.”*
 
 #### **Application Enrollment View**
-
 
 | Subject title | Enrolled in |
 | :--- | :--- |
@@ -216,10 +182,6 @@ This case serves as a master reference for international centers. It demonstrate
 | OxfordAQA International AS level in Economics (9640) | 2024/25 – Year 12 |
 | Pearson Edexcel International A level in Mathematics (YMA01) | 2025/26 – Year 13 |
 | Pearson Edexcel International AS level in Mathematics (XMA01) | 2024/25 – Year 12 |
-| **Pearson Edexcel International A level in Spanish (YSP01)** | **2024/25 – Year 12** |
-| **Pearson Edexcel International AS level in Spanish (XSP01)** | **2024/25 – Year 12** |
-| **Cambridge International GCE A level in Information Technology (9626)** | **2025/26 – Year 13** |
-| **Cambridge International GCE AS level in Information Technology (9626)** | **2025/26 – Year 13** |
 | Pearson Edexcel International AS level in Further Mathematics (XFM01) | 2024/25 – Year 12 |
 | Cambridge International GCE A level in Law (9084) | **Exam only** |
 | Cambridge International GCE AS level in Law (9084) | **Exam only** |
@@ -229,30 +191,14 @@ This case serves as a master reference for international centers. It demonstrate
 
 #### **Key Considerations**
 
-!!! info "Mixed Assessment Logic"
-    The application dynamically adapts to the specific board logic:
-    *   **Staged (CIE/OxfordAQA):** Records the transition from Year 12 AS to Year 13 A-Level as linked exam events.
-    *   **Accelerated (Spanish):** Archives final A-Level results achieved in Year 12 for ongoing reporting in Year 13.
-    *   **Student-Choice Linear (IT):** Benchmarks both AS and A2 components against a single target in Year 13.
+!!! info "Staged Subjects"
 
-!!! info "Exam Only & Independent Projects"
-    For **Law (9084)** and the **IPQ**, the system focuses on final outcome reporting. While the IPQ is a taught component, Law is excluded from internal Value-Added calculations to reflect its status as an external accreditation.
 
+    
 ---
 
-### Case Study 3: International Baccalaureate (IB) Diploma Pathway
+### International Baccalaureate (IB) Diploma
 *“Recording a full IB Diploma profile using numerical grading (1-7), HL/SL distinctions, and Core (A–E) components.”*
-
-#### **Profile Overview**
-This case represents the IB Diploma route. It demonstrates the system's ability to host numerical assessment scales and the specific grading requirements of the IB curriculum over the two-year Diploma Programme (DP).
-
-*   **IB Diploma Structure:** 3 subjects at **Higher Level (HL)** and 3 subjects at **Standard Level (SL)**.
-*   **Numerical Grading:** Attainment and Predicted grades are recorded on the **1–7 scale**.
-*   **The Core:** Integration of the **Extended Essay (EE)** and **Theory of Knowledge (TOK)** (A–E scale), alongside the mandatory **CAS** requirement.
-*   **Linear Assessment:** All internal data is tracked against a final exam series at the end of Grade 12.
-
-#### **Application Enrollment View**
-
 
 | Subject title | Enrolled in |
 | :--- | :--- |
@@ -269,14 +215,7 @@ This case represents the IB Diploma route. It demonstrates the system's ability 
 | IB DP Extended Essay (EE) | 2025/26 – Grade 12 <br> 2024/25 – Grade 11 |
 | IB DP Creativity, Activity, Service (CAS) | 2025/26 – Grade 12 <br> 2024/25 – Grade 11 |
 
-#### **Key Considerations**
-
-!!! info "Numerical Grade Tracking"
-    For IB subjects, the **Grades Analysis** module enables a **1–7 numerical scale**. The system tracks the student's trajectory by comparing internal **Attainment** and **Predicted** grades against the final **Exam Grade** achieved at the end of the two-year program (Grade 12).
-
-!!! info "Managing Mixed Scales & CAS Completion"
-    The application allows for the coexistence of different grading systems. While subjects use the **1–7 scale** and the Core (TOK/EE) uses **A–E**, the **CAS** component is tracked as a mandatory **completion requirement** (Pass/Fail) rather than a graded academic subject.
-
+<!-- 
 ---
 
 ### Case Study 4: Multi-Board IGCSE Integration & Science Rationalization
@@ -355,3 +294,42 @@ This case demonstrates the application's ability to handle the "Triple Science" 
 
 !!! info "Advanced Research Foundation"
     The **HPQ** in this profile is recorded as a skills-based qualification. This allows the center to track the development of independent study habits early, serving as a critical data point for predicting success in Year 12/13 research-heavy subjects.
+
+---
+
+### Case Study 6: GCE O-Level Regional Pathway (Legacy & Commonwealth)
+*“Managing traditional GCE Ordinary Level (O-Level) qualifications: focusing on alphabetic grading (A*–E) and terminal assessment models in regional markets.”*
+
+#### **Profile Overview**
+This case study demonstrates the application's compatibility with the GCE O-Level system, widely used in Singapore, Pakistan, and Mauritius. It highlights the system's ability to process legacy alphabetic grading while maintaining the same tracking rigor as modern IGCSEs.
+
+*   **Traditional Rigor:** A 7-subject O-Level portfolio focused on academic core disciplines.
+*   **Alphabetic Grading (A*–E):** All subjects utilize the standard GCE O-Level scale, requiring the system to map results against international benchmarks.
+*   **Regional Specialization:** Inclusion of Islamic Studies (2068) and Sociology (2251), common in South Asian and Middle Eastern centers.
+*   **Single-Board Loyalty:** A 100% Cambridge (CIE) profile, typical of centers operating under National Equivalency requirements.
+
+#### **Application Enrollment View**
+
+
+| Subject title | Enrolled in |
+| :--- | :--- |
+| **GCE O Levels** | |
+| Cambridge O Level Mathematics (4024) | 2025/26 – Year 11 <br> 2024/25 – Year 10 |
+| Cambridge O Level English Language (1123) | 2025/26 – Year 11 <br> 2024/25 – Year 10 |
+| Cambridge O Level Physics (5054) | 2025/26 – Year 11 <br> 2024/25 – Year 10 |
+| Cambridge O Level Chemistry (5070) | 2025/26 – Year 11 <br> 2024/25 – Year 10 |
+| Cambridge O Level Sociology (2251) | 2025/26 – Year 11 <br> 2024/25 – Year 10 |
+| Cambridge O Level Islamic Studies (2068) | 2025/26 – Year 11 <br> 2024/25 – Year 10 |
+| Cambridge O Level Economics (2281) | 2025/26 – Year 11 <br> 2024/25 – Year 10 |
+
+#### **Key Considerations**
+
+!!! info "Legacy Grading Logic"
+    Unlike IGCSEs that often use the 9-1 scale, **GCE O Levels** consistently use the **A* to E** scale. The application ensures that internal targets and predicted grades are restricted to this alphabetic format to match the official statement of results issued by Cambridge.
+
+!!! info "Terminal Assessment Focus"
+    O-Level subjects are strictly linear. The application records all internal mock results as direct indicators of the final terminal exam performance, providing specific **Value-Added** metrics based on the historical difficulty of O-Level grade thresholds compared to IGCSE.
+
+!!! info "Equivalency Mapping"
+    For students moving from O-Levels to IB or A-Levels, the system provides a background mapping (e.g., Grade B = Level 6) to allow for seamless transition tracking within the student’s lifelong academic record.
+-->
