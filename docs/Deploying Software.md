@@ -2,5 +2,5 @@
 
 ## Git Flow Context
 
-![Setup Students](../assets/images/GitFlow.png){ width="700" }
+![Image title](assets/images/test.png){ width="400" }
 
