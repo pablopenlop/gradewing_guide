@@ -147,8 +147,6 @@ Click the `Group tags` button to create the specific tags required for your scho
 ### GCE AS & A-Level
 *“Integrating linear subject tracking with a completed AS-Level and independent research certification.”*
 
-#### **Application Enrollment View**
-
 | Subject title | Enrolled in |
 | :--- | :--- |
 | **GCE AS & A levels** | |
@@ -161,17 +159,13 @@ Click the `Group tags` button to create the specific tags required for your scho
 | **Level 3 Extended Project Qualifications** | |
 | Pearson Edexcel Level 3 Extended Project Qualification | 2025/26 – Year 13 |
 
-#### **Key Considerations**
-
-!!! info "Linear Subject"
+!!! info "Linear Subjects"
     For linear subjects all grades recorded in the application (**Internal and Expected**) refer to the **entire qualification**. Since there is only one final exam, the system compares all grades against each other and against a **single Final Exam Grade**. This allows the application to track the student's overall progress and calculate the **Value-Added** provided by the school.
 
 ---
 
 ### International AS & A levels
 *“A comprehensive summary of international curricula: combining CIE, OxfordAQA, and Pearson Edexcel.”*
-
-#### **Application Enrollment View**
 
 | Subject title | Enrolled in |
 | :--- | :--- |
@@ -189,10 +183,9 @@ Click the `Group tags` button to create the specific tags required for your scho
 | **International Project Qualifications** | |
 | Cambridge International Project Qualification | 2025/26 – Year 13 |
 
-#### **Key Considerations**
 
-!!! info "Staged Subjects"
-
+!!! info "Staged linear & modular Subjects"
+Staged Linear and Modular systems both utilize two distinct qualification grades —the AS and the A Level— allowing the application to track progress and calculate Value-Added across both milestones.
 
     
 ---
@@ -204,11 +197,9 @@ Click the `Group tags` button to create the specific tags required for your scho
 | :--- | :--- |
 | **IB Diploma Programme** | |
 | IB DP English A: Lang & Lit HL (Group 1) | 2025/26 – Grade 12 <br> 2024/25 – Grade 11 |
-| IB DP Spanish B SL (Group 2) | 2025/26 – Grade 12 <br> 2024/25 – Grade 11 |
 | IB DP Geography HL (Group 3) | 2025/26 – Grade 12 <br> 2024/25 – Grade 11 |
 | IB DP Biology SL (Group 4) | 2025/26 – Grade 12 <br> 2024/25 – Grade 11 |
 | IB DP Mathematics: Analysis and Approaches HL (Group 5) | 2025/26 – Grade 12 <br> 2024/25 – Grade 11 |
-| IB DP Visual Arts SL (Group 6) | 2025/26 – Grade 12 <br> 2024/25 – Grade 11 |
 | | |
 | **IB Core Components** | |
 | IB DP Theory of Knowledge (TOK) | 2025/26 – Grade 12 <br> 2024/25 – Grade 11 |
