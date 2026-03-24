@@ -2,5 +2,5 @@
 
 ## Git Flow Context
 
-![Image title](assets/images/test.png){ width="400" }
+![Image title](assets/images/GitFlow.png){ width="700" }
 
