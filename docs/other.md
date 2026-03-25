@@ -6,13 +6,13 @@
 ![Image title](assets/images/GitFlow.png){ width="700" }
 
 
-### **Main Branch**
+#### **Main Branch**
 Known as **`main`**, it is a permanent branch and is only updated whenever a new software version is promoted to Production from the **Release** or **Hotfix** branch. Each new version is always associated with a **Tag** corresponding to a **Docker Image**.
 
-### **Develop Branch**
+#### **Develop Branch**
 Known as **`dev`**, it is a permanent branch where continuous work is performed. Commits are made as needed until a new version of the Gradewing software is ready for deployment to **Stage**.
 
-### **Release Branch**
+#### **Release Branch**
 This is a temporary branch called **`Release`**. Commits are **never** made directly to this branch.
 
 *   It is created via "**New Branch**" in GitHub, using **`dev`** as the source branch.
@@ -22,7 +22,7 @@ This is a temporary branch called **`Release`**. Commits are **never** made dire
 *   Next, a **merge** is performed within the Hetzner terminal from the **`Release`** branch into **`main`**. At this point, the three branches are leveled (excluding any commits made to `dev` after the `Release` branch was created).
 *   Finally, the temporary **`Release`** branch is deleted from both Hetzner and GitHub, leaving only the two permanent branches: **`dev`** and **`main`**.
 
-### **Hotfix Branch**
+#### **Hotfix Branch**
 This is a temporary and exceptional branch called **`Hotfix`**. Usually, only a single commit is made on this branch to push an urgent fix to Production.
 
 *   It is created via "**New Branch**" in GitHub, using **`main`** as the source branch.
@@ -35,12 +35,12 @@ This is a temporary and exceptional branch called **`Hotfix`**. Usually, only a 
 
 ## Stage Deployment of a **New Software Version**
 
-### 1. Creation of a new Release branch on GitHub
+#### 1. Creation of a new Release branch on GitHub
 *   **Create new Branch**
 *   **New Branch name:** Release
 *   **Source:** dev
 
-### 2. Connection to Hetzner and positioning in Gradewing from the terminal
+#### 2. Connection to Hetzner and positioning in Gradewing from the terminal
 
 First, log in via SSH to the server:
 ```bash
@@ -55,7 +55,7 @@ cd gradewing
 
 !!! note "Once you are positioned at root@gradewing-server:~/gradewing/gradewing#, you can run the necessary commands to deploy the software from GitHub"
 
-### 3. Localizing the software from the Release branch on the Hetzner server
+#### 3. Localizing the software from the Release branch on the Hetzner server
 
 ```bash
 git fetch origin
@@ -70,13 +70,13 @@ git reset --hard HEAD
 git pull origin Release
 ```
 
-### 4. Execution permissions
+#### 4. Execution permissions
 
 ```bash
 chmod +x ./run/*.sh
 ```
 
-### 5. Deployment to Stage of the new branch software already localized in Hetzner (keeping current data)
+#### 5. Deployment to Stage of the new branch software already localized in Hetzner (keeping current data)
 
 ```bash
 ./run/03-start_staging.sh
