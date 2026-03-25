@@ -99,7 +99,7 @@ chmod +x ./run/*.sh
 
 !!! note "By executing a single command, we verify the deployment in Stage (see Appendix I)."
 ```bash
-check-stage																															# -- VERIFICATION
+check-stage				# -- VERIFICATION
 ```
 
 ## Production Deployment of a **New Software Version** certified in Stage
@@ -142,7 +142,7 @@ chmod +x ./run/*.sh
 !!! note "With a single command, we verify the deployment in Production (see Appendix II)."
 
 ```bash
-check-prod
+check-prod				# -- VERIFICATION
 ```
 
 #### 6. Merge into **main** from the **Release** branch, and deletion of said branch in Hetzner and GitHub
@@ -160,16 +160,16 @@ git pull origin main
 git merge Release
 ```
 ```bash
-git diff main..origin/Release
+git diff main..origin/Release			# -- VERIFICATION
 ```
 ```bash
 git push origin main
 ```
 ```bash
-git diff origin/main..origin/Release
+git diff origin/main..origin/Release			# -- VERIFICATION
 ```
 ```bash
-git log main..origin/dev --oneline
+git log main..origin/dev --oneline			# -- VERIFICATION
 ```
 ```bash
 git branch -d Release
@@ -181,7 +181,7 @@ git push origin --delete Release
 #### 7. Verification of branch status in Hetzner and GitHub
 
 ```bash
-git branch -a
+git branch -a				# -- VERIFICATION
 ```
 
 ## Production Deployment of a **Hotfix**
