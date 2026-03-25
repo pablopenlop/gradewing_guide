@@ -52,7 +52,38 @@ cd gradewing
 ```bash
 cd gradewing
 ```
-    !!! note "Once you are positioned at root@gradewing-server:~/gradewing/gradewing#, you can run the necessary commands to deploy the software from GitHub"
+
+!!! note "Once you are positioned at root@gradewing-server:~/gradewing/gradewing#, you can run the necessary commands to deploy the software from GitHub"
+
+### 3. Localizing the software from the Release branch on the Hetzner server
+
+```bash
+git fetch origin
+```
+```bash
+git checkout Release
+```
+```bash
+git reset --hard HEAD
+```
+```bash
+git pull origin Release
+```
+
+### 4. Execution permissions
+
+```bash
+chmod +x ./run/*.sh
+```
+
+### 5. Deployment to Stage of the new branch software already localized in Hetzner (keeping current data)
+
+```bash
+./run/03-start_staging.sh
+```
+
+
+
 
 
 
