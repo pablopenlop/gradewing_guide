@@ -386,6 +386,16 @@ Run the following command in your Hetzner terminal to add the alias to your `~/.
 ```bash
 echo "alias check-stage='echo \"\n🔨 --- 1. BUILD STATUS & IMAGE ID ---\" && docker images | grep staging && echo \"\n🧹 --- 2. DANGLING IMAGES (Build Junk) ---\" && docker images -f \"dangling=true\" || echo \"No junk images\" && echo \"\n📊 --- 3. STAGING RESOURCES ---\" && docker stats --no-stream | grep staging && echo \"\n🌐 --- 4. STAGING NETWORK ---\" && docker network ls | grep staging && echo \"\n🧼 --- 5. STAGING DB & REDIS ---\" && docker exec GradewingDjango_staging python manage.py showmigrations | grep \"\[ \]\" || echo \"All migrated in Stage\" && docker exec GradewingDjango_staging python manage.py shell -c \"from django.core.cache import cache; cache.set('\''test'\'', '\''ok'\'', 5); print('\''Redis Stage Status:'\'', cache.get('\''test'\''))\" && echo \"\n⚠️ --- 6. BUILD & RUN LOGS ---\" && docker compose -f docker-compose.staging.yml logs --tail=50 | grep -Ei \"error|critical|fail\" || echo \"No errors in Staging\"'" >> ~/.bashrc && source ~/.bashrc
 ```
+## Appendix II: Command to create the `check-prod` alias
+
+To ensure the Production environment is running correctly, this custom alias performs a comprehensive check of versions, resources, storage, and database health in a single command.
+
+#### Installation
+
+Run the following command in your Hetzner terminal to add the alias to your `~/.bashrc` and activate it:
+
+```bash
+echo "alias check-prod='echo \"\n🚀 --- 1. STATUS & VERSIONS ---\" && docker ps --filter \"name=production\" --format \"table {{.Names}}\t{{.Status}}\t{{.Image}}\" && echo \"\n📦 --- 2. DOCKER IMAGES (v1.1.4 check) ---\" && docker images | grep -E \"REPOSITORY|v1.1.4|staging\" && echo \"\n📊 --- 3. RESOURCE USAGE (Stats) ---\" && docker stats --no-stream && echo \"\n🌐 --- 4. NETWORK ISOLATION ---\" && docker network ls | grep gradewing && echo \"\n💾 --- 5. DISK SPACE (Server) ---\" && df -h / && echo \"\n📂 --- 6. DOCKER SYSTEM DF ---\" && docker system df && echo \"\n🧼 --- 7. REDIS & MIGRATIONS ---\" && docker exec GradewingDjango_production python manage.py showmigrations | grep \"\[ \]\" || echo \"All migrated\" && docker exec GradewingDjango_production python manage.py shell -c \"from django.core.cache import cache; cache.set('\''test'\'', '\''ok'\'', 5); print('\''Redis Status:'\'', cache.get('\''test'\''))\" && echo \"\n⚠️ --- 8. ERRORS (Last 100 lines) ---\" && docker compose -f docker-compose.production.yml logs --tail=100 | grep -Ei \"error|critical|fail\" || echo \"No critical errors found\"'" >> ~/.bashrc && source ~/.bashrc
 
 
 
