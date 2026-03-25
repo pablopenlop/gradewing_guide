@@ -95,7 +95,7 @@ chmod +x ./run/*.sh
 ./run/21-restore_to_staging.sh
 ```
 
-#### 7. Stage Environment Verification
+#### 6. Stage Environment Verification
 
 !!! note "By executing a single command, we verify the deployment in Stage (see Appendix I)."
 ```bash
@@ -184,7 +184,154 @@ git push origin --delete Release
 git branch -a
 ```
 
+## Production Deployment of a **Hotfix**
 
+#### 1. Creation of a new Release branch on GitHub
+*   **Create new Branch**
+*   **New Branch name:** Hotfix
+*   **Source:** main
+
+#### 2. Connection to Hetzner and positioning in Gradewing from the terminal
+
+First, log in via SSH to the server:
+```bash
+ssh root@46.62.132.133
+```
+```bash
+cd gradewing
+```
+```bash
+cd gradewing
+```
+
+!!! note "Once you are positioned at root@gradewing-server:~/gradewing/gradewing#, you can run the necessary commands to deploy the software from GitHub"
+
+#### 3. Localizing the software from the Release branch on the Hetzner server
+
+```bash
+git fetch origin
+```
+```bash
+git checkout Hotfix
+```
+```bash
+git reset --hard HEAD
+```
+```bash
+git pull origin Hotfix
+```
+
+#### 4. Execution permissions
+
+```bash
+chmod +x ./run/*.sh
+```
+
+#### 5.1 Deployment to Stage of the new branch software already localized in Hetzner (keeping current data)
+
+```bash
+./run/03-start_staging.sh
+```
+
+#### 5.2 Deployment to Stage by deleting current data and, optionally, loading Production data
+
+```bash
+./run/04-stop_staging.sh
+```
+```bash
+./run/03-start_staging.sh
+```
+!!! tip Although** improbable, it might be advisable to replicate **Production data** to avoid starting with an empty environment."
+
+```bash
+./run/21-restore_to_staging.sh
+```
+
+#### 6. Stage Environment Verification
+
+!!! note "By executing a single command, we verify the deployment in Stage (see Appendix I)."
+```bash
+check-stage
+```
+
+
+#### 7. Docker Image Tagging (Image: `gradewing-web:vn.n`) and software on GitHub (Tag: `vn.n`)
+
+```bash
+./run/10-tag_web.sh
+```
+
+#### 8. Deployment of the tagged Docker image to Production (without Build)
+
+```bash
+./run/05-start_production.sh
+```
+
+#### 9. Production Environment Verification
+
+!!! note "With a single command, we verify the deployment in Production (see Appendix II)."
+
+```bash
+check-prod
+```
+
+#### 10. Merge into **main** and **dev** from the **Hotfix** branch, and deletion of said branch in Hetzner and GitHub
+
+```bash
+git fetch origin
+```
+```bash
+git checkout main
+```
+```bash
+git pull origin main
+```
+```bash
+git merge Hotfix
+```
+```bash
+git diff main..origin/Hotfix
+```
+```bash
+git push origin main
+```
+```bash
+git diff origin/main..origin/Hotfix
+```
+
+```bash
+git checkout dev
+```
+```bash
+git pull origin dev
+```
+```bash
+git merge Hotfix
+```
+```bash
+git diff dev..origin/Hotfix
+```
+```bash
+git push origin dev
+```
+```bash
+git diff origin/dev..origin/Hotfix
+
+```bash
+git log main..origin/dev --oneline
+```
+```bash
+git branch -d Hotfix
+```
+```bash
+git push origin --delete Hotfix
+```
+
+#### 11. Verification of branch status in Hetzner and GitHub
+
+```bash
+git branch -a
+```
 
 
 
