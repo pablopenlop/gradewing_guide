@@ -1,9 +1,9 @@
 # Deploying Software
 
-## Git Flow: Branching and Deployment Strategy
+## GitFlow: Branching and Deployment Strategy
 
 
-![Image title](assets/images/GitFlow.png){ width="700" }
+![Image title](assets/images/GitFlow.png){ width="670" }
 
 
 #### **Main Branch**
