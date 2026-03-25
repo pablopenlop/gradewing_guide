@@ -76,11 +76,37 @@ git pull origin Release
 chmod +x ./run/*.sh
 ```
 
-#### 5. Deployment to Stage of the new branch software already localized in Hetzner (keeping current data)
+#### 5.1 Deployment to Stage of the new branch software already localized in Hetzner (keeping current data)
 
 ```bash
 ./run/03-start_staging.sh
 ```
+
+#### 5.2 Deployment to Stage by deleting current data and, optionally, loading Production data
+
+```bash
+./run/04-stop_staging.sh
+```
+```bash
+./run/03-start_staging.sh
+```
+!!! note "Depending on the magnitude of the changes made, it might be advisable to replicate the Production data so as not to start with an empty environment."
+```bash
+./run/21-restore_to_staging.sh
+```
+
+#### 7. Stage Environment Verification
+
+!!! note "By executing a single command, we verify the deployment in Stage (see Appendix I)."
+```bash
+check-stage
+```
+
+
+
+
+
+
 
 
 
