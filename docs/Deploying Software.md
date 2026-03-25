@@ -52,7 +52,7 @@ cd gradewing
 ```bash
 cd gradewing
 ```
-!!! note "Once you are positioned at root@gradewing-server:~/gradewing/gradewing#, you can run the necessary commands to deploy the software from GitHub"
+    !!! note "Once you are positioned at root@gradewing-server:~/gradewing/gradewing#, you can run the necessary commands to deploy the software from GitHub"
 
 
 
