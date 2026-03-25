@@ -208,7 +208,7 @@ cd gradewing
 
 !!! note "Once you are positioned at root@gradewing-server:~/gradewing/gradewing#, you can run the necessary commands to deploy the software from GitHub"
 
-#### 3. Localizing the software from the Release branch on the Hetzner server
+#### 3. Localizing the software from the Hotfix branch on the Hetzner server
 
 ```bash
 git fetch origin
@@ -333,6 +333,12 @@ git push origin --delete Hotfix
 ```bash
 git branch -a
 ```
+
+## Production Disaster Recovery: Deploying a previous software version while preserving data
+
+> [!CAUTION]
+> This procedure must **ONLY** be used in the event of a critical failure in the current Production version. The objective is to perform a **Rollback** to a stable previous version while strictly **preserving the existing database**.
+
 
 
 
