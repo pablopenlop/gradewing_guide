@@ -336,9 +336,10 @@ git branch -a
 
 ## Production Disaster Recovery: Deploying a previous software version while preserving data
 
-> [!CAUTION]
-> This procedure must **ONLY** be used in the event of a critical failure in the current Production version. The objective is to perform a **Rollback** to a stable previous version while strictly **preserving the existing database**.
+!!! danger "Critical Disaster Recovery"
+    This procedure must **ONLY** be used in the event of a critical failure in the current Production version. The objective is to perform a **Rollback** to a stable previous version while strictly **preserving the existing database**.
 
+!!! tip "Before starting, identify the version number (`vn.n`) of the last stable image that was working correctly."
 
 
 
