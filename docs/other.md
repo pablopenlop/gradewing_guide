@@ -3,8 +3,7 @@
 ## GitFlow: Branching and Deployment Strategy
 
 
-![Image title](assets/images/GitFlow.png){ width="650" }
-
+![Image title](assets/images/GitFlow.png){ width="570" }
 #### **Main Branch**
 Known as **`main`**, it is a permanent branch and is only updated whenever a new software version is promoted to Production from the **Release** or **Hotfix** branch. Each new version is always associated with a **Tag** corresponding to a **Docker Image**.
 
