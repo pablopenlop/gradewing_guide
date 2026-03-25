@@ -46,3 +46,12 @@ First, log in via SSH to the server:
 ```bash
 ssh root@46.62.132.133
 
+```bash
+cd gradewing
+
+```bash
+cd gradewing
+
+
+
+
