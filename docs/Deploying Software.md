@@ -7,7 +7,7 @@
 
 
 ### **Main Branch**
-Known as **`main`**, it is a permanent branch and is only updated whenever a new software version is promoted to Production from the **Release** branch. Each new version is always associated with a **Tag** corresponding to a **Docker Image**.
+Known as **`main`**, it is a permanent branch and is only updated whenever a new software version is promoted to Production from the **Release** or **Hotfix** branch. Each new version is always associated with a **Tag** corresponding to a **Docker Image**.
 
 ### **Develop Branch**
 Known as **`dev`**, it is a permanent branch where continuous work is performed. Commits are made as needed until a new version of the Gradewing software is ready for deployment to **Stage**.
@@ -33,17 +33,16 @@ This is a temporary and exceptional branch called **`Hotfix`**. Usually, only a 
 *   Finally, the temporary **`Hotfix`** branch is deleted from both Hetzner and GitHub, leaving only the two permanent branches: **`dev`** and **`main`**.
 
 
+## Stage Deployment of a **New Software Version**
 
+### 1. Creation of a new Release branch on GitHub
+*   **Create new Branch**
+*   **New Branch name:** Release
+*   **Source:** dev
 
+### 2. Connection to Hetzner and positioning in Gradewing from the terminal
 
-
-
-
-```text
-{test}
-
-* git fetch origin
-* git checkout Release
-* git reset --hard HEAD
-* git pull origin Release00" }
+First, log in via SSH to the server:
+```bash
+ssh root@46.62.132.133
 
