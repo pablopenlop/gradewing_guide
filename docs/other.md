@@ -99,7 +99,7 @@ chmod +x ./run/*.sh
 
 !!! note "By executing a single command, we verify the deployment in Stage (see Appendix I)."
 ```bash
-check-stage
+check-stage																															# -- VERIFICATION
 ```
 
 ## Production Deployment of a **New Software Version** certified in Stage
