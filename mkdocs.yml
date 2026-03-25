@@ -27,7 +27,7 @@ theme:
 
 nav:
   - Gradewing: index.md
-  - Technical guide: deploy-software.md
+  - Technical guide: dep-sof.md
   - Data Manager's Guide:
       - Getting Started: data-manager/getting-started.md
       - The Operational Roadmap: data-manager/operational-roadmap.md
