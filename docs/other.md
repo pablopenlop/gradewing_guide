@@ -191,6 +191,8 @@ git branch -a
 *   **New Branch name:** Hotfix
 *   **Source:** main
 
+!!! warning "The software is modified within the **Hotfix** branch on GitHub, and the corresponding commit is made so that the changes can be later pulled into the Hetzner server."
+
 #### 2. Connection to Hetzner and positioning in Gradewing from the terminal
 
 First, log in via SSH to the server:
@@ -241,7 +243,7 @@ chmod +x ./run/*.sh
 ```bash
 ./run/03-start_staging.sh
 ```
-!!! tip Although** improbable, it might be advisable to replicate **Production data** to avoid starting with an empty environment."
+!!! tip "Although** improbable, it might be advisable to replicate **Production data** to avoid starting with an empty environment."
 
 ```bash
 ./run/21-restore_to_staging.sh
@@ -298,7 +300,6 @@ git push origin main
 ```bash
 git diff origin/main..origin/Hotfix
 ```
-
 ```bash
 git checkout dev
 ```
@@ -316,7 +317,7 @@ git push origin dev
 ```
 ```bash
 git diff origin/dev..origin/Hotfix
-
+```
 ```bash
 git log main..origin/dev --oneline
 ```
