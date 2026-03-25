@@ -45,12 +45,15 @@ This is a temporary and exceptional branch called **`Hotfix`**. Usually, only a 
 First, log in via SSH to the server:
 ```bash
 ssh root@46.62.132.133
-
+```
 ```bash
 cd gradewing
-
+```
 ```bash
 cd gradewing
+```
+!!! note "Once you are positioned at root@gradewing-server:~/gradewing/gradewing#, you can run the necessary commands to deploy the software from GitHub"
+
 
 
 
