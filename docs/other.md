@@ -253,7 +253,7 @@ chmod +x ./run/*.sh
 
 !!! note "By executing a single command, we verify the deployment in Stage (see Appendix I)."
 ```bash
-check-stage
+check-stage				# -- VERIFICATION
 ```
 
 
@@ -274,7 +274,7 @@ check-stage
 !!! note "With a single command, we verify the deployment in Production (see Appendix II)."
 
 ```bash
-check-prod
+check-prod				# -- VERIFICATION
 ```
 
 #### 10. Merge into **main** and **dev** from the **Hotfix** branch, and deletion of said branch in Hetzner and GitHub
@@ -292,13 +292,13 @@ git pull origin main
 git merge Hotfix
 ```
 ```bash
-git diff main..origin/Hotfix
+git diff main..origin/Hotfix			# -- VERIFICATION
 ```
 ```bash
 git push origin main
 ```
 ```bash
-git diff origin/main..origin/Hotfix
+git diff origin/main..origin/Hotfix			# -- VERIFICATION
 ```
 ```bash
 git checkout dev
@@ -310,16 +310,16 @@ git pull origin dev
 git merge Hotfix
 ```
 ```bash
-git diff dev..origin/Hotfix
+git diff dev..origin/Hotfix				# -- VERIFICATION
 ```
 ```bash
 git push origin dev
 ```
 ```bash
-git diff origin/dev..origin/Hotfix
+git diff origin/dev..origin/Hotfix			# -- VERIFICATION
 ```
 ```bash
-git log main..origin/dev --oneline
+git log main..origin/dev --oneline			# -- VERIFICATION
 ```
 ```bash
 git branch -d Hotfix
@@ -331,7 +331,7 @@ git push origin --delete Hotfix
 #### 11. Verification of branch status in Hetzner and GitHub
 
 ```bash
-git branch -a
+git branch -a				# -- VERIFICATION
 ```
 
 ## Production Disaster Recovery: Deploying a previous software version while preserving data
@@ -364,7 +364,7 @@ cd gradewing
 ./run/05-start_production.sh
 ```
 ```bash
-docker ps --format "table {{.Names}}\t{{.Image}}\t{{.Status}}"
+docker ps --format "table {{.Names}}\t{{.Image}}\t{{.Status}}"		# -- VERIFICATION
 ```
 
 #### 2. Production Environment Verification
@@ -372,7 +372,7 @@ docker ps --format "table {{.Names}}\t{{.Image}}\t{{.Status}}"
 !!! note "With a single command, we verify the deployment in Production (see Appendix II)."
 
 ```bash
-check-prod
+check-prod				# -- VERIFICATION
 ```
 
 ## Appendix I: Command to create the `check-stage` alias
