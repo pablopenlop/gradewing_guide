@@ -90,7 +90,7 @@ chmod +x ./run/*.sh
 ```bash
 ./run/03-start_staging.sh
 ```
-!!! note "Depending on the magnitude of the changes made, it might be advisable to replicate the Production data so as not to start with an empty environment."
+!!! tip "Depending on the magnitude of the changes made, it might be advisable to replicate the Production data so as not to start with an empty environment."
 ```bash
 ./run/21-restore_to_staging.sh
 ```
@@ -102,10 +102,87 @@ chmod +x ./run/*.sh
 check-stage
 ```
 
+## Production Deployment of a **New Software Version** certified in Stage
 
 
+#### 1. Connection to Hetzner and positioning in Gradewing from the terminal
 
+First, log in via SSH to the server:
+```bash
+ssh root@46.62.132.133
+```
+```bash
+cd gradewing
+```
+```bash
+cd gradewing
+```
+!!! note "Once you are positioned at root@gradewing-server:~/gradewing/gradewing#, you can run the necessary commands to deploy the software from GitHub"
 
+#### 2. Execution permissions
+
+```bash
+chmod +x ./run/*.sh
+```
+
+#### 3. Docker Image Tagging (Image: `gradewing-web:vn.n`) and software on GitHub (Tag: `vn.n`)
+
+```bash
+./run/10-tag_web.sh
+```
+
+#### 4. Deployment of the tagged Docker image to Production (without Build)
+
+```bash
+./run/05-start_production.sh
+```
+
+#### 5. Production Environment Verification
+
+!!! note "With a single command, we verify the deployment in Production (see Appendix II)."
+
+```bash
+check-prod
+```
+
+#### 6. Merge into **main** from the **Release** branch, and deletion of said branch in Hetzner and GitHub
+
+```bash
+git fetch origin
+```
+```bash
+git checkout main
+```
+```bash
+git pull origin main
+```
+```bash
+git merge Release
+```
+```bash
+git diff main..origin/Release
+```
+```bash
+git push origin main
+```
+```bash
+git diff origin/main..origin/Release
+```
+```bash
+git log main..origin/dev --oneline
+```
+```bash
+git branch -d Release
+```
+```bash
+git push origin --delete Release
+```
+
+#### 7. Verification of branch status in Hetzner and GitHub
+
+```bash
+git branch -a
+```
 
 
 
