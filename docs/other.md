@@ -386,7 +386,7 @@ cd gradewing
 
 !!! note "Once you are positioned at root@gradewing-server:~/gradewing/gradewing#, you can run the necessary commands to deploy a stable previousversion."
 
-#### 1. Deploying an older Docker Image
+#### 2. Deploying an older Docker Image
 
 !!! tip "This script identifies the last five 'gradewing-web' images. Please choose the one you intend to use for the production deployment (normally the penultimate one)."
 
@@ -403,7 +403,7 @@ docker images --format "{{.Tag}}\t{{.CreatedSince}}" gradewing-web | grep "^v"  
 docker ps --format "table {{.Names}}\t{{.Image}}\t{{.Status}}"		# -- VERIFICATION
 ```
 
-#### 2. Production Environment Verification
+#### 3. Production Environment Verification
 
 !!! note "With a single command, we verify the deployment in Production (see Appendix II)."
 
@@ -411,7 +411,7 @@ docker ps --format "table {{.Names}}\t{{.Image}}\t{{.Status}}"		# -- VERIFICATIO
 check-prod				# -- VERIFICATION
 ```
 
-#### 3. Removing Rollbacked Tag
+#### 4. Removing Rollbacked Tag
 
 !!! info "This script allows you to remove a specific Tag (e.g., v2.0) from an image ID. If other tags (like 'staging') share the same ID, the physical data will remain safe and 'In Use' (see Appendix III)."
 
@@ -423,7 +423,22 @@ untag-gradewing
 !!! danger "Destructive restore of the Production Database"
     All current data in 'GradewingDjango_production' will be overwritten with the selected backup file
 
-#### 1. Pre-Restore Analysis
+#### 1. Connection to Hetzner and positioning in Gradewing from the terminal
+
+First, log in via SSH to the server:
+```bash
+ssh root@46.62.132.133
+```
+```bash
+cd gradewing
+```
+```bash
+cd gradewing
+```
+
+!!! note "Once you are positioned at root@gradewing-server:~/gradewing/gradewing#, you can run the necessary commands to deploy a stable previousversion."
+
+#### 2. Pre-Restore Analysis
 
 ```bash
 # 1. Load variables from .env into your current session
@@ -437,7 +452,7 @@ BACKUP_DIR="./db_backups"
 docker exec -i "$PROD_DB_CONTAINER" psql -U "$POSTGRES_USER" -d "$POSTGRES_DB" -c "SELECT count(*) AS total_migrations FROM django_migrations;"
 ```
 
-#### 2. Emergency Snapshot (The "Undo" Button)
+#### 3. Emergency Snapshot (The "Undo" Button)
 
 ```bash
 echo "🛡️ Creating emergency pre-restore snapshot..."
@@ -445,13 +460,13 @@ docker exec -i "$PROD_DB_CONTAINER" pg_dump -U "$POSTGRES_USER" "$POSTGRES_DB" |
 echo "✅ Snapshot saved to: $BACKUP_DIR"
 ```
 
-#### 3. The Restore Script
+#### 4. The Restore Script
 
 ```bash
 ./run/22-restore_to_production.sh
 ```
 
-#### 4. Production Environment Verification
+#### 5. Production Environment Verification
 
 !!! note "With a single command, we verify Production environment (see Appendix II)."
 
