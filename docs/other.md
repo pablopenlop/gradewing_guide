@@ -411,6 +411,37 @@ docker ps --format "table {{.Names}}\t{{.Image}}\t{{.Status}}"		# -- VERIFICATIO
 check-prod				# -- VERIFICATION
 ```
 
+#### Removing Rollbacked Tag
+
+!!! info "This script allows you to remove a specific Tag (e.g., v2.0) from an image ID. If other tags (like 'staging') share the same ID, the physical data will remain safe and 'In Use'."
+
+```bash
+# ==============================================================================
+# DOCKER UNTAGGING UTILITY
+# ==============================================================================
+
+# 1. Display current tags for gradewing-web
+echo "--- Current Tags for gradewing-web ---"
+docker images gradewing-web --format "Tag: {{.Tag}} \t ID: {{.ID}} \t {{.Extra}}"
+
+echo "--------------------------------------------------------------------------"
+# 2. Ask the user which tag to remove
+read -p "Enter the TAG you want to remove (e.g., v2.0): " TAG_TO_REMOVE
+
+# 3. Execute the untagging
+if [ -z "$TAG_TO_REMOVE" ]; then
+    echo "No tag entered. Operation cancelled."
+else
+    echo "Untagging gradewing-web:$TAG_TO_REMOVE..."
+    docker rmi gradewing-web:$TAG_TO_REMOVE
+fi
+
+# 4. Show updated status
+echo "--------------------------------------------------------------------------"
+echo "Updated status for gradewing-web:"
+docker images gradewing-web --format "Tag: {{.Tag}} \t ID: {{.ID}}"
+```
+
 ## Appendix I: Command to create the `check-stage` alias
 
 To simplify the verification of the Stage environment, we use a custom alias that checks build status, images, resources, network, database migrations, Redis, and logs in a single execution.
