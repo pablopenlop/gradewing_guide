@@ -469,6 +469,68 @@ Simply run the following command (see Appendix IV) in the terminal:
 docker-audit
 ```
 
+## Git Integrity
+
+!!! tip "No Local Software Modifications on Production"
+
+Simply run the following command (see Appendix V) in the terminal:
+
+```bash
+check-git-integrity
+```
+
+## Miscellaneous & Maintenace
+
+#### Git Credential Automation (Token Storage)
+
+!!! note "Configures the local environment to securely cache GitHub credentials, eliminating the need for manual authentication during Git operations."
+
+```bash
+git config --global credential.helper store
+```
+
+#### Environment Configuration Reload
+
+!!! note "Synchronizes the current terminal session with the latest updates made in aliases and functions."
+
+```bash
+source ~/.bashrc
+```
+
+!!! warning "Execute this command immediately after modifying aliases or custom functions to apply changes without re-establishing the SSH connection." 
+
+#### Risk-Free Docker Cleanup
+
+!!! note "Removes only "orphaned" data and images not currently "In Use" by a container."
+
+```bash
+docker volume prune
+```
+```bash
+docker image prune -a
+```
+
+#### Code Integrity Reset
+
+!!! note "To discard any manual changes made on the Hetzner server and force the code to match GitHub exactly."
+
+```bash
+git fetch origin main
+git reset --hard origin/main
+git clean -fd
+```
+
+#### Emergency Log Inspection
+
+!!! note "To quickly identify errors in the application or background workers."
+
+```bash
+docker logs --tail 100 -f GradewingDjango_production
+```
+```bash
+docker logs GradewingDjango_production 2>&1 | grep -Ei "error|critical|exception"
+```
+
 ## Appendix I: Command to create the `check-stage` alias
 
 To simplify the verification of the Stage environment, we use a custom alias that checks build status, images, resources, network, database migrations, Redis, and logs in a single execution.
@@ -578,6 +640,50 @@ docker-audit() {
     [ "$REC_FOUND" -eq 0 ] && echo "✅ System is optimized. No actions required."
 
     echo -e "\n✅ Audit Complete."
+}
+```
+
+## Appendix V: Command to create the `check-git-integrity`function
+
+### Installation
+
+Run the following command in your Hetzner terminal to add the alias to your `~/.bashrc` and activate it:
+
+```bash
+check-git-integrity() {
+    echo -e "🔍 --- GIT REPOSITORY INTEGRITY CHECK --- 🔍"
+
+    # 1. Update the local knowledge of the remote (GitHub)
+    echo "Fetching latest metadata from GitHub..."
+    git fetch origin main -q
+
+    # 2. Check for "Dirty" Code (Local uncommitted changes)
+    echo -e "\n📝 1. LOCAL MODIFICATIONS (Dirty Code)"
+    if git diff --quiet; then
+        echo "✅ No local modifications found. Code is pristine."
+    else
+        echo "❌ ALERT: Local software modifications detected!"
+        git status -s
+        echo "💡 Recommendation: Run 'git reset --hard' to discard local changes."
+    fi
+
+    # 3. Check for "Drift" (Local main vs Remote main)
+    echo -e "\n🚀 2. REMOTE ALIGNMENT (GitHub vs Hetzner)"
+    LOCAL=$(git rev-parse @)
+    REMOTE=$(git rev-parse @{u})
+    BASE=$(git merge-base @ @{u})
+
+    if [ $LOCAL = $REMOTE ]; then
+        echo "✅ Up-to-date: Hetzner is perfectly synced with GitHub."
+    elif [ $LOCAL = $BASE ]; then
+        echo "⚠️  BEHIND: GitHub has new commits. Run 'git pull' to update."
+    elif [ $REMOTE = $BASE ]; then
+        echo "❌ FORWARD: Hetzner has local commits not on GitHub! (Restricted)"
+    else
+        echo "🚨 DIVERGED: Both sides have different changes. Manual fix required."
+    fi
+
+    echo -e "\n✅ Integrity Check Complete."
 }
 ```
 
