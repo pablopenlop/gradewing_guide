@@ -388,11 +388,17 @@ cd gradewing
 
 #### 1. Deploying an older Docker Image
 
-!!! info "Any of the five previous Docker Images, which were previously used in the Production environment, can be redeployed without altering the data.""
+!!! tip "This script identifies the last five 'gradewing-web' images. Please choose the one you intend to use for the production deployment (normally the penultimate one)."
 
+```bash
+docker images --format "{{.Tag}}\t{{.CreatedSince}}" gradewing-web | grep "^v"   # -- VERIFICATION
+```
 ```bash
 ./run/05-start_production.sh
 ```
+
+!!! tip "The image currently used by 'GradewingDjango_production' will be displayed. Please verify that it is correct."
+
 ```bash
 docker ps --format "table {{.Names}}\t{{.Image}}\t{{.Status}}"		# -- VERIFICATION
 ```
