@@ -203,10 +203,10 @@ git branch -a				# -- VERIFICATION
 ```
 
 !!! info "Correct state of the branches"
-    * main
-*   remotes/origin/HEAD -> origin/main
-*   remotes/origin/dev
-*   remotes/origin/main
+*   **main**
+*       remotes/origin/HEAD -> origin/main
+*       remotes/origin/dev
+*       remotes/origin/main
 
 ## Production Deployment of a **Hotfix**
 
