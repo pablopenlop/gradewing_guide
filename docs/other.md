@@ -423,7 +423,7 @@ untag-gradewing
 !!! danger "Destructive restore of the Production Database"
     All current data in 'GradewingDjango_production' will be overwritten with the selected backup file
 
-!!! note " Just to load variables from .env"
+#### 1. Pre-Restore Analysis
 
 ```bash
 # 1. Load variables from .env into your current session
@@ -433,14 +433,8 @@ export $(grep -v '^#' .env | xargs)
 PROD_DB_CONTAINER="GradewingPostgres_production"
 BACKUP_DIR="./db_backups"
 
-# 3. NOW Step 1 will work perfectly:
+# 3. Analysis:
 docker exec -i "$PROD_DB_CONTAINER" psql -U "$POSTGRES_USER" -d "$POSTGRES_DB" -c "SELECT count(*) AS total_migrations FROM django_migrations;"
-```
-
-#### 1. Pre-Restore Analysis
-
-```bash
-docker exec -i "$PROD_DB_CONTAINER" psql -U "$POSTGRES_USER" -d "$POSTGRES_DB" -c "SELECT count(*) AS total_migrations FROM django_migrations;" || echo "⚠️ DB is already empty or unreachable."
 ```
 
 #### 2. Emergency Snapshot (The "Undo" Button)
