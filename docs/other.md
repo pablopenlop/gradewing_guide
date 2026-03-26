@@ -489,6 +489,8 @@ check-git-integrity
 git config --global credential.helper store
 ```
 
+!!! tip "Perform this once. The first time you run a git fetch afterward, enter your GitHub Personal Access Token (PAT) as the password. It will be saved indefinitely."
+
 #### Environment Configuration Reload
 
 !!! note "Synchronizes the current terminal session with the latest updates made in aliases and functions."
@@ -645,7 +647,7 @@ docker-audit() {
 
 ## Appendix V: Command to create the `check-git-integrity`function
 
-### Installation
+#### Installation
 
 Run the following command in your Hetzner terminal to add the alias to your `~/.bashrc` and activate it:
 
