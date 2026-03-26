@@ -134,6 +134,12 @@ docker images --format "{{.Tag}}\t{{.CreatedSince}}" gradewing-web | grep "^v"  
 ./run/10-tag_web.sh
 ```
 
+!!! note "Just in case."
+
+```bash
+docker images --format "{{.Tag}}\t{{.CreatedSince}}" gradewing-web | grep "^v"   # -- VERIFICATION
+```
+
 #### 4. Deployment of the tagged Docker image to Production (without Build)
 
 ```bash
@@ -262,8 +268,19 @@ check-stage				# -- VERIFICATION
 
 #### 7. Docker Image Tagging (Image: `gradewing-web:vn.n`) and software on GitHub (Tag: `vn.n`)
 
+!!! tip "This script identifies the most recent 'gradewing-web' image. Calculate a new version by adding 1 to the second digit, and use it in the posterior tagging script."
+
+```bash
+docker images --format "{{.Tag}}\t{{.CreatedSince}}" gradewing-web | grep "^v"   # -- VERIFICATION
+```
 ```bash
 ./run/10-tag_web.sh
+```
+
+!!! note "Just in case."
+
+```bash
+docker images --format "{{.Tag}}\t{{.CreatedSince}}" gradewing-web | grep "^v"   # -- VERIFICATION
 ```
 
 #### 8. Deployment of the tagged Docker image to Production (without Build)
