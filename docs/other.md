@@ -125,6 +125,11 @@ chmod +x ./run/*.sh
 
 #### 3. Docker Image Tagging (Image: `gradewing-web:vn.n`) and software on GitHub (Tag: `vn.n`)
 
+!!! tip "This script identifies the most recent 'gradewing-web' image. Calculate a new version by adding 1 to the first digit, and use it in the posterior tagging script."
+
+```bash
+docker images --format "{{.Tag}}\t{{.CreatedSince}}" gradewing-web | grep "^v"   # -- VERIFICATION
+```
 ```bash
 ./run/10-tag_web.sh
 ```
