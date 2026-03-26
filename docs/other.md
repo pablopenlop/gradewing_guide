@@ -31,7 +31,7 @@ This is a temporary and exceptional branch called **`Hotfix`**. Usually, only a 
 *   Finally, the temporary **`Hotfix`** branch is deleted from both Hetzner and GitHub, leaving only the two permanent branches: **`dev`** and **`main`**.
 
 
-## Stage Deployment of a **New Software Version**
+## Stage Environment: New Version Deployment
 
 #### 1. Creation of a new Release branch on GitHub
 *   **Create new Branch**
@@ -100,7 +100,7 @@ chmod +x ./run/*.sh
 check-stage				# -- VERIFICATION
 ```
 
-## Production Deployment of a **New Software Version** certified in Stage
+## Production Environment: Stage-Certified Deployment
 
 
 #### 1. Connection to Hetzner and positioning in Gradewing from the terminal
@@ -205,7 +205,7 @@ git branch -a				# -- VERIFICATION
 !!! info "Correct state of the branches"
     **main** - remotes/origin/HEAD -> origin/main - remotes/origin/dev - remotes/origin/main
 
-## Production Deployment of a **Hotfix**
+## Production Environment: Hotfix Deployment
 
 #### 1. Creation of a new Release branch on GitHub
 *   **Create new Branch**
@@ -366,7 +366,7 @@ git push origin --delete Hotfix
 git branch -a				# -- VERIFICATION
 ```
 
-## Production Disaster Recovery: Deploying a previous software version while preserving data
+## Disaster Recovery: Version Rollback with Data Preservation
 
 !!! danger "Critical Disaster Recovery"
     This procedure must **ONLY** be used in the event of a critical failure in the current Production version. The objective is to perform a **Rollback** to a stable previous version while strictly **preserving the existing database**.
@@ -419,7 +419,7 @@ check-prod				# -- VERIFICATION
 untag-gradewing
 ```
 
-## Critical: Production Database Restore
+## Critical: Production Database Restoration
 !!! danger "Destructive restore of the Production Database"
     All current data in 'GradewingDjango_production' will be overwritten with the selected backup file
 
@@ -474,7 +474,7 @@ echo "✅ Snapshot saved to: $BACKUP_DIR"
 check-prod              # -- VERIFICATION
 ```
 
-## Docker Audit
+## Security Audit: Docker Environment
 
 !!! tip "A comprehensive diagnostic tool to verify the health, security, and storage efficiency of the Gradewing environment."
 
@@ -484,7 +484,7 @@ Simply run the following command (see Appendix IV) in the terminal:
 docker-audit
 ```
 
-## Git Integrity
+## Integrity Check: Git Repository
 
 !!! tip "No Local Software Modifications on Production"
 
