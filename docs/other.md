@@ -533,22 +533,26 @@ docker logs --tail 100 -f GradewingDjango_production
 docker logs GradewingDjango_production 2>&1 | grep -Ei "error|critical|exception"
 ```
 
-## Appendix I: Command to create the `check-stage` alias
+## Appendix: Shell Aliases and Functions
+
+!!! warning "They will only be used when an alias or function needs to be rebuilt. Initially, this was never supposed to happen."
+
+#### Appendix I: Command to create the `check-stage` alias
 
 To simplify the verification of the Stage environment, we use a custom alias that checks build status, images, resources, network, database migrations, Redis, and logs in a single execution.
 
-#### Installation
+##### Installation
 
 Run the following command in your Hetzner terminal to add the alias to your `~/.bashrc` and activate it:
 
 ```bash
 echo "alias check-stage='echo \"\n🔨 --- 1. BUILD STATUS & IMAGE ID ---\" && docker images | grep staging && echo \"\n🧹 --- 2. DANGLING IMAGES (Build Junk) ---\" && docker images -f \"dangling=true\" || echo \"No junk images\" && echo \"\n📊 --- 3. STAGING RESOURCES ---\" && docker stats --no-stream | grep staging && echo \"\n🌐 --- 4. STAGING NETWORK ---\" && docker network ls | grep staging && echo \"\n🧼 --- 5. STAGING DB & REDIS ---\" && docker exec GradewingDjango_staging python manage.py showmigrations | grep \"\[ \]\" || echo \"All migrated in Stage\" && docker exec GradewingDjango_staging python manage.py shell -c \"from django.core.cache import cache; cache.set('\''test'\'', '\''ok'\'', 5); print('\''Redis Stage Status:'\'', cache.get('\''test'\''))\" && echo \"\n⚠️ --- 6. BUILD & RUN LOGS ---\" && docker compose -f docker-compose.staging.yml logs --tail=50 | grep -Ei \"error|critical|fail\" || echo \"No errors in Staging\"'" >> ~/.bashrc && source ~/.bashrc
 ```
-## Appendix II: Command to create the `check-prod` alias
+#### Appendix II: Command to create the `check-prod` alias
 
 To ensure the Production environment is running correctly, this custom alias performs a comprehensive check of versions, resources, storage, and database health in a single command.
 
-#### Installation
+##### Installation
 
 Run the following command in your Hetzner terminal to add the alias to your `~/.bashrc` and activate it:
 
@@ -557,9 +561,9 @@ echo "alias check-prod='echo \"\n🚀 --- 1. STATUS & VERSIONS ---\" && docker p
 ```
 
 
-## Appendix III: Command to create the `untag-gradewing` function
+#### Appendix III: Command to create the `untag-gradewing` function
 
-#### Installation
+##### Installation
 
 Run the following command in your Hetzner terminal to add the alias to your `~/.bashrc` and activate it:
 
@@ -588,9 +592,9 @@ untag-gradewing() {
 }
 ```
 
-## Appendix IV: Command to create the `docker-audit`function
+#### Appendix IV: Command to create the `docker-audit`function
 
-#### Installation
+##### Installation
 
 Run the following command in your Hetzner terminal to add the alias to your `~/.bashrc` and activate it:
 
@@ -645,9 +649,9 @@ docker-audit() {
 }
 ```
 
-## Appendix V: Command to create the `check-git-integrity`function
+#### Appendix V: Command to create the `check-git-integrity`function
 
-#### Installation
+##### Installation
 
 Run the following command in your Hetzner terminal to add the alias to your `~/.bashrc` and activate it:
 
