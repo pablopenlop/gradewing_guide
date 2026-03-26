@@ -448,7 +448,7 @@ echo "✅ Snapshot saved to: $BACKUP_DIR"
 #### 3. The Restore Script
 
 ```bash
-./run/21-restore_to_production.sh
+./run/22-restore_to_production.sh
 ```
 
 #### 4. Production Environment Verification
@@ -457,6 +457,16 @@ echo "✅ Snapshot saved to: $BACKUP_DIR"
 
 ```bash
 check-prod              # -- VERIFICATION
+```
+
+## Docker Audit
+
+!!! tip "A comprehensive diagnostic tool to verify the health, security, and storage efficiency of the Gradewing environment."
+
+Simply run the following command (see Appendix IV) in the terminal:
+
+```bash
+docker-audit
 ```
 
 ## Appendix I: Command to create the `check-stage` alias
@@ -514,8 +524,62 @@ untag-gradewing() {
 }
 ```
 
+## Appendix IV: Command to create the `docker-audit`function
 
+#### Installation
 
+Run the following command in your Hetzner terminal to add the alias to your `~/.bashrc` and activate it:
+
+``
+docker-audit() {
+    echo -e "🔍 --- DOCKER SYSTEM AUDIT & HEALTH CHECK --- 🔍"
+    
+    # 1. CONTAINER HEALTH
+    echo -e "\n⚠️  1. CONTAINER HEALTH"
+    ERRORS=$(docker ps -a --filter "status=restarting" --filter "status=exited" --format "{{.Names}}: {{.Status}}" | grep -vi "Certbot")
+    [ -z "$ERRORS" ] && echo "✅ Critical containers are Healthy." || echo -e "❌ ALERT: Crashing/Stopped:\n$ERRORS"
+
+    # 2. SSL
+    echo -e "\n🔐 2. SSL CERTIFICATE EXPIRY"
+    SSL_DATE=$(timeout 2s openssl s_client -connect localhost:443 -servername gradewing.com </dev/null 2>/dev/null | openssl x509 -noout -dates | grep notAfter)
+    echo "${SSL_DATE:-"⚠️ Could not verify SSL (Nginx down?)"}"
+
+    # 3. STORAGE
+    echo -e "\n📊 3. STORAGE & RECLAIMABLE"
+    docker system df
+    HAS_WASTE=$(docker system df | grep -qE "(8[0-9]%|9[0-9]%|100%)" && echo "YES")
+
+    # 4. VOLUMES
+    echo -e "\n💾 4. ORPHANED VOLUMES"
+    UNUSED_VOLS=$(docker volume ls -f "dangling=true" -q)
+    VOL_COUNT=$(echo "$UNUSED_VOLS" | grep -v '^$' | wc -l)
+    [ "$VOL_COUNT" -eq 0 ] && echo "✅ No orphaned volumes." || echo "⚠️  WARNING: $VOL_COUNT orphaned volumes found."
+
+    # 5. RECOMMENDATIONS (The Intelligent Part)
+    echo -e "\n💡 --- SMART RECOMMENDATIONS ---"
+    REC_FOUND=0
+    
+    if [ "$VOL_COUNT" -gt 0 ]; then
+        echo "- [VOLUMES] Clean $VOL_COUNT orphaned volumes: 'docker volume prune'"
+        REC_FOUND=1
+    fi
+    
+    if [ "$HAS_WASTE" == "YES" ]; then
+        echo "- [IMAGES] Recover space from old versions: 'docker image prune -a'"
+        echo "  (Note: Your active 'v1.0' and 'staging' are PROTECTED and won't be deleted)"
+        REC_FOUND=1
+    fi
+
+    if [ -n "$ERRORS" ]; then
+        echo "- [REPAIR] Check logs for crashing containers: 'docker logs [NAME]'"
+        REC_FOUND=1
+    fi
+
+    [ "$REC_FOUND" -eq 0 ] && echo "✅ System is optimized. No actions required."
+
+    echo -e "\n✅ Audit Complete."
+}
+```
 
 
 
