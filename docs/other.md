@@ -413,33 +413,10 @@ check-prod				# -- VERIFICATION
 
 #### Removing Rollbacked Tag
 
-!!! info "This script allows you to remove a specific Tag (e.g., v2.0) from an image ID. If other tags (like 'staging') share the same ID, the physical data will remain safe and 'In Use'."
+!!! info "This script allows you to remove a specific Tag (e.g., v2.0) from an image ID. If other tags (like 'staging') share the same ID, the physical data will remain safe and 'In Use' (see Appendix III)."
 
 ```bash
-# ==============================================================================
-# DOCKER UNTAGGING UTILITY
-# ==============================================================================
-
-# 1. Display current tags for gradewing-web
-echo "--- Current Tags for gradewing-web ---"
-docker images gradewing-web --format "Tag: {{.Tag}} \t ID: {{.ID}} \t {{.Extra}}"
-
-echo "--------------------------------------------------------------------------"
-# 2. Ask the user which tag to remove
-read -p "Enter the TAG you want to remove (e.g., v2.0): " TAG_TO_REMOVE
-
-# 3. Execute the untagging
-if [ -z "$TAG_TO_REMOVE" ]; then
-    echo "No tag entered. Operation cancelled."
-else
-    echo "Untagging gradewing-web:$TAG_TO_REMOVE..."
-    docker rmi gradewing-web:$TAG_TO_REMOVE
-fi
-
-# 4. Show updated status
-echo "--------------------------------------------------------------------------"
-echo "Updated status for gradewing-web:"
-docker images gradewing-web --format "Tag: {{.Tag}} \t ID: {{.ID}}"
+untag-gradewing
 ```
 
 ## Appendix I: Command to create the `check-stage` alias
@@ -466,6 +443,34 @@ echo "alias check-prod='echo \"\n🚀 --- 1. STATUS & VERSIONS ---\" && docker p
 ```
 
 
+## Appendix III: Command to remove rollbacked tag
+
+#### Installation
+
+```bash
+untag-gradewing() {
+    echo "--- REMOVING ROLLBACKED TAG ---"
+    
+    # Standard Docker fields: Repository, Tag, ID, and Created
+    docker images gradewing-web --format "Tag: {{.Tag}} \t ID: {{.ID}} \t Created: {{.CreatedSince}}"
+    echo "--------------------------------------------------------"
+    
+    read -p "Enter the TAG to remove (e.g., v2.0): " TAG_TO_REMOVE
+    
+    if [[ "$TAG_TO_REMOVE" == "staging" || "$TAG_TO_REMOVE" == "v1.0" ]]; then
+        echo "ERROR: Protection enabled. Cannot remove '$TAG_TO_REMOVE'."
+    elif [ -z "$TAG_TO_REMOVE" ]; then
+        echo "Cancelled: No tag entered."
+    else
+        echo "Untagging gradewing-web:$TAG_TO_REMOVE..."
+        docker rmi gradewing-web:"$TAG_TO_REMOVE"
+        
+        echo "--------------------------------------------------------"
+        echo "Updated Status:"
+        docker images gradewing-web --format "Tag: {{.Tag}} \t ID: {{.ID}}"
+    fi
+}
+```
 
 
 
