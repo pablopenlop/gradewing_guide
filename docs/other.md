@@ -439,13 +439,15 @@ To ensure the Production environment is running correctly, this custom alias per
 Run the following command in your Hetzner terminal to add the alias to your `~/.bashrc` and activate it:
 
 ```bash
-echo "alias check-prod='echo \"\n🚀 --- 1. STATUS & VERSIONS ---\" && docker ps --filter \"name=production\" --format \"table {{.Names}}\t{{.Status}}\t{{.Image}}\" && echo \"\n📦 --- 2. DOCKER IMAGES (v1.1.4 check) ---\" && docker images | grep -E \"REPOSITORY|v1.1.4|staging\" && echo \"\n📊 --- 3. RESOURCE USAGE (Stats) ---\" && docker stats --no-stream && echo \"\n🌐 --- 4. NETWORK ISOLATION ---\" && docker network ls | grep gradewing && echo \"\n💾 --- 5. DISK SPACE (Server) ---\" && df -h / && echo \"\n📂 --- 6. DOCKER SYSTEM DF ---\" && docker system df && echo \"\n🧼 --- 7. REDIS & MIGRATIONS ---\" && docker exec GradewingDjango_production python manage.py showmigrations | grep \"\[ \]\" || echo \"All migrated\" && docker exec GradewingDjango_production python manage.py shell -c \"from django.core.cache import cache; cache.set('\''test'\'', '\''ok'\'', 5); print('\''Redis Status:'\'', cache.get('\''test'\''))\" && echo \"\n⚠️ --- 8. ERRORS (Last 100 lines) ---\" && docker compose -f docker-compose.production.yml logs --tail=100 | grep -Ei \"error|critical|fail\" || echo \"No critical errors found\"'" >> ~/.bashrc && source ~/.bashrc
+echo "alias check-prod='echo \"\n🚀 --- 1. STATUS & VERSIONS ---\" && docker ps --filter \"name=production\" --format \"table {{.Names}}\t{{.Status}}\t{{.Image}}\" && echo \"\n📦 --- 2. DOCKER IMAGES (vX.X check) ---\" && docker images | grep -E \"REPOSITORY|v[0-9]|staging\" | head -n 6 && echo \"\n📊 --- 3. RESOURCE USAGE (Stats) ---\" && docker stats --no-stream && echo \"\n🌐 --- 4. NETWORK ISOLATION ---\" && docker network ls | grep gradewing && echo \"\n💾 --- 5. DISK SPACE (Server) ---\" && df -h / && echo \"\n📂 --- 6. DOCKER SYSTEM DF ---\" && docker system df && echo \"\n🧼 --- 7. REDIS & MIGRATIONS ---\" && docker exec GradewingDjango_production python manage.py showmigrations | grep \"\\\[ \\\]\" || echo \"All migrated\" && docker exec GradewingDjango_production python manage.py shell -c \"from django.core.cache import cache; cache.set('\''test'\'', '\''ok'\'', 5); print('\''Redis Status:'\'', cache.get('\''test'\''))\" && echo \"\n⚠️ --- 8. ERRORS (Last 100 lines) ---\" && docker compose -f docker-compose.production.yml logs --tail=100 | grep -Ei \"error|critical|fail\" || echo \"No critical errors found\"'" >> ~/.bashrc && source ~/.bashrc
 ```
 
 
-## Appendix III: Command to remove rollbacked tag
+## Appendix III: Command to create the `untag-gradewing` function
 
 #### Installation
+
+Run the following command in your Hetzner terminal to add the alias to your `~/.bashrc` and activate it:
 
 ```bash
 untag-gradewing() {
