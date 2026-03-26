@@ -411,12 +411,44 @@ docker ps --format "table {{.Names}}\t{{.Image}}\t{{.Status}}"		# -- VERIFICATIO
 check-prod				# -- VERIFICATION
 ```
 
-#### Removing Rollbacked Tag
+#### 3. Removing Rollbacked Tag
 
 !!! info "This script allows you to remove a specific Tag (e.g., v2.0) from an image ID. If other tags (like 'staging') share the same ID, the physical data will remain safe and 'In Use' (see Appendix III)."
 
 ```bash
 untag-gradewing
+```
+
+## Critical: Production Database Restore
+!!! danger "Destructive restore of the Production Database"
+    All current data in 'GradewingDjango_production' will be overwritten with the selected backup file
+
+#### 1. Pre-Restore Analysis
+
+```bash
+docker exec -i "$PROD_DB_CONTAINER" psql -U "$POSTGRES_USER" -d "$POSTGRES_DB" -c "SELECT count(*) AS total_migrations FROM django_migrations;" || echo "⚠️ DB is already empty or unreachable."
+```
+
+#### 2. Emergency Snapshot (The "Undo" Button)
+
+```bash
+echo "🛡️ Creating emergency pre-restore snapshot..."
+docker exec -i "$PROD_DB_CONTAINER" pg_dump -U "$POSTGRES_USER" "$POSTGRES_DB" | gzip > "$BACKUP_DIR/emergency_pre_restore_$(date +%F_%H%M).sql.gz"
+echo "✅ Snapshot saved to: $BACKUP_DIR"
+```
+
+#### 3. The Restore Script
+
+```bash
+./run/21-restore_to_production.sh
+```
+
+#### 4. Production Environment Verification
+
+!!! note "With a single command, we verify Production environment (see Appendix II)."
+
+```bash
+check-prod              # -- VERIFICATION
 ```
 
 ## Appendix I: Command to create the `check-stage` alias
