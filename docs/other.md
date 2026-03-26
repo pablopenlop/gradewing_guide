@@ -359,8 +359,6 @@ git branch -a				# -- VERIFICATION
 !!! danger "Critical Disaster Recovery"
     This procedure must **ONLY** be used in the event of a critical failure in the current Production version. The objective is to perform a **Rollback** to a stable previous version while strictly **preserving the existing database**.
 
-!!! tip "Before starting, identify the version number (`vn.n`) of the last stable image that was working correctly."
-
 #### 1. Connection to Hetzner and positioning in Gradewing from the terminal
 
 First, log in via SSH to the server:
