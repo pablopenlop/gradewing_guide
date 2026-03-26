@@ -530,7 +530,7 @@ untag-gradewing() {
 
 Run the following command in your Hetzner terminal to add the alias to your `~/.bashrc` and activate it:
 
-``
+```
 docker-audit() {
     echo -e "🔍 --- DOCKER SYSTEM AUDIT & HEALTH CHECK --- 🔍"
     
@@ -580,6 +580,7 @@ docker-audit() {
     echo -e "\n✅ Audit Complete."
 }
 ```
+
 
 
 
