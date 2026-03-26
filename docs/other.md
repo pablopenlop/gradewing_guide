@@ -165,21 +165,30 @@ git checkout main
 ```bash
 git pull origin main
 ```
+
+!!! info "The terminal should have shown: * branch main -> FETCH_HEAD - Already up to date"
+
 ```bash
 git merge Release
 ```
 ```bash
 git diff main..origin/Release			# -- VERIFICATION
 ```
+!!! info "Nothing should have been displayed on the terminal"
+
 ```bash
 git push origin main
 ```
 ```bash
 git diff origin/main..origin/Release			# -- VERIFICATION
 ```
+!!! info "Nothing should have been displayed on the terminal"
+
 ```bash
 git log main..origin/dev --oneline			# -- VERIFICATION
 ```
+!!! info "Pending commits from the dev branch will be displayed"
+
 ```bash
 git branch -d Release
 ```
@@ -192,6 +201,12 @@ git push origin --delete Release
 ```bash
 git branch -a				# -- VERIFICATION
 ```
+
+!!! info "Correct state of the branches"
+    * main
+        remotes/origin/HEAD -> origin/main
+        remotes/origin/dev
+        remotes/origin/main
 
 ## Production Deployment of a **Hotfix**
 
