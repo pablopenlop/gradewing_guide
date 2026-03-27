@@ -82,6 +82,8 @@ chmod +x ./run/*.sh
 
 #### 5.2 Deployment to Stage by deleting current data and, optionally, loading Production data
 
+!!! warning "Alternative Staging Data Cleanup Process."
+
 ```bash
 ./run/04-stop_staging.sh
 ```
@@ -89,6 +91,7 @@ chmod +x ./run/*.sh
 ./run/03-start_staging.sh
 ```
 !!! tip "Depending on the magnitude of the changes made, it might be advisable to replicate the Production data so as not to start with an empty environment."
+
 ```bash
 ./run/21-restore_to_staging.sh
 ```
@@ -258,6 +261,8 @@ chmod +x ./run/*.sh
 
 #### 5.2 Deployment to Stage by deleting current data and, optionally, loading Production data
 
+!!! warning "Alternative Staging Data Cleanup Process."
+
 ```bash
 ./run/04-stop_staging.sh
 ```
@@ -347,6 +352,13 @@ git merge Hotfix
 ```bash
 git diff dev..origin/Hotfix				# -- VERIFICATION
 ```
+!!! info "Nothing should have been displayed on the terminal"
+
+```BASH
+git log dev..origin/dev --oneline       # -- VERIFICATION
+```
+!!! warning "Before running **git push origin dev**, verify that your local branch is synchronized. Use the output from the previous **git log dev..origin/dev --oneline** command to ensure no remote commits are missing."
+
 ```bash
 git push origin dev
 ```
@@ -366,11 +378,22 @@ git branch -d Hotfix
 git push origin --delete Hotfix
 ```
 
-#### 13. Verification of branch status in Hetzner and GitHub
+#### 13. Deletion of **dev** branch in Hetzner (**only**)
+
+```bash
+git checkout main
+```
+```bash
+git branch -d dev
+```
+
+#### 14. Verification of branch status in Hetzner and GitHub
 
 ```bash
 git branch -a				# -- VERIFICATION
 ```
+!!! info "Correct state of the branches"
+    **main** - remotes/origin/HEAD -> origin/main - remotes/origin/dev - remotes/origin/main
 
 ## Disaster Recovery: Version Rollback with Data Preservation
 
