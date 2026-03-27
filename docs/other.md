@@ -358,7 +358,7 @@ git diff dev..origin/Hotfix				# -- VERIFICATION
 ```BASH
 git log dev..origin/dev --oneline       # -- VERIFICATION
 ```
-!!! warning "Before running **git push origin dev**, verify that your local branch is synchronized. Use the output from the previous **git log dev..origin/dev --oneline** command to ensure no remote commits are missing."
+!!! warning "Before running `git push origin dev`, verify that your local branch is synchronized. Use the output from the previous `git log dev..origin/dev --oneline command to ensure no remote commits are missing."
 
 ```bash
 git push origin dev
@@ -451,7 +451,7 @@ untag-gradewing
 
 ## Critical: Production Database Restoration
 !!! danger "Destructive restore of the Production Database"
-    All current data in 'GradewingDjango_production' will be overwritten with the selected backup file
+    All current data in `GradewingDjango_production` will be overwritten with the selected backup file
 
 #### 1. Connection to Hetzner and positioning in Gradewing from the terminal
 
