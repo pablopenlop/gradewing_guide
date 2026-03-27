@@ -309,7 +309,7 @@ docker images --format "{{.Tag}}\t{{.CreatedSince}}" gradewing-web | grep "^v"  
 check-prod				# -- VERIFICATION
 ```
 
-#### 10. Merge into **main** and **dev** from the **Hotfix** branch, and deletion of said branch in Hetzner and GitHub
+#### 10. Merge into **main** from the **Hotfix** branch
 
 ```bash
 git fetch origin
@@ -332,6 +332,9 @@ git push origin main
 ```bash
 git diff origin/main..origin/Hotfix			# -- VERIFICATION
 ```
+
+#### 11. Merge into **dev** from the **Hotfix** branch
+
 ```bash
 git checkout dev
 ```
@@ -353,6 +356,9 @@ git diff origin/dev..origin/Hotfix			# -- VERIFICATION
 ```bash
 git log main..origin/dev --oneline			# -- VERIFICATION
 ```
+
+#### 12. Deletion of **Hotfix** branch in Hetzner and GitHub
+
 ```bash
 git branch -d Hotfix
 ```
@@ -360,7 +366,7 @@ git branch -d Hotfix
 git push origin --delete Hotfix
 ```
 
-#### 11. Verification of branch status in Hetzner and GitHub
+#### 13. Verification of branch status in Hetzner and GitHub
 
 ```bash
 git branch -a				# -- VERIFICATION
