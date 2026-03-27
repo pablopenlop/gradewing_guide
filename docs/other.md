@@ -474,7 +474,9 @@ echo "✅ Snapshot saved to: $BACKUP_DIR"
 check-prod              # -- VERIFICATION
 ```
 
-## Security Audit: Docker Environment
+## Docker Audit & Git Integrity
+
+#### Security Audit: Docker Environment
 
 !!! tip "A comprehensive diagnostic tool to verify the health, security, and storage efficiency of the Gradewing environment."
 
@@ -484,7 +486,7 @@ Simply run the following command (see Appendix IV) in the terminal:
 docker-audit
 ```
 
-## Integrity Check: Git Repository
+#### Integrity Check: Git Repository
 
 !!! tip "No Local Software Modifications on Production"
 
