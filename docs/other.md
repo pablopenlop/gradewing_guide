@@ -18,7 +18,7 @@ This is a temporary branch called **`Release`**. Commits are **never** made dire
 *   Once the software is certified, a **Tag** is applied, and the corresponding **Docker Image** is labeled.
 *   Using this tagged Docker Image, the **deployment to Production** is carried out (without a new build).
 *   Next, a **merge** is performed within the Hetzner terminal from the **`Release`** branch into **`main`**. At this point, the three branches are leveled (excluding any commits made to `dev` after the `Release` branch was created).
-*   Finally, the temporary **`Release`** branch is deleted from both Hetzner and GitHub, leaving only the two permanent branches: **`dev`** and **`main`**.
+*   Finally, the temporary **`Release`** branch is deleted from both Hetzner and GitHub, leaving only the two permanent branches: **`dev`** and **`main`** in GitHub.
 
 #### **Hotfix Branch**
 This is a temporary and exceptional branch called **`Hotfix`**. Usually, only a single commit is made on this branch to push an urgent fix to Production.
@@ -28,8 +28,8 @@ This is a temporary and exceptional branch called **`Hotfix`**. Usually, only a 
 *   Once verified, a **Tag** is applied, and the corresponding **Docker Image** is labeled.
 *   Using this tagged Docker Image, the **deployment to Production** is carried out (without a new build).
 *   Next, a **double merge** is performed within the Hetzner terminal from the **`Hotfix`** branch into both **`main` and `dev`**. This ensures that both `Hotfix` and `main` branches are leveled (noting that `dev` may have accumulated many previous commits).
-*   Additionally, the `dev` branch is deleted **ONLY** in the local Hetzner environment. 
-*   Finally, the temporary **`Hotfix`** branch is deleted from both Hetzner and GitHub, leaving only the two permanent branches: **`dev`** and **`main`**.
+*   Additionally, the **`dev`** branch is deleted **ONLY** in the local Hetzner environment. 
+*   Finally, the temporary **`Hotfix`** branch is deleted from both Hetzner and GitHub, leaving only the two permanent branches: **`dev`** and **`main`** in GitHub.
 
 
 ## Stage Environment: New Version Deployment
