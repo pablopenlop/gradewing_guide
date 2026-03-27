@@ -118,7 +118,7 @@ cd gradewing
 ```bash
 cd gradewing
 ```
-!!! note "Once you are positioned at root@gradewing-server:~/gradewing/gradewing#, you can run the necessary commands to deploy the software from GitHub"
+!!! note "Once you are positioned at root@gradewing-server:~/gradewing/gradewing#, you can run the necessary commands to deploy the software from GitHub."
 
 #### 2. Execution permissions
 
@@ -270,7 +270,7 @@ chmod +x ./run/*.sh
 ```bash
 ./run/03-start_staging.sh
 ```
-!!! tip "Although** improbable, it might be advisable to replicate **Production data** to avoid starting with an empty environment."
+!!! tip "It might be advisable to replicate **Production data** to avoid starting with an empty environment."
 
 ```bash
 ./run/21-restore_to_staging.sh
@@ -358,7 +358,7 @@ git diff dev..origin/Hotfix				# -- VERIFICATION
 ```BASH
 git log dev..origin/dev --oneline       # -- VERIFICATION
 ```
-!!! warning "Before running `git push origin dev`, verify that your local branch is synchronized. Use the output from the previous `git log dev..origin/dev --oneline command` to ensure no remote commits are missing."
+!!! warning "Before running `git push origin dev`, verify that your local branch is synchronized. Use the output from the previous `git log dev..origin/dev --oneline` command to ensure no remote commits are missing."
 
 ```bash
 git push origin dev
