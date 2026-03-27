@@ -212,7 +212,7 @@ git branch -a				# -- VERIFICATION
 ## Production Environment: Hotfix Deployment
 
 !!! danger "Enable GitHub Branch Protection"
-    **Before starting development, you must complete this procedure.** It ensures that your remote branches are protected and that all code changes follow a secure, peer-reviewed process via Pull Requests.
+    **Before starting development, you must complete this procedure.** It ensures that your remote **`dev`** branche is protected and that all code changes follow a secure, peer-reviewed process via Pull Requests.
 
     *   **Open GitHub Settings:**
         Navigate to your repository on GitHub and click the **Settings** tab in the top navigation bar.
@@ -569,7 +569,7 @@ check-git-integrity
 git config --global credential.helper store
 ```
 
-!!! tip "Perform this once. The first time you run a git fetch afterward, enter your GitHub Personal Access Token (PAT) as the password. It will be saved indefinitely."
+!!! tip "Perform this once. The first time you run a **`git fetch`** afterward, enter your GitHub Personal Access Token (PAT) as the password. It will be saved indefinitely."
 
 #### Environment Configuration Reload
 
