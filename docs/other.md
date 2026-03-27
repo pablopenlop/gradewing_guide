@@ -593,6 +593,27 @@ docker logs --tail 100 -f GradewingDjango_production
 docker logs GradewingDjango_production 2>&1 | grep -Ei "error|critical|exception"
 ```
 
+#### Procedure: Remove Git Pre-Commit Hook
+
+!!! warning "Local Git Policy: Branch Protection Hook"
+    Currently, a **pre-commit hook** is active in this repository to prevent accidental direct commits to the **`main`** branch. This ensures that all development follows the standard workflow (Release or Hotfix branches) before merging into production. If you need to deactivate this restriction, follow the standard decommissioning procedure below.
+
+1. Verify permissions and existence
+
+```bash
+ls -l .git/hooks/pre-commit
+```
+2. Review the content (Safety check)
+
+```bash
+cat -n .git/hooks/pre-commit
+```
+3. Delete the hook
+
+```bash
+rm .git/hooks/pre-commit
+```
+
 ## Appendix: Shell Aliases and Functions
 
 !!! warning "They will only be used when an alias or function needs to be rebuilt. Initially, this was never supposed to happen."
