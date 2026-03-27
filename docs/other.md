@@ -519,10 +519,13 @@ docker-audit
 !!! note "list of `Docker` Images and Containers"
 
 ```bash
-docker images
+docker images           
 ```
 ```bash
 docker ps
+```
+```bash
+docker ps -a --filter "name=Gradewing" --format "table {{.ID}}\t{{.Names}}\t{{.Image}}\t{{.Status}}"    # -- GRADEWING
 ```
 
 #### Integrity Check: Git Repository
