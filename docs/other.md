@@ -221,7 +221,7 @@ git branch -a				# -- VERIFICATION
     *   **Add Protection Rule:**
         Locate the **"Branch protection rules"** section and click the **Add branch protection rule** button.
     *   **Define Target Branch:**
-        In the **"Branch name pattern"** field, type the exact name of the branch you want to protect (e.g., `main` or `dev`).
+        In the **"Branch name pattern"** field, type the exact name of the branch you want to protect: **`dev`**.
     *   **Enable Pull Request Requirement:**
         Check the box **"Require a pull request before merging"**.
         *Optional:* Check **"Require approvals"** and set the number to 1.
