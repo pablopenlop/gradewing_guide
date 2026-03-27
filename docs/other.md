@@ -215,7 +215,8 @@ git branch -a				# -- VERIFICATION
 *   **New Branch name:** Hotfix
 *   **Source:** main
 
-!!! warning "The software is modified within the **Hotfix** branch on GitHub, and the corresponding commit is made so that the changes can be later pulled into the Hetzner server."
+!!! danger "Software Modification on GitHub (Including Hotfixes)"
+    The software is modified within the **Hotfix** branch on GitHub, and the corresponding commit is made so that the changes can be later pulled into the Hetzner server.
 
 #### 2. Connection to Hetzner and positioning in Gradewing from the terminal
 
