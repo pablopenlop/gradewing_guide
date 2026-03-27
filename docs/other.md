@@ -212,22 +212,24 @@ git branch -a				# -- VERIFICATION
 ## Production Environment: Hotfix Deployment
 
 !!! danger "Enable GitHub Branch Protection"
-    Before starting development, you must complete this procedure. It ensures that your remote branches are protected and that all code changes follow a secure, peer-reviewed process via Pull Requests.
-*   Open GitHub Settings
-    Navigate to your repository on GitHub and click the Settings tab in the top navigation bar.
-*   Access Branch Rules
-    On the left sidebar, under the "Code and automation" section, click on Branches.
-*   Add Protection Rule
-    Locate the "Branch protection rules" section and click the Add branch protection rule button.
-*   Define Target Branch
-    In the "Branch name pattern" field, type the exact name of the branch you want to protect (e.g., main or dev).
-*   Enable Pull Request Requirement
-    Check the box "Require a pull request before merging".
-    Optional: Check "Require approvals" and set the number to 1 if you want to mandate a formal review before merging.
-*   Enforce for Administrators (Crucial)
-    To ensure these rules apply to you (the repo owner) as well, check the box "Do not allow bypassing the above settings" or "Include administrators".
-*   Save Changes
-    Click the Create or Save changes button at the bottom of the page.
+    **Before starting development, you must complete this procedure.** It ensures that your remote branches are protected and that all code changes follow a secure, peer-reviewed process via Pull Requests.
+
+    *   **Open GitHub Settings:**
+        Navigate to your repository on GitHub and click the **Settings** tab in the top navigation bar.
+    *   **Access Branch Rules:**
+        On the left sidebar, under the **"Code and automation"** section, click on **Branches**.
+    *   **Add Protection Rule:**
+        Locate the **"Branch protection rules"** section and click the **Add branch protection rule** button.
+    *   **Define Target Branch:**
+        In the **"Branch name pattern"** field, type the exact name of the branch you want to protect (e.g., `main` or `dev`).
+    *   **Enable Pull Request Requirement:**
+        Check the box **"Require a pull request before merging"**.
+        *Optional:* Check **"Require approvals"** and set the number to 1.
+    *   **Enforce for Administrators (Crucial):**
+        To ensure these rules apply to you, check the box **"Do not allow bypassing the above settings"** or **"Include administrators"**.
+    *   **Save Changes:**
+        Click the **Create** or **Save changes** button at the bottom of the page.
+
 
 #### 1. Creation of a new Release branch on GitHub
 *   **Create new Branch**
