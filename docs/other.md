@@ -516,6 +516,15 @@ Simply run the following command (see Appendix IV) in the terminal:
 docker-audit
 ```
 
+!!! note "list of `Docker` Images and Containers"
+
+```bash
+docker images
+```
+```bash
+docker ps
+```
+
 #### Integrity Check: Git Repository
 
 !!! tip "No Local Software Modifications on Production"
