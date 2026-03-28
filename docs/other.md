@@ -211,7 +211,7 @@ git branch -a				# -- VERIFICATION
 
 ## Production Environment: Hotfix Deployment
 
-!!! danger "Enable GitHub Branch Protection"
+!!! warning "Enable GitHub Branch Protection"
     **Before starting deployment, you should complete this procedure.** It ensures that your remote **`dev`** branche is protected and that all code changes follow a secure, peer-reviewed process via Pull Requests.
 
     *   **Open GitHub Settings:**
