@@ -351,6 +351,9 @@ git checkout main
 ```bash
 git pull origin main
 ```
+!!! info "The terminal should have shown: * branch main -> FETCH_HEAD - Already up to date"
+
+
 ```bash
 git merge Hotfix
 ```
