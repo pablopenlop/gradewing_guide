@@ -211,35 +211,40 @@ git branch -a				# -- VERIFICATION
 
 ## Production Environment: Hotfix Deployment
 
-!!! warning "Enable GitHub Branch Protection"
-    **Before starting deployment, you should complete this procedure.** It ensures that your remote **`dev`** branche is protected and that all code changes follow a secure, peer-reviewed process via Pull Requests.
-
-    *   **Open GitHub Settings:**
-        Navigate to your repository on GitHub and click the **Settings** tab in the top navigation bar.
-    *   **Access Branch Rules:**
-        On the left sidebar, under the **"Code and automation"** section, click on **Branches**.
-    *   **Add Protection Rule:**
-        Locate the **"Branch protection rules"** section and click the **Add branch protection rule** button.
-    *   **Define Target Branch:**
-        In the **"Branch name pattern"** field, type the exact name of the branch you want to protect: **`dev`**.
-    *   **Enable Pull Request Requirement:**
-        Check the box **"Require a pull request before merging"**.
-        *Optional:* Check **"Require approvals"** and set the number to 1.
-    *   **Enforce for Administrators (Crucial):**
-        To ensure these rules apply to you, check the box **"Do not allow bypassing the above settings"** or **"Include administrators"**.
-    *   **Save Changes:**
-        Click the **Create** or **Save changes** button at the bottom of the page.
-
 #### 1. Creation of a new Release branch on GitHub
 *   **Create new Branch**
 *   **New Branch name:** Hotfix
 *   **Source:** main
 
-#### 2. Apply the hotfix directly to the source code
-!!! danger "Software Modification on GitHub (Including Hotfixes)"
-    The software is modified within the **Hotfix** branch on GitHub, and the corresponding commit is made so that the changes can be later pulled into the Hetzner server.
+#### 2. Software Changes on the **Hotfix** Branch
 
-#### 3. Connection to Hetzner and positioning in Gradewing from the terminal
+Instead of using the terminal, apply the fix directly through your browser:
+
+    *   **Switch Branch**: In the "Branch" dropdown menu, select the **`Hotfix`** branch.
+    *   **Edit Files**: Navigate to the file(s) requiring the fix and click the **pencil icon** (*Edit this file*).
+    *   **Apply Fix**: Modify the code as needed within the editor.
+    *   **Commit Changes**: 
+        *   Scroll down to the **"Commit changes"** section.
+        *   Add a descriptive title.
+        *   Select **"Commit directly to the Hotfix branch"**.
+        *   Click **Commit changes**.
+
+#### 3. Merging **Hotfix** into **dev** (Integration)
+
+Once the software is fixed, you must synchronize it with your development history to ensure the fix is preserved:
+
+    *   **Open Pull Request**: Go to the **"Pull requests"** tab and click **"New pull request"**.
+    *   **Compare Branches**: 
+        *   Set **base**: `dev` 
+        *   Set **compare**: `Hotfix`
+    *  **Merge Process**: 
+        *   If GitHub says **"Able to merge"**, click **Create pull request**.
+        *   Review the changes and click **Merge pull request**, then **Confirm merge**.
+
+!!! note " Ready for production deployment in Hetzner."
+
+
+#### 4. Connection to Hetzner and positioning in Gradewing from the terminal
 
 First, log in via SSH to the server:
 ```bash
@@ -254,7 +259,7 @@ cd gradewing
 
 !!! note "Once you are positioned at `root@gradewing-server:~/gradewing/gradewing#`, you can run the necessary commands to deploy the software from GitHub."
 
-#### 4. Localizing the software from the Hotfix branch on the Hetzner server
+#### 5. Localizing the software from the Hotfix branch on the Hetzner server
 
 ```bash
 git fetch origin
@@ -269,19 +274,19 @@ git reset --hard HEAD
 git pull origin Hotfix
 ```
 
-#### 5. Execution permissions
+#### 6. Execution permissions
 
 ```bash
 chmod +x ./run/*.sh
 ```
 
-#### 6.1 Deployment to Stage of the new branch software already localized in Hetzner (keeping current data)
+#### 7.1 Deployment to Stage of the new branch software already localized in Hetzner (keeping current data)
 
 ```bash
 ./run/03-start_staging.sh
 ```
 
-#### 6.2 Deployment to Stage by deleting current data and, optionally, loading Production data
+#### 7.2 Deployment to Stage by deleting current data and, optionally, loading Production data
 
 !!! warning "Alternative Staging Data Cleanup Process."
 
@@ -297,15 +302,14 @@ chmod +x ./run/*.sh
 ./run/21-restore_to_staging.sh
 ```
 
-#### 7. Stage Environment Verification
+#### 8. Stage Environment Verification
 
 !!! note "By executing a single command, we verify the deployment in Stage (see Appendix I)."
 ```bash
 check-stage				# -- VERIFICATION
 ```
 
-
-#### 8. Docker Image Tagging (Image: `gradewing-web:vn.n`) and software on GitHub (Tag: `vn.n`)
+#### 9. Docker Image Tagging (Image: `gradewing-web:vn.n`) and software on GitHub (Tag: `vn.n`)
 
 !!! tip "This script identifies the most recent 'gradewing-web' image. Calculate a new version by adding 1 to the second digit, and use it in the posterior tagging script."
 
@@ -322,13 +326,13 @@ docker images --format "{{.Tag}}\t{{.CreatedSince}}" gradewing-web | grep "^v"  
 docker images --format "{{.Tag}}\t{{.CreatedSince}}" gradewing-web | grep "^v"   # -- VERIFICATION
 ```
 
-#### 9. Deployment of the tagged Docker image to Production (without Build)
+#### 10. Deployment of the tagged Docker image to Production (without Build)
 
 ```bash
 ./run/05-start_production.sh
 ```
 
-#### 10. Production Environment Verification
+#### 11. Production Environment Verification
 
 !!! note "With a single command, we verify the deployment in Production (see Appendix II)."
 
@@ -336,7 +340,7 @@ docker images --format "{{.Tag}}\t{{.CreatedSince}}" gradewing-web | grep "^v"  
 check-prod				# -- VERIFICATION
 ```
 
-#### 11. Merge into **main** from the **Hotfix** branch
+#### 12. Merge into **main** from the **Hotfix** branch
 
 ```bash
 git fetch origin
@@ -360,37 +364,6 @@ git push origin main
 git diff origin/main..origin/Hotfix			# -- VERIFICATION
 ```
 
-#### 12. Merge into **dev** from the **Hotfix** branch
-
-```bash
-git checkout dev
-```
-```bash
-git pull origin dev
-```
-```bash
-git merge Hotfix
-```
-```bash
-git diff dev..origin/Hotfix				# -- VERIFICATION
-```
-!!! info "Nothing should have been displayed on the terminal"
-
-```BASH
-git log dev..origin/dev --oneline       # -- VERIFICATION
-```
-!!! warning "Before running `git push origin dev`, verify that your local branch is synchronized. Use the output from the previous `git log dev..origin/dev --oneline` command to ensure no remote commits are missing."
-
-```bash
-git push origin dev
-```
-```bash
-git diff origin/dev..origin/Hotfix			# -- VERIFICATION
-```
-```bash
-git log main..origin/dev --oneline			# -- VERIFICATION
-```
-
 #### 13. Deletion of **Hotfix** branch in Hetzner and GitHub
 
 ```bash
@@ -400,16 +373,7 @@ git branch -d Hotfix
 git push origin --delete Hotfix
 ```
 
-#### 14. Deletion of **dev** branch in Hetzner (**only**)
-
-```bash
-git checkout main
-```
-```bash
-git branch -d dev
-```
-
-#### 15. Verification of branch status in Hetzner and GitHub
+#### 14. Verification of branch status in Hetzner and GitHub
 
 ```bash
 git branch -a				# -- VERIFICATION
