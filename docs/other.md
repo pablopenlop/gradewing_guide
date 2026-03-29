@@ -220,26 +220,26 @@ git branch -a				# -- VERIFICATION
 
 Instead of using the terminal, apply the fix directly through your browser:
 
-    *   **Switch Branch**: In the "Branch" dropdown menu, select the **`Hotfix`** branch.
-    *   **Edit Files**: Navigate to the file(s) requiring the fix and click the **pencil icon** (*Edit this file*).
-    *   **Apply Fix**: Modify the code as needed within the editor.
-    *   **Commit Changes**: 
-        *   Scroll down to the **"Commit changes"** section.
-        *   Add a descriptive title.
-        *   Select **"Commit directly to the Hotfix branch"**.
-        *   Click **Commit changes**.
+*   **Switch Branch**: In the "Branch" dropdown menu, select the **`Hotfix`** branch.
+*   **Edit Files**: Navigate to the file(s) requiring the fix and click the **pencil icon** (*Edit this file*).
+*   **Apply Fix**: Modify the code as needed within the editor.
+*   **Commit Changes**: 
+    *   Scroll down to the **"Commit changes"** section.
+    *   Add a descriptive title.
+    *   Select **"Commit directly to the Hotfix branch"**.
+    *   Click **Commit changes**.
 
 #### 3. Merging **Hotfix** into **dev** (Integration)
 
 Once the software is fixed, you must synchronize it with your development history to ensure the fix is preserved:
 
-    *   **Open Pull Request**: Go to the **"Pull requests"** tab and click **"New pull request"**.
-    *   **Compare Branches**: 
-        *   Set **base**: `dev` 
-        *   Set **compare**: `Hotfix`
-    *  **Merge Process**: 
-        *   If GitHub says **"Able to merge"**, click **Create pull request**.
-        *   Review the changes and click **Merge pull request**, then **Confirm merge**.
+*   **Open Pull Request**: Go to the **"Pull requests"** tab and click **"New pull request"**.
+*   **Compare Branches**: 
+    *   Set **base**: `dev` 
+    *   Set **compare**: `Hotfix`
+*  **Merge Process**: 
+    *   If GitHub says **"Able to merge"**, click **Create pull request**.
+    *   Review the changes and click **Merge pull request**, then **Confirm merge**.
 
 !!! note " Ready for production deployment in Hetzner."
 
