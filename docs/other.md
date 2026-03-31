@@ -239,9 +239,9 @@ Once the software is fixed, you must synchronize it with your development histor
     *   Set **compare**: `Hotfix`
 *  **Merge Process**: 
     *   If GitHub says **"Able to merge"**, click **Create pull request**.
-    *   Review the changes and click **Merge pull request**, then **Confirm merge**.
+    *   Review the changes and click **Merge pull request - Squash and Merge**, then **Confirm merge**.
 
-!!! note " Ready for production deployment in Hetzner."
+!!! warning "Note the **New Commit ID** (7 characters) that GitHub generates in `dev` after the merge (e.g., 8f9d63e)."
 
 
 #### 4. Connection to Hetzner and positioning in Gradewing from the terminal
