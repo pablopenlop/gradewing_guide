@@ -353,7 +353,7 @@ git pull origin main
 ```
 !!! info "The terminal should have shown: * branch main -> FETCH_HEAD - Already up to date"
 
-!!! note "With the next funcion called **`gcp`**, you are going to add the commit previously merged from `Hotfix` into `dev."
+!!! note "With the next funcion called **`gcp`**, you are going to add the commit previously merged from `Hotfix` into `dev`."
 
 ```bash
 gcp
