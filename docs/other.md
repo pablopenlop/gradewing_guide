@@ -526,6 +526,22 @@ check-git-integrity
 
 ## Miscellaneous & Maintenace
 
+#### Backups Status
+
+!!!note "Show status of the automatic (three per day) Backups."
+
+```bash
+echo "--- ESPACIO EN DISCO ---" && df -h / | grep / && \
+echo -e "\n--- ÚLTIMOS 3 BACKUPS ---" && ls -lh /root/gradewing/gradewing/db_backups/*.gz | tail -n 3 && \
+echo -e "\n--- RESULTADO ÚLTIMO LOG ---" && tail -n 10 /root/gradewing/gradewing/backups_logs/backup_prod.log | grep -E "INICIO|✅|ÉXITO"
+```
+
+!!! note "Execution permissions. In case it is necessary."
+
+```bash
+chmod 755 /root/gradewing/gradewing/run/20-backup_production.sh
+```
+
 #### Git Credential Automation (Token Storage)
 
 !!! note "Configures the local environment to securely cache GitHub credentials, eliminating the need for manual authentication during Git operations."
