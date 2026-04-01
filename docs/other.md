@@ -354,7 +354,7 @@ git diff origin/main..origin/Hotfix		# -- VERIFICATION
 git diff main..Hotfix                   # --VERIFICATION
 ```
 
-#### 12. Merging **main* into **dev** (Integration)
+#### 12. Merging **main** into **dev** (Integration)
 
 Once the software is fixed, you must synchronize it with your development history to ensure the fix is preserved:
 
