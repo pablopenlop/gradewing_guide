@@ -27,8 +27,7 @@ This is a temporary and exceptional branch called **`Hotfix`**. Usually, only a 
 *   Using the software included in this branch, usually a single commit, an **urgent deployment to Stage** is performed from the Hetzner terminal.
 *   Once verified, a **Tag** is applied, and the corresponding **Docker Image** is labeled.
 *   Using this tagged Docker Image, the **deployment to Production** is carried out (without a new build).
-*   Next, a **double merge** is performed within the Hetzner terminal from the **`Hotfix`** branch into both **`main` and `dev`**. This ensures that both `Hotfix` and `main` branches are leveled (noting that `dev` may have accumulated many previous commits).
-*   Additionally, the **`dev`** branch is deleted **ONLY** in the local Hetzner environment. 
+*   Next, a merge is performed within the Hetzner terminal from the `Hotfix` branch into `main`, and after from the `main` into `dev`. This ensures that both `Hotfix` and `main` branches are leveled (noting that `dev` may have accumulated many previous commits).
 *   Finally, the temporary **`Hotfix`** branch is deleted from both Hetzner and GitHub, leaving only the two permanent branches: **`dev`** and **`main`** in GitHub.
 
 
