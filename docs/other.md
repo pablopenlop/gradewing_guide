@@ -95,8 +95,14 @@ chmod +x ./run/*.sh
 ```bash
 ./run/21-restore_to_staging.sh
 ```
+#### 6. Removes only orpahed data
 
-#### 6. Stage Environment Verification
+```bash
+docker volume prune
+```
+
+
+#### 7. Stage Environment Verification
 
 !!! note "By executing a single command, we verify the deployment in Stage (see Appendix I)."
 ```bash
@@ -564,11 +570,12 @@ source ~/.bashrc
 
 #### Risk-Free Docker Cleanup
 
-!!! note "Removes only "orphaned" data and images not currently "In Use" by a container."
+!!! note "Removes only "orphaned" data."
 
 ```bash
 docker volume prune
 ```
+!!! warning "Removes only images not currently "In Use" by a container. This command disables the ability to roll back to prior Docker images."
 ```bash
 docker image prune -a
 ```
