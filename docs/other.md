@@ -62,9 +62,6 @@ git fetch origin
 git checkout Release
 ```
 ```bash
-git reset --hard HEAD
-```
-```bash
 git pull origin Release
 ```
 
@@ -256,9 +253,6 @@ git fetch origin
 ```
 ```bash
 git checkout Hotfix
-```
-```bash
-git reset --hard HEAD
 ```
 ```bash
 git pull origin Hotfix
