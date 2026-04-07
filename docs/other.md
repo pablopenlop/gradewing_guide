@@ -109,6 +109,9 @@ check-stage				# -- VERIFICATION
 ## Release Branch Deleted: Staging Certification Failed
 
 ```bash
+git checkout main
+```
+```bash
 git branch -d Release
 ```
 ```bash
