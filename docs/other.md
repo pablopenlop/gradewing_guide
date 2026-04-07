@@ -106,6 +106,15 @@ docker volume prune
 check-stage				# -- VERIFICATION
 ```
 
+## Release Branch Deleted: Staging Certification Failed
+
+```bash
+git branch -d Release
+```
+```bash
+git push origin --delete Release
+```
+
 ## Production Environment: Stage-Certified Deployment
 
 
