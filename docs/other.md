@@ -108,6 +108,22 @@ check-stage				# -- VERIFICATION
 
 ## Release Branch Deleted: Staging Certification Failed
 
+#### 1. Connection to Hetzner and positioning in Gradewing from the terminal
+
+First, log in via SSH to the server:
+```bash
+ssh root@46.62.132.133
+```
+```bash
+cd gradewing
+```
+```bash
+cd gradewing
+```
+!!! note "Once you are positioned at `root@gradewing-server:~/gradewing/gradewing#`, you can run the necessary commands to deploy the software from GitHub."
+
+#### 2. Deletion of Release branch
+
 ```bash
 git checkout main
 ```
@@ -117,6 +133,14 @@ git branch -D Release
 ```bash
 git push origin --delete Release
 ```
+
+#### 3. Verification of branch status in Hetzner and GitHub
+
+```bash
+git branch -a               # -- VERIFICATION
+```
+!!! info "Correct state of the branches"
+    **main** - remotes/origin/HEAD -> origin/main - remotes/origin/dev - remotes/origin/main
 
 ## Production Environment: Stage-Certified Deployment
 
