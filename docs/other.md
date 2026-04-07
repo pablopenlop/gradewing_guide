@@ -92,12 +92,14 @@ chmod +x ./run/*.sh
 ```bash
 ./run/21-restore_to_staging.sh
 ```
-#### 6. Removes only orpahed data
+#### 6. Removes only orpahed data and dangling images
 
 ```bash
 docker volume prune
 ```
-
+```bash
+docker image prune
+```
 
 #### 7. Stage Environment Verification
 
@@ -322,14 +324,23 @@ chmod +x ./run/*.sh
 ./run/21-restore_to_staging.sh
 ```
 
-#### 7. Stage Environment Verification
+#### 7. Removes only orpahed data and dangling images
+
+```bash
+docker volume prune
+```
+```bash
+docker image prune
+```
+
+#### 8. Stage Environment Verification
 
 !!! note "By executing a single command, we verify the deployment in Stage (see Appendix I)."
 ```bash
 check-stage				# -- VERIFICATION
 ```
 
-#### 8. Docker Image Tagging (Image: `gradewing-web:vn.n`) and software on GitHub (Tag: `vn.n`)
+#### 9. Docker Image Tagging (Image: `gradewing-web:vn.n`) and software on GitHub (Tag: `vn.n`)
 
 !!! tip "This script identifies the most recent 'gradewing-web' image. Calculate a new version by adding 1 to the second digit, and use it in the posterior tagging script."
 
@@ -346,13 +357,13 @@ docker images --format "{{.Tag}}\t{{.CreatedSince}}" gradewing-web | grep "^v"  
 docker images --format "{{.Tag}}\t{{.CreatedSince}}" gradewing-web | grep "^v"   # -- VERIFICATION
 ```
 
-#### 9. Deployment of the tagged Docker image to Production (without Build)
+#### 10. Deployment of the tagged Docker image to Production (without Build)
 
 ```bash
 ./run/05-start_production.sh
 ```
 
-#### 10. Production Environment Verification
+#### 11. Production Environment Verification
 
 !!! note "With a single command, we verify the deployment in Production (see Appendix II)."
 
@@ -360,7 +371,7 @@ docker images --format "{{.Tag}}\t{{.CreatedSince}}" gradewing-web | grep "^v"  
 check-prod				# -- VERIFICATION
 ```
 
-#### 11. Merge into **main** from the **Hotfix** branch
+#### 12. Merge into **main** from the **Hotfix** branch
 
 ```bash
 git fetch origin
@@ -389,7 +400,7 @@ git diff origin/main..origin/Hotfix		# -- VERIFICATION
 git diff main..Hotfix                   # --VERIFICATION
 ```
 
-#### 12. Merging **main** into **dev** (Integration)
+#### 13. Merging **main** into **dev** (Integration)
 
 Once the software is fixed, you must synchronize it with your development history to ensure the fix is preserved:
 
@@ -401,7 +412,7 @@ Once the software is fixed, you must synchronize it with your development histor
     *   If GitHub says **"Able to merge"**, click **Create pull request**.
     *   Review the changes and click **Merge pull request - Create a merge commit**, then **Confirm merge**.
 
-#### 13. Deletion of **Hotfix** branch in Hetzner and GitHub
+#### 14. Deletion of **Hotfix** branch in Hetzner and GitHub
 
 ```bash
 git branch -d Hotfix
@@ -410,7 +421,7 @@ git branch -d Hotfix
 git push origin --delete Hotfix
 ```
 
-#### 14. Verification of branch status in Hetzner and GitHub
+#### 15. Verification of branch status in Hetzner and GitHub
 
 ```bash
 git branch -a				# -- VERIFICATION
