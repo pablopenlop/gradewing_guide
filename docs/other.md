@@ -112,7 +112,7 @@ check-stage				# -- VERIFICATION
 git checkout main
 ```
 ```bash
-git branch -d Release
+git branch -D Release
 ```
 ```bash
 git push origin --delete Release
@@ -208,7 +208,7 @@ git log main..origin/dev --oneline			# -- VERIFICATION
 !!! info "Pending commits from the dev branch will be displayed"
 
 ```bash
-git branch -d Release
+git branch -D Release
 ```
 ```bash
 git push origin --delete Release
