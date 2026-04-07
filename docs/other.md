@@ -616,9 +616,9 @@ source ~/.bashrc
 ```bash
 docker volume prune
 ```
-!!! warning "Removes only images not currently "In Use" by a container. This command disables the ability to roll back to prior Docker images."
+!!! note "Removes only dangling images."
 ```bash
-docker image prune -a
+docker image prune
 ```
 
 #### Code Integrity Reset
