@@ -127,6 +127,9 @@ cd gradewing
 #### 2. Deletion of Release branch
 
 ```bash
+git fetch origin
+```
+```bash
 git checkout main
 ```
 ```bash
