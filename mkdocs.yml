@@ -1,5 +1,5 @@
 site_name: Gradewing Guide
-#site_url: http://127.0.0.1:8000/docs123
+site_url: https://pablopenlop.github.io/gradewing_guide/
 
 plugins:
   - search

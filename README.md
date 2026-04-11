@@ -27,9 +27,15 @@ This project provides documentation and setup instructions for the Gradewing Gui
    mkdocs serve --livereload
    ```
 
-## Usage
+## Deploying to GitHub Pages
+    ```
+   mkdocs gh-deploy
+   ```
+Git Hub Pages settings:
+- Source: Deploy from a branch
+- Branch: gh-pages, folder: / (root)
 
-Refer to the documentation in the `docs/` folder for usage instructions.
+The documentation will be available at https://pablopenlop.github.io/gradewing_guide/
 
 ## Project Structure
 
