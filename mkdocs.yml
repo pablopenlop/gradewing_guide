@@ -1,6 +1,14 @@
 site_name: Gradewing Guide
 #site_url: http://127.0.0.1:8000/docs123
 
+plugins:
+  - search
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      zoomable: true
+      draggable: true
+
 theme:
   favicon: assets/images/gradewing_icon.png
   logo: assets/images/gradewing_icon_white.png
@@ -19,10 +27,13 @@ theme:
 
 nav:
   - Gradewing: index.md
+  - Technical guide: other.md
   - Data Manager's Guide:
       - Getting Started: data-manager/getting-started.md
       - The Operational Roadmap: data-manager/operational-roadmap.md
-      - Set up: data-manager/setup.md
+      - Set up:
+          - Overview: data-manager/setup.md
+          - The Student Setup: data-manager/student-setup.md
       - Gradebooks & Reports: data-manager/gradebook.md
       
   - Teacher's Guide:
@@ -33,7 +44,20 @@ nav:
 markdown_extensions:
   - admonition
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+          - name: mermaid
+            class: mermaid
+            format: !!python/name:pymdownx.superfences.fence_code_format
   - attr_list
   - pymdownx.blocks.caption
-  
+  - toc:
+      toc_depth: 3
+
+extra_javascript:
+  - https://unpkg.com
+
+extra_css:
+  #- https://cdnjs.cloudflare.com
+  - stylesheets/extra.css
+
