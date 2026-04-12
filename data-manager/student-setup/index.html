@@ -1,0 +1,1586 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://pablopenlop.github.io/gradewing_guide/data-manager/student-setup/">
+      
+      
+        <link rel="prev" href="../operational-roadmap/">
+      
+      
+        <link rel="next" href="../student-setup-v2/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/gradewing_icon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+    
+    
+      
+        <title>The Student Setup - Gradewing Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Nunito";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#the-student-setup-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Gradewing Guide" class="md-header__button md-logo" aria-label="Gradewing Guide" data-md-component="logo">
+      
+  <img src="../../assets/images/gradewing_icon_white.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Gradewing Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              The Student Setup
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Gradewing
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../other/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Technical guide
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../getting-started/" class="md-tabs__link">
+          
+  
+  
+  Data Manager's Guide
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../teacher/getting-started/" class="md-tabs__link">
+          
+  
+  
+  Teacher's Guide
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Gradewing Guide" class="md-nav__button md-logo" aria-label="Gradewing Guide" data-md-component="logo">
+      
+  <img src="../../assets/images/gradewing_icon_white.png" alt="logo">
+
+    </a>
+    Gradewing Guide
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gradewing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Technical guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked="">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Manager's Guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Data Manager's Guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../operational-roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Operational Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked="">
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Set up
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Set up
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Student Setup
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Student Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#student-registration-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Student Registration Process
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Student Registration Process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-student" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Add student
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Edit profile
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#group-tags" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Group tags
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#student-registration-guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Student registration guidelines
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Student registration guidelines">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gce-as-a-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GCE AS &amp; A-Level
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#international-as-a-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        International AS &amp; A levels
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#international-baccalaureate-ib-diploma" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        International Baccalaureate (IB) Diploma
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../student-setup-v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Student Setup v2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gradebook.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gradebooks &amp; Reports
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teacher's Guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Teacher's Guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/gradebook/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gradebooks &amp; Reports
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/record/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Student &amp; Learner Records
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#student-registration-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Student Registration Process
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Student Registration Process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-student" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Add student
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Edit profile
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#group-tags" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Group tags
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#student-registration-guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Student registration guidelines
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Student registration guidelines">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gce-as-a-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GCE AS &amp; A-Level
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#international-as-a-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        International AS &amp; A levels
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#international-baccalaureate-ib-diploma" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        International Baccalaureate (IB) Diploma
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="the-student-setup-guide">The Student Setup Guide</h1>
+<h2 id="student-registration-process">Student Registration Process</h2>
+<pre class="mermaid"><code>graph LR
+    A([Add Student]) --&gt; B[Edit Profile]
+
+    subgraph Setup [Profile Details]
+        B -.-&gt; C(Personal Data)
+        B -.-&gt; D(Guardians)
+        B -.-&gt; E(Permanent Tags)
+    end
+
+    subgraph Enrolment [Enrolment Process]
+        B --&gt; F(Academic Year)
+        F --&gt; G(Programme)
+        G --&gt; H(Subjects)
+    end
+
+    C &amp; D &amp; E &amp; H --- Z((Done))
+
+    style Z fill:#fafafa,stroke:#bbb,stroke-width:1px,stroke-dasharray: 5 5
+    style Setup fill:#f9f9f9,stroke:#eee,stroke-dasharray: 2 2
+    style Enrolment fill:#fff,stroke:#eee</code></pre>
+<h3 id="add-student">Add student</h3>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/images/Setup_Students.png" data-desc-position="bottom"><img alt="Setup Students" src="../../assets/images/Setup_Students.png" width="700"></a></p>
+<p>Click the <code>Add student</code> button to begin the registration process. Enter the student's First Name and Last Name into the corresponding form to create the record. You may also provide their Gender, Date of Birth, and Email Address as optional fields.</p>
+<h3 id="edit-profile">Edit profile</h3>
+<ul>
+<li><strong>Personal data</strong>: This section allows you to review and update the student's core information previously entered during registration.</li>
+<li><strong>Guardians</strong>: This section allows you to register one or multiple guardians by providing their Full Name and Email Address.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Assign a guardian to the student to enable progress report sharing</p>
+</div>
+<ul>
+<li><strong>Permanent group tags</strong>: Assign one or multiple permanent group tags to the student. Tags assigned here are permanent and will apply across all enrolment years. Their use enables student group analysis for insights based on demographics or specific cohorts.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Group tags must be previously created in <code>Setup &gt; Students &gt; Tags</code>, clicking the <code>Group tags</code> button</p>
+</div>
+<h4 id="enrolment-process">Enrolment Process</h4>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/images/Setup_Students_Enrolment.png" data-desc-position="bottom"><img alt="Setup Students" src="../../assets/images/Setup_Students_Enrolment.png" width="700"></a></p>
+<ol>
+<li>
+<p><strong>Academic Years</strong>: Click on <code>+ Enrol</code> to associate the student with a specific Academic Year. This step is required to activate the student's record for the current cycle and enables their inclusion in specific year groups.</p>
+<div class="admonition note">
+<p class="admonition-title">Student must be enrolled in an Academic Year before assigning a Programme</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Review before saving</p>
+<p>Please ensure the <strong>Academic Year</strong> and <strong>Year Group</strong> are correct. <strong>These fields cannot be modified</strong> once the enrolment is created.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Annual Group Tags</p>
+<p>You can assign one or multiple tags to a student for a specific academic year. Unlike permanent tags, these are used to group students for academic purposes that may change from year to year.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Learner Statuses (Flags)</p>
+<p>Assign one or multiple specific educational profiles to the student. These "flags" allow teachers and Data Managers to immediately identify and support specific student needs:</p>
+<ul>
+<li><strong>SEN (Special Educational Needs)</strong>: The student has a learning difficulty or disability that requires special educational provision.</li>
+<li><strong>EAL (English as an Additional Language)</strong>: The student's first language is not English and they may need support to access the curriculum.</li>
+<li><strong>LA (Low Attainer)</strong>: The student is currently struggling to achieve the minimum expected academic standards for their level.</li>
+<li><strong>G&amp;T (Gifted &amp; Talented)</strong>: The student demonstrates high ability in one or more academic, creative, or practical areas.</li>
+<li><strong>MP (Mobile Pupil)</strong>: The student has joined the school outside the standard admission cycle or intake times.</li>
+<li><strong>OAGC (Out of Age Group Cohort)</strong>: The student is not in the expected year group based on their chronological age.     </li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Academic Enrolments</strong>: Select <code>+ Add programme</code> to assign the student to a programme and enable subject enrolment.</p>
+<div class="admonition info">
+<p class="admonition-title">Add Programme</p>
+<p>Within the form, you can select the most appropriate program for each student from the following options, organized by educational level:</p>
+<p><strong>Final Secondary (KS5)</strong></p>
+<ul>
+<li><strong>IB Diploma Programme</strong></li>
+<li><strong>GCE AS &amp; A levels</strong></li>
+<li><strong>Level 3 Extended Project Qualifications</strong></li>
+<li><strong>International AS &amp; A levels</strong></li>
+<li><strong>International Project Qualifications</strong></li>
+<li><strong>Other Pre-university (KS5) Programmes</strong></li>
+</ul>
+<p><strong>Upper Secondary (KS4)</strong></p>
+<ul>
+<li><strong>IB Middle Years Programme (Years 4–5)</strong></li>
+<li><strong>GCSEs</strong></li>
+<li><strong>Level 1 &amp; 2 Project Qualifications</strong></li>
+<li><strong>International GCSEs</strong></li>
+<li><strong>O Levels</strong></li>
+</ul>
+<p><strong>Lower Secondary (KS3)</strong></p>
+<ul>
+<li><strong>International Lower Secondary Programme</strong></li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Subjects</strong>: Locate the specific Programme section and click its corresponding <code>+ Add subject</code> button.</p>
+<p></p><table style="border: none; border-collapse: collapse; width: 100%; table-layout: fixed;">
+  <tbody><tr style="border: none;">
+    <td style="border: none; width: 50%; padding: 10px; text-align: center; vertical-align: top;">
+      <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/images/Setup_Students_Add_Subject.png" data-desc-position="bottom"><img src="../../assets/images/Setup_Students_Add_Subject.png" class="glightbox" style="width: 100%; border-radius: 4px; border: 1px solid #eee;" alt="Subject Selection"></a>
+    </td>
+    <td style="border: none; width: 50%; padding: 10px; text-align: center; vertical-align: top;">
+      <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/images/Setup_Students_Add_Subject_Conf.png" data-desc-position="bottom"><img src="../../assets/images/Setup_Students_Add_Subject_Conf.png" class="glightbox" style="width: 100%; border-radius: 4px; border: 1px solid #eee;" alt="Enrolment Details"></a>
+    </td>
+  </tr>
+</tbody></table><p></p>
+<p><strong>Step 1: Selection</strong><br>
+Use the dropdown in the first form to select the required subject. Each option in the list is a <strong>unique entry</strong> that already includes its specific <strong>Examination Board</strong> and <strong>Curriculum System</strong> (e.g., <strong>Cambridge</strong>, <strong>Pearson/Edexcel</strong>, <strong>Oxford/AQA</strong>, or <strong>International Baccalaureate</strong>). Click <code>Next</code> to proceed.</p>
+<p><strong>Step 2: Configuration</strong><br>
+In the final form, select the <strong>Academic Year</strong> and the <strong>Enrolment Type</strong>:</p>
+<div class="admonition info">
+<p class="admonition-title">Enrolment Types</p>
+<ul>
+<li><strong>Standard Enrolment</strong>: For students following the regular internal course.</li>
+<li><strong>Exam Only</strong>: This option allows exam results to be recorded <strong><em>without creating an internal enrolment record</em></strong>. It is an efficient way to manage subject qualifications earned outside the institution by incoming students.</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Multi-Year Enrolment</p>
+<p>Multiple academic years can be assigned to a single subject. This is useful when a subject spans two years or if a student requires additional time to complete the course.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Finalizing the Profile</p>
+<p>After completing all sections—including <strong>Personal Data</strong>, <strong>Guardians</strong>, <strong>Group Tags</strong>, and <strong>Enrolments</strong>—you must click the <code>Done</code> button to save and synchronize the entire student record.</p>
+</div>
+</li>
+</ol>
+<h3 id="group-tags">Group tags</h3>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/images/Setup_Students.png" data-desc-position="bottom"><img alt="Setup Students" src="../../assets/images/Setup_Students.png" width="700"></a></p>
+<p>Click the <code>Group tags</code> button to create the specific tags required for your school. You can select one or multiple tags from the provided list or add your own custom labels. The standard categories include:</p>
+<p><strong>Educational Needs</strong></p>
+<ul>
+<li><strong>EAL</strong>: English as an Additional Language.</li>
+<li><strong>G&amp;T / GIFTED</strong>: Gifted and Talented students.</li>
+<li><strong>IEP</strong>: Individualized Education Program.</li>
+<li><strong>SEN</strong>: Special Educational Needs.</li>
+</ul>
+<p><strong>Other Demographics</strong></p>
+<ul>
+<li><strong>MOBILE</strong>: Mobile Pupil (students joining outside the standard admission cycle).</li>
+<li><strong>OAGC</strong>: Out of Age Group Cohort.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Global Tags Setup</p>
+<p>Setting up these <strong>Group Tags</strong> in <code>Setup &gt; Students &gt; Tags</code> ensures they are available as dropdown options when editing individual student profiles later.</p>
+</div>
+<hr>
+<h2 id="student-registration-guidelines">Student registration guidelines</h2>
+<h3 id="gce-as-a-level">GCE AS &amp; A-Level</h3>
+<p><em>“Integrating linear subject tracking with a completed AS-Level and independent research certification.”</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Subject title</th>
+<th style="text-align: left;">Enrolled in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>GCE AS &amp; A levels</strong></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">AQA Level 3 Advanced GCE in Physics (7408)</td>
+<td style="text-align: left;">2025/26 – Year 13 <br> 2024/25 – Year 12</td>
+</tr>
+<tr>
+<td style="text-align: left;">AQA Level 3 Advanced GCE in Spanish (7692)</td>
+<td style="text-align: left;"><strong>Exam only</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">OCR Level 3 Advanced GCE in Computer Science (H446)</td>
+<td style="text-align: left;">2025/26 – Year 13 <br> 2024/25 – Year 12</td>
+</tr>
+<tr>
+<td style="text-align: left;">Pearson Edexcel Level 3 Advanced GCE in Mathematics (9MA0)</td>
+<td style="text-align: left;">2025/26 – Year 13 <br> 2024/25 – Year 12</td>
+</tr>
+<tr>
+<td style="text-align: left;">Pearson Edexcel Level 3 Advanced Subsidiary GCE in Further Mathematics (8FM0)</td>
+<td style="text-align: left;">2024/25 – Year 12</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Level 3 Extended Project Qualifications</strong></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Pearson Edexcel Level 3 Extended Project Qualification</td>
+<td style="text-align: left;">2025/26 – Year 13</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">Linear Subjects</p>
+<p>For linear subjects all grades recorded in the application (<strong>Internal and Expected</strong>) refer to the <strong>entire qualification</strong>. Since there is only one final exam, the system compares all grades against each other and against a <strong>single Final Exam Grade</strong>. This allows the application to track the student's overall progress and calculate the <strong>Value-Added</strong> provided by the school.</p>
+</div>
+<hr>
+<h3 id="international-as-a-levels">International AS &amp; A levels</h3>
+<p><em>“A comprehensive summary of international curricula: combining CIE, OxfordAQA, and Pearson Edexcel.”</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Subject title</th>
+<th style="text-align: left;">Enrolled in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>International AS &amp; A levels</strong></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Cambridge International GCE A level in Media (9607)</td>
+<td style="text-align: left;">2025/26 – Year 13</td>
+</tr>
+<tr>
+<td style="text-align: left;">Cambridge International GCE AS level in Media (9607)</td>
+<td style="text-align: left;">2024/25 – Year 12</td>
+</tr>
+<tr>
+<td style="text-align: left;">OxfordAQA International A level in Economics (9640)</td>
+<td style="text-align: left;">2025/26 – Year 13</td>
+</tr>
+<tr>
+<td style="text-align: left;">OxfordAQA International AS level in Economics (9640)</td>
+<td style="text-align: left;">2024/25 – Year 12</td>
+</tr>
+<tr>
+<td style="text-align: left;">Pearson Edexcel International A level in Mathematics (YMA01)</td>
+<td style="text-align: left;">2025/26 – Year 13</td>
+</tr>
+<tr>
+<td style="text-align: left;">Pearson Edexcel International AS level in Mathematics (XMA01)</td>
+<td style="text-align: left;">2024/25 – Year 12</td>
+</tr>
+<tr>
+<td style="text-align: left;">Pearson Edexcel International AS level in Further Mathematics (XFM01)</td>
+<td style="text-align: left;">2024/25 – Year 12</td>
+</tr>
+<tr>
+<td style="text-align: left;">Cambridge International GCE A level in Law (9084)</td>
+<td style="text-align: left;"><strong>Exam only</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Cambridge International GCE AS level in Law (9084)</td>
+<td style="text-align: left;"><strong>Exam only</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>International Project Qualifications</strong></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Cambridge International Project Qualification</td>
+<td style="text-align: left;">2025/26 – Year 13</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">Staged linear &amp; modular Subjects</p>
+</div>
+<p>Staged Linear and Modular systems both utilize two distinct qualification grades —the AS and the A Level— allowing the application to track progress and calculate Value-Added across both milestones.</p>
+<hr>
+<h3 id="international-baccalaureate-ib-diploma">International Baccalaureate (IB) Diploma</h3>
+<p><em>“Recording a full IB Diploma profile using numerical grading (1-7), HL/SL distinctions, and Core (A–E) components.”</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Subject title</th>
+<th style="text-align: left;">Enrolled in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>IB Diploma Programme</strong></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">IB DP English A: Lang &amp; Lit HL (Group 1)</td>
+<td style="text-align: left;">2025/26 – Grade 12 <br> 2024/25 – Grade 11</td>
+</tr>
+<tr>
+<td style="text-align: left;">IB DP Geography HL (Group 3)</td>
+<td style="text-align: left;">2025/26 – Grade 12 <br> 2024/25 – Grade 11</td>
+</tr>
+<tr>
+<td style="text-align: left;">IB DP Biology SL (Group 4)</td>
+<td style="text-align: left;">2025/26 – Grade 12 <br> 2024/25 – Grade 11</td>
+</tr>
+<tr>
+<td style="text-align: left;">IB DP Mathematics: Analysis and Approaches HL (Group 5)</td>
+<td style="text-align: left;">2025/26 – Grade 12 <br> 2024/25 – Grade 11</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>IB Core Components</strong></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">IB DP Theory of Knowledge (TOK)</td>
+<td style="text-align: left;">2025/26 – Grade 12 <br> 2024/25 – Grade 11</td>
+</tr>
+<tr>
+<td style="text-align: left;">IB DP Extended Essay (EE)</td>
+<td style="text-align: left;">2025/26 – Grade 12 <br> 2024/25 – Grade 11</td>
+</tr>
+<tr>
+<td style="text-align: left;">IB DP Creativity, Activity, Service (CAS)</td>
+<td style="text-align: left;">2025/26 – Grade 12 <br> 2024/25 – Grade 11</td>
+</tr>
+</tbody>
+</table>
+<!-- 
+---
+
+### Case Study 4: Multi-Board IGCSE Integration & Science Rationalization
+*“A strategic demonstration of Key Stage 4 curriculum design: balancing core sciences via the Combined route while unifying dual grading scales (9-1 and A*-G) across three international boards.”*
+
+#### **Profile Overview**
+This case study illustrates the application’s ability to manage the transition between traditional and reformed grading scales at the IGCSE level. It highlights the "Single Award" science logic and the inclusion of Level 2 independent research (HPQ) as a curriculum enhancer.
+
+*   **Science Optimization:** Implementation of **Combined Science (0653)** to provide a broad scientific foundation within a single-credit framework.
+*   **Dual-Scale Calibration:** Simultaneous tracking of **Numerical (9-1)** and **Alphabetic (A*-G)** results in a unified student transcript.
+*   **Breadth & Specialization:** A balanced portfolio covering STEM, Humanities, Languages, and Vocational studies (Business/Media).
+*   **Early Research Skills:** Integration of the **AQA Level 2 HPQ** to bridge the gap between IGCSE and future A-Level/IPQ research requirements.
+
+#### **Application Enrollment View**
+
+
+| Subject title | Enrolled in |
+| :--- | :--- |
+| **International GCSEs** | |
+| Cambridge IGCSE (9-1) in Mathematics (0980) | 2025/26 – Year 11 <br> 2024/25 – Year 10 |
+| Cambridge IGCSE (9-1) in Spanish (7160) | 2025/26 – Year 11 <br> 2024/25 – Year 10 |
+| **Cambridge IGCSE in Combined Science (0653)** | **2025/26 – Year 11 <br> 2024/25 – Year 10** |
+| **Cambridge IGCSE in History (0470)** | **2025/26 – Year 11 <br> 2024/25 – Year 10** |
+| OxfordAQA IGCSE (9-1) in Media Studies (9257) | 2025/26 – Year 11 <br> 2024/25 – Year 10 |
+| Pearson Edexcel International GCSE (9-1) in Business (4BS1) | 2025/26 – Year 11 <br> 2024/25 – Year 10 |
+| Pearson Edexcel International GCSE (9-1) in English Language A (4EA1) | 2025/26 – Year 11 <br> 2024/25 – Year 10 |
+| | |
+| **Level 1 & 2 Project Qualifications** | |
+| **AQA Level 2 Higher Project Qualification (HPQ)** | **2025/26 – Year 11 <br> 2024/25 – Year 10** |
+
+#### **Key Considerations**
+
+!!! info "The 'Combined Science' Logic"
+    Unlike 'Co-ordinated' or 'Triple' routes, **Combined Science (0653)** is treated by the system as a **Single Award (1 IGCSE)**. The application maps Biology, Chemistry, and Physics components into a single terminal grade, optimizing the student's timetable for additional electives like Business and Media.
+
+!!! info "Cross-Board Grading Alignment"
+    The system performs real-time normalization between boards:
+    *   **9-1 Scale (Edexcel/OxfordAQA/CIE):** Standardized for subjects like English and Maths.
+    *   **A*-G Scale (CIE History/Science):** The application retains the legacy alphabetic format for these specific codes (0470/0653) while providing equivalency mapping for internal school reporting.
+
+---
+
+### Case Study 5: The Triple Science Specialist (STEM-Driven Profile)
+*“A specialized STEM-oriented IGCSE pathway: focusing on independent science disciplines while integrating Cambridge’s numerical Mathematics for a high-rigor foundation.”*
+
+#### **Profile Overview**
+This case demonstrates the application's ability to handle the "Triple Science" route. It rejects grouped models in favor of three distinct reporting streams (Biology, Chemistry, Physics), providing a more granular academic record for future STEM specialization.
+
+*   **Independent Science Stream:** Three separate Pearson Edexcel IGCSEs (4BI1, 4CH1, 4PH1), explicitly avoiding the Combined or Co-ordinated awards.
+*   **Numerical Maths Integration:** Utilization of **Cambridge (0980)** to ensure a 9-1 graded foundation in Mathematics.
+*   **High-Rigor Academic Load:** A 9-qualification portfolio designed for students targeting Medicine, Engineering, or Pure Sciences at Key Stage 5.
+*   **Technical Breadth:** Inclusion of Computer Science and Geography to complement the scientific analytical framework.
+
+#### **Application Enrollment View**
+
+
+| Subject title | Enrolled in |
+| :--- | :--- |
+| **International GCSEs** | |
+| **Cambridge IGCSE (9-1) in Mathematics (0980)** | **2025/26 – Year 11 <br> 2024/25 – Year 10** |
+| **Pearson Edexcel International GCSE in Biology (4BI1)** | **2025/26 – Year 11 <br> 2024/25 – Year 10** |
+| **Pearson Edexcel International GCSE in Chemistry (4CH1)** | **2025/26 – Year 11 <br> 2024/25 – Year 10** |
+| **Pearson Edexcel International GCSE in Physics (4PH1)** | **2025/26 – Year 11 <br> 2024/25 – Year 10** |
+| Pearson Edexcel International GCSE (9-1) in English Language A (4EA1) | 2025/26 – Year 11 <br> 2024/25 – Year 10 |
+| Pearson Edexcel International GCSE (9-1) in Spanish (4SP1) | 2025/26 – Year 11 <br> 2024/25 – Year 10 |
+| Cambridge IGCSE (9-1) in Geography (0976) | 2025/26 – Year 11 <br> 2024/25 – Year 10 |
+| OxfordAQA IGCSE (9-1) in Computer Science (9210) | 2025/26 – Year 11 <br> 2024/25 – Year 10 |
+| | |
+| **Level 1 & 2 Project Qualifications** | |
+| **AQA Level 2 Higher Project Qualification (HPQ)** | **2025/26 – Year 11 <br> 2024/25 – Year 10** |
+
+#### **Key Considerations**
+
+!!! info "Disaggregated Science Logic"
+    By not utilizing **Combined** or **Co-ordinated** sciences, the system tracks three independent grades. This prevents a lower performance in one discipline from "diluting" the student's overall scientific profile, a critical distinction for highly selective university admissions.
+
+!!! info "Advanced Research Foundation"
+    The **HPQ** in this profile is recorded as a skills-based qualification. This allows the center to track the development of independent study habits early, serving as a critical data point for predicting success in Year 12/13 research-heavy subjects.
+
+---
+
+### Case Study 6: GCE O-Level Regional Pathway (Legacy & Commonwealth)
+*“Managing traditional GCE Ordinary Level (O-Level) qualifications: focusing on alphabetic grading (A*–E) and terminal assessment models in regional markets.”*
+
+#### **Profile Overview**
+This case study demonstrates the application's compatibility with the GCE O-Level system, widely used in Singapore, Pakistan, and Mauritius. It highlights the system's ability to process legacy alphabetic grading while maintaining the same tracking rigor as modern IGCSEs.
+
+*   **Traditional Rigor:** A 7-subject O-Level portfolio focused on academic core disciplines.
+*   **Alphabetic Grading (A*–E):** All subjects utilize the standard GCE O-Level scale, requiring the system to map results against international benchmarks.
+*   **Regional Specialization:** Inclusion of Islamic Studies (2068) and Sociology (2251), common in South Asian and Middle Eastern centers.
+*   **Single-Board Loyalty:** A 100% Cambridge (CIE) profile, typical of centers operating under National Equivalency requirements.
+
+#### **Application Enrollment View**
+
+
+| Subject title | Enrolled in |
+| :--- | :--- |
+| **GCE O Levels** | |
+| Cambridge O Level Mathematics (4024) | 2025/26 – Year 11 <br> 2024/25 – Year 10 |
+| Cambridge O Level English Language (1123) | 2025/26 – Year 11 <br> 2024/25 – Year 10 |
+| Cambridge O Level Physics (5054) | 2025/26 – Year 11 <br> 2024/25 – Year 10 |
+| Cambridge O Level Chemistry (5070) | 2025/26 – Year 11 <br> 2024/25 – Year 10 |
+| Cambridge O Level Sociology (2251) | 2025/26 – Year 11 <br> 2024/25 – Year 10 |
+| Cambridge O Level Islamic Studies (2068) | 2025/26 – Year 11 <br> 2024/25 – Year 10 |
+| Cambridge O Level Economics (2281) | 2025/26 – Year 11 <br> 2024/25 – Year 10 |
+
+#### **Key Considerations**
+
+!!! info "Legacy Grading Logic"
+    Unlike IGCSEs that often use the 9-1 scale, **GCE O Levels** consistently use the **A* to E** scale. The application ensures that internal targets and predicted grades are restricted to this alphabetic format to match the official statement of results issued by Cambridge.
+
+!!! info "Terminal Assessment Focus"
+    O-Level subjects are strictly linear. The application records all internal mock results as direct indicators of the final terminal exam performance, providing specific **Value-Added** metrics based on the historical difficulty of O-Level grade thresholds compared to IGCSE.
+
+!!! info "Equivalency Mapping"
+    For students moving from O-Levels to IB or A-Levels, the system provides a background mapping (e.g., Grade B = Level 6) to allow for seamless transition tracking within the student’s lifelong academic record.
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.sections", "search.suggest", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

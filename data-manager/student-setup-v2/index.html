@@ -1,0 +1,1404 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://pablopenlop.github.io/gradewing_guide/data-manager/student-setup-v2/">
+      
+      
+        <link rel="prev" href="../student-setup/">
+      
+      
+        <link rel="next" href="../../teacher/getting-started/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/gradewing_icon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+    
+    
+      
+        <title>The Student Setup v2 - Gradewing Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Nunito";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#the-student-setup-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Gradewing Guide" class="md-header__button md-logo" aria-label="Gradewing Guide" data-md-component="logo">
+      
+  <img src="../../assets/images/gradewing_icon_white.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Gradewing Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              The Student Setup v2
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Gradewing
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../other/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Technical guide
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../getting-started/" class="md-tabs__link">
+          
+  
+  
+  Data Manager's Guide
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../teacher/getting-started/" class="md-tabs__link">
+          
+  
+  
+  Teacher's Guide
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Gradewing Guide" class="md-nav__button md-logo" aria-label="Gradewing Guide" data-md-component="logo">
+      
+  <img src="../../assets/images/gradewing_icon_white.png" alt="logo">
+
+    </a>
+    Gradewing Guide
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gradewing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Technical guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked="">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Manager's Guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Data Manager's Guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../operational-roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Operational Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked="">
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Set up
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Set up
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../student-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Student Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Student Setup v2
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Student Setup v2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#the-student-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Student Profile
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Student Profile">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-personal-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Personal Data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-guardians-optional-but-recommended" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Guardians (Optional but Recommended)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-permanent-group-tags-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Permanent Group Tags (Optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-academic-years" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Academic Years
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-academic-enrolments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Academic Enrolments
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#group-tags" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Group Tags
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learner-statuses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Learner Statuses
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subject-enrolment-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Subject Enrolment Guide
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Subject Enrolment Guide">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gce-as-a-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GCE AS &amp; A-Level
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#international-as-a-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        International AS &amp; A levels
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#international-baccalaureate-ib-diploma" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        International Baccalaureate (IB) Diploma
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gradebook.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gradebooks &amp; Reports
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teacher's Guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Teacher's Guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/gradebook/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gradebooks &amp; Reports
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/record/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Student &amp; Learner Records
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#the-student-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Student Profile
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Student Profile">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-personal-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Personal Data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-guardians-optional-but-recommended" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Guardians (Optional but Recommended)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-permanent-group-tags-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Permanent Group Tags (Optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-academic-years" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Academic Years
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-academic-enrolments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Academic Enrolments
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#group-tags" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Group Tags
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learner-statuses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Learner Statuses
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subject-enrolment-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Subject Enrolment Guide
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Subject Enrolment Guide">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gce-as-a-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GCE AS &amp; A-Level
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#international-as-a-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        International AS &amp; A levels
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#international-baccalaureate-ib-diploma" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        International Baccalaureate (IB) Diploma
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="the-student-setup-guide">The Student Setup Guide</h1>
+<h2 id="the-student-profile">The Student Profile</h2>
+<p>To register a new student, click the <code>Add student</code> button. Then provide the student's First Name and Last Name—these are required fields. Once saved, you will be redirected to the student's profile.</p>
+<p>The student profile consists of <strong>five</strong> sections: <strong>Personal Data</strong>, <strong>Guardians</strong>, <strong>Permanent Group Tags</strong>, <strong>Academic Years</strong> and <strong>Academic Enrolments</strong>. Each section contains specific fields that you need to complete to set up a student's record in Gradewing.</p>
+<h3 id="1-personal-data">1. Personal Data</h3>
+<p>This section allows you to review or update the student's information as needed.
+The 'Gender' field is optional, but providing it allows you to compare grades by gender.</p>
+<h3 id="2-guardians-optional-but-recommended">2. Guardians (Optional but Recommended)</h3>
+<p>You should assign at least one guardian to each student to enable secure report sharing. By adding guardians, you enable Gradewing to send reports directly to the appropriate contacts on your behalf. You can add multiple guardians if needed.</p>
+<h3 id="3-permanent-group-tags-optional">3. Permanent Group Tags (Optional)</h3>
+<p>You can assign any number of <strong>permanent group tags</strong> to the student, which will apply across <strong>all</strong> their academic years. 
+See the <a href="#group-tags">Group Tags</a> section to learn more.</p>
+<h3 id="4-academic-years">4. Academic Years</h3>
+<p>The enrolment process requires you to enrol each student in an <strong>Academic Year</strong> and <strong>Year Group</strong>. This step allows you to assign subjects to the chosen academic year. </p>
+<p>You may also assign <strong>Annual Group Tags</strong> to a student for each academic year; these tags are specific to that year only. See the <a href="#group-tags">Group Tags</a> section to learn more.</p>
+<p>You should mark the appropriate <strong>Learner Statuses</strong> (SEN, EAL, G&amp;T...) for the student in that academic year. See the <a href="#learner-statuses">Learner Statuses</a> section to learn more.</p>
+<h3 id="5-academic-enrolments">5. Academic Enrolments</h3>
+<p>You can assign each student to one (and more) programmes. 
+A programme is simply a group of subjects from the same educational system and level that a student takes in one or more academic years. </p>
+<p>A programme does not care which academic year the student is enrolled in.</p>
+<div class="admonition info">
+<p class="admonition-title">Academic Programmes</p>
+<p><em>Final Secondary (KS5)</em></p>
+<ul>
+<li><strong>IB Diploma Programme</strong> – All SL, HL, and Core subjects (Theory of Knowledge, Extended Essay, CAS)</li>
+<li><strong>GCE AS &amp; A levels</strong> – All GCE AS and A level subjects from AQA, Edexcel, and OCR</li>
+<li><strong>Level 3 Extended Project Qualifications</strong> –
+        All EPQ from AQA, OCR, and Edexcel</li>
+<li><strong>International AS &amp; A levels</strong> – All IAS and IAL subjects from Cambridge (CIE), Edexcel and OxfordAQA</li>
+<li><strong>International Project Qualifications</strong> – International EPQ from Cambridge (CIE) and OxfordAQA</li>
+<li><strong>Other Pre-university (KS5) Programmes</strong> – Custom subjects e.g. PSHE (non-examinable)</li>
+</ul>
+<p><em>Upper Secondary (KS4)</em></p>
+<ul>
+<li><strong>IB Middle Years Programme (Years 4–5)</strong> – All MYP subjects from the 8 subject groups</li>
+<li><strong>GCSEs</strong> – All GCSE subjects from AQA, Edexcel, and OCR</li>
+<li><strong>Level 1 &amp; 2 Project Qualifications</strong> – All Level 1 &amp; 2 EPQ from AQA, OCR, and Edexcel</li>
+<li><strong>International GCSEs</strong> – All IGCSE subjects from Cambridge (CIE), Edexcel and OxfordAQA</li>
+<li><strong>O Levels</strong> – All O Level subjects from Cambridge (CIE)</li>
+<li><strong>KS4</strong> – Custom KS4 subjects e.g. PSHE (non-examinable)</li>
+</ul>
+<p><em>Lower Secondary (KS3)</em></p>
+<ul>
+<li><strong>International Lower Secondary Programme</strong> – All subjects from the lower secondary curriculum</li>
+</ul>
+</div>
+<p>After adding a programme, you can enrol the student in any of the subjects within that programme. 
+A programme itself is not tied to a specific academic year, but you can only assign subjects to an academic year in which the student is enroled.</p>
+<h4 id="subject-enrolment-standard-vs-exam-only">Subject Enrolment: Standard vs Exam Only</h4>
+<p>There are two ways to enrol a student in a subject:</p>
+<ul>
+<li><strong>Standard Enrolment</strong>: For students following the regular internal course. 
+You can assign multiple academic years to a single subject if needed.
+In fact, this is the recommended way for IB MYP &amp; DP subjects, GCSEs, and A levels.
+See the <a href="#subject-assignment">Assigning Subjects</a> section below for real-world examples and best practices.</li>
+<li><strong>Exam Only</strong>: For recording exam results without creating an internal enrolment record. This allows you to <strong>record and analyse</strong> prior exam results for <ul>
+<li>students who joined your school with prior qualifications.</li>
+<li>all your students during the first year of adoption of Gradewing.</li>
+</ul>
+</li>
+</ul>
+<p>Registering KS4 exam results grants GEM the ability to generate accurate <strong>Expected Grades</strong> for KS5 subjects.</p>
+<div class="admonition tip">
+<p class="admonition-title">Plan subject enrolments carefully</p>
+<p>For example, for modular IALs, students can be enroled in AS for Y12 and A2 for Y13; for linear A-levels, a two-year enrolment is recommended. See the <a href="#subject-enrolment-guide">Subject Enrolment Guide</a> section for examples and best practices.</p>
+</div>
+<h2 id="group-tags">Group Tags</h2>
+<h2 id="learner-statuses">Learner Statuses</h2>
+<p>Learner statuses (also called "flags") help you identify students with specific educational profiles or support needs. When enrolling a student in an Academic Year, you can assign one or more of the following statuses:</p>
+<ul>
+<li><strong>SEN (Special Educational Needs)</strong>: For students requiring special educational provision.</li>
+<li><strong>EAL (English as an Additional Language)</strong>: For students whose first language is not English.</li>
+<li><strong>LA (Low Attainer)</strong>: For students struggling to meet expected academic standards.</li>
+<li><strong>G&amp;T (Gifted &amp; Talented)</strong>: For students demonstrating high ability in academic, creative, or practical areas.</li>
+<li><strong>MP (Mobile Pupil)</strong>: For students who joined outside the standard admission cycle.</li>
+<li><strong>OAGC (Out of Age Group Cohort)</strong>: For students not in the expected year group for their age.</li>
+</ul>
+<p>Assigning these statuses ensures teachers and data managers can provide targeted support and track student needs effectively.</p>
+<h2 id="subject-enrolment-guide">Subject Enrolment Guide</h2>
+<h3 id="gce-as-a-level">GCE AS &amp; A-Level</h3>
+<p>We recommend a two-year enrolment for (linear) A levels (Y12 and Y13).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Subject title</th>
+<th style="text-align: left;">Enroled in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">AQA Level 3 Advanced GCE in Physics (7408)</td>
+<td style="text-align: left;">2025/26 – Year 13 <br> 2024/25 – Year 12</td>
+</tr>
+<tr>
+<td style="text-align: left;">Pearson Edexcel Level 3 Advanced GCE in Further Mathematics (9FM0)</td>
+<td style="text-align: left;">2024/25 – Year 12</td>
+</tr>
+<tr>
+<td style="text-align: left;">Pearson Edexcel Level 3 Advanced Subsidiary GCE in Further Mathematics (8FM0)</td>
+<td style="text-align: left;">Exam only</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example 1:</strong> The student takes Physics (linear qualification) normally in Y12 and Y13, and takes Further Mathematics in Y12 but drops it in Y13. The student sits the Further Mathematics AS exam in Y13 without lessons, hence the "Exam only" enrolment.</p>
+<hr>
+<h3 id="international-as-a-levels">International AS &amp; A levels</h3>
+<p>For staged linear &amp; modular subjects, we recommend enrolling students in AS subjects for Y12 and A2 subjects for Y13.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Subject title</th>
+<th style="text-align: left;">Enroled in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Cambridge International GCE A level in Media (9607)</td>
+<td style="text-align: left;">2025/26 – Year 13</td>
+</tr>
+<tr>
+<td style="text-align: left;">Pearson Edexcel International A level in Mathematics (YMA01)</td>
+<td style="text-align: left;">2025/26 – Year 13</td>
+</tr>
+<tr>
+<td style="text-align: left;">Cambridge International GCE AS level in Media (9607)</td>
+<td style="text-align: left;">2024/25 – Year 12</td>
+</tr>
+<tr>
+<td style="text-align: left;">Pearson Edexcel International AS level in Mathematics (XMA01)</td>
+<td style="text-align: left;">2024/25 – Year 12</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example 2:</strong> The student is enroled in Media (staged qualification) and Mathematics (modular qualification). The student takes the Media AS level exam in Y12 and the A Level level exam in Y13. The student sits some (AS) units in Y12, and the remaining (A2) units in Y13.</p>
+<hr>
+<h3 id="international-baccalaureate-ib-diploma">International Baccalaureate (IB) Diploma</h3>
+<p>We recommend two-year enrolment for IB DP subjects and core components (TOK, CAS and EE) whenever possible.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Subject title</th>
+<th style="text-align: left;">Enroled in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">IB DP Biology HL (Group 4)</td>
+<td style="text-align: left;">2025/26 – Grade 12</td>
+</tr>
+<tr>
+<td style="text-align: left;">IB DP Biology SL (Group 4)</td>
+<td style="text-align: left;">2024/25 – Grade 11</td>
+</tr>
+<tr>
+<td style="text-align: left;">IB DP English A: Lang &amp; Lit HL (Group 1)</td>
+<td style="text-align: left;">2025/26 – Grade 12 <br> 2024/25 – Grade 11</td>
+</tr>
+<tr>
+<td style="text-align: left;">IB DP Theory of Knowledge (TOK)</td>
+<td style="text-align: left;">2025/26 – Grade 12 <br> 2024/25 – Grade 11</td>
+</tr>
+<tr>
+<td style="text-align: left;">IB DP Creativity, Activity, Service (CAS)</td>
+<td style="text-align: left;">2025/26 – Grade 12 <br> 2024/25 – Grade 11</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example 3:</strong> The student takes Biology SL in Grade 11 and decides to take it at HL in Grade 12. The student takes English A: Lang &amp; Lit at HL, TOK and CAS core components across both years.</p>
+<div class="admonition info">
+<p class="admonition-title">IB Core Components</p>
+<p>TOK, EE and CAS can be assigned as normal subjects in Gradewing. CAS is given a special grading scale (7/7, 6/7 ... 0/7) which reflects the state of completion of the seven CAS learning outcomes.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.sections", "search.suggest", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

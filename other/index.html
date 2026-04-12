@@ -1,0 +1,1887 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://pablopenlop.github.io/gradewing_guide/other/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../data-manager/getting-started/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/gradewing_icon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+    
+    
+      
+        <title>Technical guide - Gradewing Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Nunito";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#deploying-software" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Gradewing Guide" class="md-header__button md-logo" aria-label="Gradewing Guide" data-md-component="logo">
+      
+  <img src="../assets/images/gradewing_icon_white.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Gradewing Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Technical guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Gradewing
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Technical guide
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../data-manager/getting-started/" class="md-tabs__link">
+          
+  
+  
+  Data Manager's Guide
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../teacher/getting-started/" class="md-tabs__link">
+          
+  
+  
+  Teacher's Guide
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Gradewing Guide" class="md-nav__button md-logo" aria-label="Gradewing Guide" data-md-component="logo">
+      
+  <img src="../assets/images/gradewing_icon_white.png" alt="logo">
+
+    </a>
+    Gradewing Guide
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gradewing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Technical guide
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Technical guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#gitflow-branching-and-deployment-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GitFlow: Branching and Deployment Strategy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stage-environment-new-version-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stage Environment: New Version Deployment
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-branch-deleted-staging-certification-failed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Release Branch Deleted: Staging Certification Failed
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#production-environment-stage-certified-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Production Environment: Stage-Certified Deployment
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#production-environment-hotfix-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Production Environment: Hotfix Deployment
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disaster-recovery-version-rollback-with-data-preservation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Disaster Recovery: Version Rollback with Data Preservation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#critical-production-database-restoration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Critical: Production Database Restoration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-audit-git-integrity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Docker Audit &amp; Git Integrity
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#miscellaneous-maintenace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Miscellaneous &amp; Maintenace
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-procedures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Procedures
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quick Procedures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#remove-git-pre-commit-hook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Remove Git Pre-Commit Hook
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#incorporate-new-bash-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Incorporate New Bash Function
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-shell-aliases-and-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Appendix: Shell Aliases and Functions
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Manager's Guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Data Manager's Guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-manager/getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-manager/operational-roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Operational Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Set up
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Set up
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-manager/setup.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-manager/student-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Student Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-manager/student-setup-v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Student Setup v2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-manager/gradebook.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gradebooks &amp; Reports
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teacher's Guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Teacher's Guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../teacher/getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../teacher/gradebook/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gradebooks &amp; Reports
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../teacher/record/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Student &amp; Learner Records
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#gitflow-branching-and-deployment-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GitFlow: Branching and Deployment Strategy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stage-environment-new-version-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stage Environment: New Version Deployment
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-branch-deleted-staging-certification-failed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Release Branch Deleted: Staging Certification Failed
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#production-environment-stage-certified-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Production Environment: Stage-Certified Deployment
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#production-environment-hotfix-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Production Environment: Hotfix Deployment
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disaster-recovery-version-rollback-with-data-preservation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Disaster Recovery: Version Rollback with Data Preservation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#critical-production-database-restoration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Critical: Production Database Restoration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-audit-git-integrity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Docker Audit &amp; Git Integrity
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#miscellaneous-maintenace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Miscellaneous &amp; Maintenace
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-procedures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Procedures
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quick Procedures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#remove-git-pre-commit-hook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Remove Git Pre-Commit Hook
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#incorporate-new-bash-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Incorporate New Bash Function
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-shell-aliases-and-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Appendix: Shell Aliases and Functions
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="deploying-software">Deploying Software</h1>
+<h2 id="gitflow-branching-and-deployment-strategy">GitFlow: Branching and Deployment Strategy</h2>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/images/GitFlow.png" data-desc-position="bottom"><img alt="Image title" src="../assets/images/GitFlow.png" style="display:block; margin:0 auto;" width="100%"></a></p>
+<h4 id="main-branch"><strong>Main Branch</strong></h4>
+<p>Known as <strong><code>main</code></strong>, it is a permanent branch and is only updated whenever a new software version is promoted to Production from the <strong>Release</strong> or <strong>Hotfix</strong> branch. Each new version is always associated with a <strong>Tag</strong> corresponding to a <strong>Docker Image</strong>.</p>
+<h4 id="develop-branch"><strong>Develop Branch</strong></h4>
+<p>Known as <strong><code>dev</code></strong>, it is a permanent branch where continuous work is performed. Commits are made as needed until a new version of the Gradewing software is ready for deployment to <strong>Stage</strong>.</p>
+<h4 id="release-branch"><strong>Release Branch</strong></h4>
+<p>This is a temporary branch called <strong><code>Release</code></strong>. Commits are <strong>never</strong> made directly to this branch.</p>
+<ul>
+<li>It is created via "<strong>New Branch</strong>" in GitHub, using <strong><code>dev</code></strong> as the source branch.</li>
+<li>Using the software included in this branch, a <strong>deployment to Stage</strong> is performed from the Hetzner terminal, where the new software will be exhaustively tested.</li>
+<li>Once the software is certified, a <strong>Tag</strong> is applied, and the corresponding <strong>Docker Image</strong> is labeled.</li>
+<li>Using this tagged Docker Image, the <strong>deployment to Production</strong> is carried out (without a new build).</li>
+<li>Next, a <strong>merge</strong> is performed within the Hetzner terminal from the <strong><code>Release</code></strong> branch into <strong><code>main</code></strong>. At this point, the three branches are leveled (excluding any commits made to <code>dev</code> after the <code>Release</code> branch was created).</li>
+<li>Finally, the temporary <strong><code>Release</code></strong> branch is deleted from both Hetzner and GitHub, leaving only the two permanent branches: <strong><code>dev</code></strong> and <strong><code>main</code></strong> in GitHub.</li>
+</ul>
+<h4 id="hotfix-branch"><strong>Hotfix Branch</strong></h4>
+<p>This is a temporary and exceptional branch called <strong><code>Hotfix</code></strong>. Usually, only a single commit is made on this branch to push an urgent fix to Production.</p>
+<ul>
+<li>It is created via "<strong>New Branch</strong>" in GitHub, using <strong><code>main</code></strong> as the source branch.</li>
+<li>Using the software included in this branch, usually a single commit, an <strong>urgent deployment to Stage</strong> is performed from the Hetzner terminal.</li>
+<li>Once verified, a <strong>Tag</strong> is applied, and the corresponding <strong>Docker Image</strong> is labeled.</li>
+<li>Using this tagged Docker Image, the <strong>deployment to Production</strong> is carried out (without a new build).</li>
+<li>Next, a merge is performed within the Hetzner terminal from the <code>Hotfix</code> branch into <code>main</code>, and after from the <code>main</code> into <code>dev</code>. This ensures that both <code>Hotfix</code> and <code>main</code> branches are leveled (noting that <code>dev</code> may have accumulated many previous commits).</li>
+<li>Finally, the temporary <strong><code>Hotfix</code></strong> branch is deleted from both Hetzner and GitHub, leaving only the two permanent branches: <strong><code>dev</code></strong> and <strong><code>main</code></strong> in GitHub.</li>
+</ul>
+<h2 id="stage-environment-new-version-deployment">Stage Environment: New Version Deployment</h2>
+<h4 id="1-creation-of-a-new-release-branch-on-github">1. Creation of a new Release branch on GitHub</h4>
+<ul>
+<li><strong>Create new Branch</strong></li>
+<li><strong>New Branch name:</strong> Release</li>
+<li><strong>Source:</strong> dev</li>
+</ul>
+<h4 id="2-connection-to-hetzner-and-positioning-in-gradewing-from-the-terminal">2. Connection to Hetzner and positioning in Gradewing from the terminal</h4>
+<p>First, log in via SSH to the server:
+</p><div class="highlight"><pre><span></span><code>ssh<span class="w"> </span>root@46.62.132.133
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>gradewing
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>gradewing
+</code></pre></div><p></p>
+<div class="admonition note">
+<p class="admonition-title">Once you are positioned at <code>root@gradewing-server:~/gradewing/gradewing#</code>, you can run the necessary commands to deploy the software from GitHub.</p>
+</div>
+<h4 id="3-localizing-the-software-from-the-release-branch-on-the-hetzner-server">3. Localizing the software from the Release branch on the Hetzner server</h4>
+<p></p><div class="highlight"><pre><span></span><code>git<span class="w"> </span>fetch<span class="w"> </span>origin
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>Release
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </span>Release
+</code></pre></div><p></p>
+<h4 id="4-execution-permissions">4. Execution permissions</h4>
+<div class="highlight"><pre><span></span><code>chmod<span class="w"> </span>+x<span class="w"> </span>./run/*.sh
+</code></pre></div>
+<h4 id="51-deployment-to-stage-of-the-new-branch-software-already-localized-in-hetzner-keeping-current-data">5.1 Deployment to Stage of the new branch software already localized in Hetzner (keeping current data)</h4>
+<div class="highlight"><pre><span></span><code>./run/03-start_staging.sh
+</code></pre></div>
+<h4 id="52-deployment-to-stage-by-deleting-current-data-and-optionally-loading-production-data">5.2 Deployment to Stage by deleting current data and, optionally, loading Production data</h4>
+<div class="admonition warning">
+<p class="admonition-title">Alternative Staging Data Cleanup Process.</p>
+</div>
+<p></p><div class="highlight"><pre><span></span><code>./run/04-stop_staging.sh
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>./run/03-start_staging.sh
+</code></pre></div><p></p>
+<div class="admonition tip">
+<p class="admonition-title">Depending on the magnitude of the changes made, it might be advisable to replicate the Production data so as not to start with an empty environment.</p>
+</div>
+<div class="highlight"><pre><span></span><code>./run/21-restore_to_staging.sh
+</code></pre></div>
+<h4 id="6-removes-only-orpahed-data-and-dangling-images">6. Removes only orpahed data and dangling images</h4>
+<p></p><div class="highlight"><pre><span></span><code>docker<span class="w"> </span>volume<span class="w"> </span>prune
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>image<span class="w"> </span>prune
+</code></pre></div><p></p>
+<h4 id="7-stage-environment-verification">7. Stage Environment Verification</h4>
+<div class="admonition note">
+<p class="admonition-title">By executing a single command, we verify the deployment in Stage (see Appendix I).</p>
+</div>
+<div class="highlight"><pre><span></span><code>check-stage<span class="w">             </span><span class="c1"># -- VERIFICATION</span>
+</code></pre></div>
+<h2 id="release-branch-deleted-staging-certification-failed">Release Branch Deleted: Staging Certification Failed</h2>
+<h4 id="1-connection-to-hetzner-and-positioning-in-gradewing-from-the-terminal">1. Connection to Hetzner and positioning in Gradewing from the terminal</h4>
+<p>First, log in via SSH to the server:
+</p><div class="highlight"><pre><span></span><code>ssh<span class="w"> </span>root@46.62.132.133
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>gradewing
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>gradewing
+</code></pre></div><p></p>
+<div class="admonition note">
+<p class="admonition-title">Once you are positioned at <code>root@gradewing-server:~/gradewing/gradewing#</code>, you can run the necessary commands to deploy the software from GitHub.</p>
+</div>
+<h4 id="2-deletion-of-release-branch">2. Deletion of Release branch</h4>
+<p></p><div class="highlight"><pre><span></span><code>git<span class="w"> </span>fetch<span class="w"> </span>origin
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>main
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>branch<span class="w"> </span>-D<span class="w"> </span>Release
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>--delete<span class="w"> </span>Release
+</code></pre></div><p></p>
+<h4 id="3-verification-of-branch-status-in-hetzner-and-github">3. Verification of branch status in Hetzner and GitHub</h4>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>branch<span class="w"> </span>-a<span class="w">               </span><span class="c1"># -- VERIFICATION</span>
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Correct state of the branches</p>
+<p><strong>main</strong> - remotes/origin/HEAD -&gt; origin/main - remotes/origin/dev - remotes/origin/main</p>
+</div>
+<h2 id="production-environment-stage-certified-deployment">Production Environment: Stage-Certified Deployment</h2>
+<h4 id="1-connection-to-hetzner-and-positioning-in-gradewing-from-the-terminal_1">1. Connection to Hetzner and positioning in Gradewing from the terminal</h4>
+<p>First, log in via SSH to the server:
+</p><div class="highlight"><pre><span></span><code>ssh<span class="w"> </span>root@46.62.132.133
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>gradewing
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>gradewing
+</code></pre></div><p></p>
+<div class="admonition note">
+<p class="admonition-title">Once you are positioned at <code>root@gradewing-server:~/gradewing/gradewing#</code>, you can run the necessary commands to deploy the software from GitHub.</p>
+</div>
+<h4 id="2-execution-permissions">2. Execution permissions</h4>
+<div class="highlight"><pre><span></span><code>chmod<span class="w"> </span>+x<span class="w"> </span>./run/*.sh
+</code></pre></div>
+<h4 id="3-docker-image-tagging-image-gradewing-webvnn-and-software-on-github-tag-vnn">3. Docker Image Tagging (Image: <code>gradewing-web:vn.n</code>) and software on GitHub (Tag: <code>vn.n</code>)</h4>
+<div class="admonition tip">
+<p class="admonition-title">This script identifies the most recent 'gradewing-web' image. Calculate a new version by adding 1 to the first digit, and use it in the posterior tagging script.</p>
+</div>
+<p></p><div class="highlight"><pre><span></span><code>docker<span class="w"> </span>images<span class="w"> </span>--format<span class="w"> </span><span class="s2">"{{.Tag}}\t{{.CreatedSince}}"</span><span class="w"> </span>gradewing-web<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">"^v"</span><span class="w">   </span><span class="c1"># -- VERIFICATION</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>./run/10-tag_web.sh
+</code></pre></div><p></p>
+<div class="admonition note">
+<p class="admonition-title">Just in case.</p>
+</div>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>images<span class="w"> </span>--format<span class="w"> </span><span class="s2">"{{.Tag}}\t{{.CreatedSince}}"</span><span class="w"> </span>gradewing-web<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">"^v"</span><span class="w">   </span><span class="c1"># -- VERIFICATION</span>
+</code></pre></div>
+<h4 id="4-deployment-of-the-tagged-docker-image-to-production-without-build">4. Deployment of the tagged Docker image to Production (without Build)</h4>
+<div class="highlight"><pre><span></span><code>./run/05-start_production.sh
+</code></pre></div>
+<h4 id="5-production-environment-verification">5. Production Environment Verification</h4>
+<div class="admonition note">
+<p class="admonition-title">With a single command, we verify the deployment in Production (see Appendix II).</p>
+</div>
+<div class="highlight"><pre><span></span><code>check-prod<span class="w">              </span><span class="c1"># -- VERIFICATION</span>
+</code></pre></div>
+<h4 id="6-merge-into-main-from-the-release-branch-and-deletion-of-said-branch-in-hetzner-and-github">6. Merge into <strong>main</strong> from the <strong>Release</strong> branch, and deletion of said branch in Hetzner and GitHub</h4>
+<p></p><div class="highlight"><pre><span></span><code>git<span class="w"> </span>fetch<span class="w"> </span>origin
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>main
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </span>main
+</code></pre></div><p></p>
+<div class="admonition info">
+<p class="admonition-title">The terminal should have shown: * branch main -&gt; FETCH_HEAD - Already up to date</p>
+</div>
+<p></p><div class="highlight"><pre><span></span><code>git<span class="w"> </span>reset<span class="w"> </span>--hard<span class="w"> </span>Release
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>diff<span class="w"> </span>main..origin/Release<span class="w">           </span><span class="c1"># -- VERIFICATION</span>
+</code></pre></div><p></p>
+<div class="admonition info">
+<p class="admonition-title">Nothing should have been displayed on the terminal</p>
+</div>
+<p></p><div class="highlight"><pre><span></span><code>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>main<span class="w"> </span>--force
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>diff<span class="w"> </span>origin/main..origin/Release<span class="w">            </span><span class="c1"># -- VERIFICATION</span>
+</code></pre></div><p></p>
+<div class="admonition info">
+<p class="admonition-title">Nothing should have been displayed on the terminal</p>
+</div>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>log<span class="w"> </span>main..origin/dev<span class="w"> </span>--oneline<span class="w">          </span><span class="c1"># -- VERIFICATION</span>
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Pending commits from the dev branch will be displayed</p>
+</div>
+<p></p><div class="highlight"><pre><span></span><code>git<span class="w"> </span>branch<span class="w"> </span>-D<span class="w"> </span>Release
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>--delete<span class="w"> </span>Release
+</code></pre></div><p></p>
+<h4 id="7-verification-of-branch-status-in-hetzner-and-github">7. Verification of branch status in Hetzner and GitHub</h4>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>branch<span class="w"> </span>-a<span class="w">               </span><span class="c1"># -- VERIFICATION</span>
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Correct state of the branches</p>
+<p><strong>main</strong> - remotes/origin/HEAD -&gt; origin/main - remotes/origin/dev - remotes/origin/main</p>
+</div>
+<h2 id="production-environment-hotfix-deployment">Production Environment: Hotfix Deployment</h2>
+<h4 id="1-creation-of-a-new-release-branch-on-github_1">1. Creation of a new Release branch on GitHub</h4>
+<ul>
+<li><strong>Create new Branch</strong></li>
+<li><strong>New Branch name:</strong> Hotfix</li>
+<li><strong>Source:</strong> main</li>
+</ul>
+<h4 id="2-software-changes-on-the-hotfix-branch">2. Software Changes on the <strong>Hotfix</strong> Branch</h4>
+<p>Instead of using the terminal, apply the fix directly through your browser:</p>
+<ul>
+<li><strong>Switch Branch</strong>: In the "Branch" dropdown menu, select the <strong><code>Hotfix</code></strong> branch.</li>
+<li><strong>Edit Files</strong>: Navigate to the file(s) requiring the fix and click the <strong>pencil icon</strong> (<em>Edit this file</em>).</li>
+<li><strong>Apply Fix</strong>: Modify the code as needed within the editor.</li>
+<li><strong>Commit Changes</strong>: <ul>
+<li>Scroll down to the <strong>"Commit changes"</strong> section.</li>
+<li>Add a descriptive title.</li>
+<li>Select <strong>"Commit directly to the Hotfix branch"</strong>.</li>
+<li>Click <strong>Commit changes</strong>.</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-connection-to-hetzner-and-positioning-in-gradewing-from-the-terminal">3. Connection to Hetzner and positioning in Gradewing from the terminal</h4>
+<p>First, log in via SSH to the server:
+</p><div class="highlight"><pre><span></span><code>ssh<span class="w"> </span>root@46.62.132.133
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>gradewing
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>gradewing
+</code></pre></div><p></p>
+<div class="admonition note">
+<p class="admonition-title">Once you are positioned at <code>root@gradewing-server:~/gradewing/gradewing#</code>, you can run the necessary commands to deploy the software from GitHub.</p>
+</div>
+<h4 id="4-localizing-the-software-from-the-hotfix-branch-on-the-hetzner-server">4. Localizing the software from the Hotfix branch on the Hetzner server</h4>
+<p></p><div class="highlight"><pre><span></span><code>git<span class="w"> </span>fetch<span class="w"> </span>origin
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>Hotfix
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </span>Hotfix
+</code></pre></div><p></p>
+<h4 id="5-execution-permissions">5. Execution permissions</h4>
+<div class="highlight"><pre><span></span><code>chmod<span class="w"> </span>+x<span class="w"> </span>./run/*.sh
+</code></pre></div>
+<h4 id="61-deployment-to-stage-of-the-new-branch-software-already-localized-in-hetzner-keeping-current-data">6.1 Deployment to Stage of the new branch software already localized in Hetzner (keeping current data)</h4>
+<div class="highlight"><pre><span></span><code>./run/03-start_staging.sh
+</code></pre></div>
+<h4 id="62-deployment-to-stage-by-deleting-current-data-and-optionally-loading-production-data">6.2 Deployment to Stage by deleting current data and, optionally, loading Production data</h4>
+<div class="admonition warning">
+<p class="admonition-title">Alternative Staging Data Cleanup Process.</p>
+</div>
+<p></p><div class="highlight"><pre><span></span><code>./run/04-stop_staging.sh
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>./run/03-start_staging.sh
+</code></pre></div><p></p>
+<div class="admonition tip">
+<p class="admonition-title">It might be advisable to replicate <strong>Production data</strong> to avoid starting with an empty environment.</p>
+</div>
+<div class="highlight"><pre><span></span><code>./run/21-restore_to_staging.sh
+</code></pre></div>
+<h4 id="7-removes-only-orpahed-data-and-dangling-images">7. Removes only orpahed data and dangling images</h4>
+<p></p><div class="highlight"><pre><span></span><code>docker<span class="w"> </span>volume<span class="w"> </span>prune
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>image<span class="w"> </span>prune
+</code></pre></div><p></p>
+<h4 id="8-stage-environment-verification">8. Stage Environment Verification</h4>
+<div class="admonition note">
+<p class="admonition-title">By executing a single command, we verify the deployment in Stage (see Appendix I).</p>
+</div>
+<div class="highlight"><pre><span></span><code>check-stage<span class="w">             </span><span class="c1"># -- VERIFICATION</span>
+</code></pre></div>
+<h4 id="9-docker-image-tagging-image-gradewing-webvnn-and-software-on-github-tag-vnn">9. Docker Image Tagging (Image: <code>gradewing-web:vn.n</code>) and software on GitHub (Tag: <code>vn.n</code>)</h4>
+<div class="admonition tip">
+<p class="admonition-title">This script identifies the most recent 'gradewing-web' image. Calculate a new version by adding 1 to the second digit, and use it in the posterior tagging script.</p>
+</div>
+<p></p><div class="highlight"><pre><span></span><code>docker<span class="w"> </span>images<span class="w"> </span>--format<span class="w"> </span><span class="s2">"{{.Tag}}\t{{.CreatedSince}}"</span><span class="w"> </span>gradewing-web<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">"^v"</span><span class="w">   </span><span class="c1"># -- VERIFICATION</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>./run/10-tag_web.sh
+</code></pre></div><p></p>
+<div class="admonition note">
+<p class="admonition-title">Just in case.</p>
+</div>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>images<span class="w"> </span>--format<span class="w"> </span><span class="s2">"{{.Tag}}\t{{.CreatedSince}}"</span><span class="w"> </span>gradewing-web<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">"^v"</span><span class="w">   </span><span class="c1"># -- VERIFICATION</span>
+</code></pre></div>
+<h4 id="10-deployment-of-the-tagged-docker-image-to-production-without-build">10. Deployment of the tagged Docker image to Production (without Build)</h4>
+<div class="highlight"><pre><span></span><code>./run/05-start_production.sh
+</code></pre></div>
+<h4 id="11-production-environment-verification">11. Production Environment Verification</h4>
+<div class="admonition note">
+<p class="admonition-title">With a single command, we verify the deployment in Production (see Appendix II).</p>
+</div>
+<div class="highlight"><pre><span></span><code>check-prod<span class="w">              </span><span class="c1"># -- VERIFICATION</span>
+</code></pre></div>
+<h4 id="12-merge-into-main-from-the-hotfix-branch">12. Merge into <strong>main</strong> from the <strong>Hotfix</strong> branch</h4>
+<p></p><div class="highlight"><pre><span></span><code>git<span class="w"> </span>fetch<span class="w"> </span>origin
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>main
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </span>main
+</code></pre></div><p></p>
+<div class="admonition info">
+<p class="admonition-title">The terminal should have shown: * branch main -&gt; FETCH_HEAD - Already up to date</p>
+</div>
+<p></p><div class="highlight"><pre><span></span><code>git<span class="w"> </span>merge<span class="w"> </span>Hotfix<span class="w"> </span>--ff-only
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>diff<span class="w"> </span>main..origin/Hotfix<span class="w">            </span><span class="c1"># -- VERIFICATION</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>main
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>diff<span class="w"> </span>origin/main..origin/Hotfix<span class="w">     </span><span class="c1"># -- VERIFICATION</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>diff<span class="w"> </span>main..Hotfix<span class="w">                   </span><span class="c1"># --VERIFICATION</span>
+</code></pre></div><p></p>
+<h4 id="13-merging-main-into-dev-integration">13. Merging <strong>main</strong> into <strong>dev</strong> (Integration)</h4>
+<p>Once the software is fixed, you must synchronize it with your development history to ensure the fix is preserved:</p>
+<ul>
+<li><strong>Open Pull Request</strong>: Go to the <strong>"Pull requests"</strong> tab and click <strong>"New pull request"</strong>.</li>
+<li><strong>Compare Branches</strong>: <ul>
+<li>Set <strong>base</strong>: <code>dev</code> </li>
+<li>Set <strong>compare</strong>: <code>main</code></li>
+</ul>
+</li>
+<li><strong>Merge Process</strong>: <ul>
+<li>If GitHub says <strong>"Able to merge"</strong>, click <strong>Create pull request</strong>.</li>
+<li>Review the changes and click <strong>Merge pull request - Create a merge commit</strong>, then <strong>Confirm merge</strong>.</li>
+</ul>
+</li>
+</ul>
+<h4 id="14-deletion-of-hotfix-branch-in-hetzner-and-github">14. Deletion of <strong>Hotfix</strong> branch in Hetzner and GitHub</h4>
+<p></p><div class="highlight"><pre><span></span><code>git<span class="w"> </span>branch<span class="w"> </span>-d<span class="w"> </span>Hotfix
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>--delete<span class="w"> </span>Hotfix
+</code></pre></div><p></p>
+<h4 id="15-verification-of-branch-status-in-hetzner-and-github">15. Verification of branch status in Hetzner and GitHub</h4>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>branch<span class="w"> </span>-a<span class="w">               </span><span class="c1"># -- VERIFICATION</span>
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Correct state of the branches</p>
+<p><strong>main</strong> - remotes/origin/HEAD -&gt; origin/main - remotes/origin/dev - remotes/origin/main</p>
+</div>
+<h2 id="disaster-recovery-version-rollback-with-data-preservation">Disaster Recovery: Version Rollback with Data Preservation</h2>
+<div class="admonition danger">
+<p class="admonition-title">Critical Disaster Recovery</p>
+<p>This procedure must <strong>ONLY</strong> be used in the event of a critical failure in the current Production version. The objective is to perform a <strong>Rollback</strong> to a stable previous version while strictly <strong>preserving the existing database</strong>.</p>
+</div>
+<h4 id="1-connection-to-hetzner-and-positioning-in-gradewing-from-the-terminal_2">1. Connection to Hetzner and positioning in Gradewing from the terminal</h4>
+<p>First, log in via SSH to the server:
+</p><div class="highlight"><pre><span></span><code>ssh<span class="w"> </span>root@46.62.132.133
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>gradewing
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>gradewing
+</code></pre></div><p></p>
+<div class="admonition note">
+<p class="admonition-title">Once you are positioned at <code>root@gradewing-server:~/gradewing/gradewing#</code>, you can run the necessary commands to deploy a stable previousversion.</p>
+</div>
+<h4 id="2-deploying-an-older-docker-image">2. Deploying an older Docker Image</h4>
+<div class="admonition tip">
+<p class="admonition-title">This script identifies the last five 'gradewing-web' images. Please choose the one you intend to use for the production deployment (normally the penultimate one).</p>
+</div>
+<p></p><div class="highlight"><pre><span></span><code>docker<span class="w"> </span>images<span class="w"> </span>--format<span class="w"> </span><span class="s2">"{{.Tag}}\t{{.CreatedSince}}"</span><span class="w"> </span>gradewing-web<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">"^v"</span><span class="w">   </span><span class="c1"># -- VERIFICATION</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>./run/05-start_production.sh
+</code></pre></div><p></p>
+<div class="admonition tip">
+<p class="admonition-title">The image currently used by 'GradewingDjango_production' will be displayed. Please verify that it is correct.</p>
+</div>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>ps<span class="w"> </span>--format<span class="w"> </span><span class="s2">"table {{.Names}}\t{{.Image}}\t{{.Status}}"</span><span class="w">      </span><span class="c1"># -- VERIFICATION</span>
+</code></pre></div>
+<h4 id="3-production-environment-verification">3. Production Environment Verification</h4>
+<div class="admonition note">
+<p class="admonition-title">With a single command, we verify the deployment in Production (see Appendix II).</p>
+</div>
+<div class="highlight"><pre><span></span><code>check-prod<span class="w">              </span><span class="c1"># -- VERIFICATION</span>
+</code></pre></div>
+<h4 id="4-removing-rollbacked-tag">4. Removing Rollbacked Tag</h4>
+<div class="admonition info">
+<p class="admonition-title">This script allows you to remove a specific Tag (e.g., v2.0) from an image ID. If other tags (like 'staging') share the same ID, the physical data will remain safe and 'In Use' (see Appendix III).</p>
+</div>
+<div class="highlight"><pre><span></span><code>untag-gradewing
+</code></pre></div>
+<h2 id="critical-production-database-restoration">Critical: Production Database Restoration</h2>
+<div class="admonition danger">
+<p class="admonition-title">Destructive restore of the Production Database</p>
+<p>All current data in <code>GradewingDjango_production</code> will be overwritten with the selected backup file</p>
+</div>
+<h4 id="1-connection-to-hetzner-and-positioning-in-gradewing-from-the-terminal_3">1. Connection to Hetzner and positioning in Gradewing from the terminal</h4>
+<p>First, log in via SSH to the server:
+</p><div class="highlight"><pre><span></span><code>ssh<span class="w"> </span>root@46.62.132.133
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>gradewing
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>gradewing
+</code></pre></div><p></p>
+<div class="admonition note">
+<p class="admonition-title">Once you are positioned at <code>root@gradewing-server:~/gradewing/gradewing#</code>, you can run the necessary commands to deploy a stable previousversion.</p>
+</div>
+<h4 id="2-pre-restore-analysis">2. Pre-Restore Analysis</h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># 1. Load variables from .env into your current session</span>
+<span class="nb">export</span><span class="w"> </span><span class="k">$(</span>grep<span class="w"> </span>-v<span class="w"> </span><span class="s1">'^#'</span><span class="w"> </span>.env<span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="k">)</span>
+
+<span class="c1"># 2. Set the container name (since it's usually not in .env)</span>
+<span class="nv">PROD_DB_CONTAINER</span><span class="o">=</span><span class="s2">"GradewingPostgres_production"</span>
+<span class="nv">BACKUP_DIR</span><span class="o">=</span><span class="s2">"./db_backups"</span>
+
+<span class="c1"># 3. Analysis:</span>
+docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-i<span class="w"> </span><span class="s2">"</span><span class="nv">$PROD_DB_CONTAINER</span><span class="s2">"</span><span class="w"> </span>psql<span class="w"> </span>-U<span class="w"> </span><span class="s2">"</span><span class="nv">$POSTGRES_USER</span><span class="s2">"</span><span class="w"> </span>-d<span class="w"> </span><span class="s2">"</span><span class="nv">$POSTGRES_DB</span><span class="s2">"</span><span class="w"> </span>-c<span class="w"> </span><span class="s2">"SELECT count(*) AS total_migrations FROM django_migrations;"</span>
+</code></pre></div>
+<h4 id="3-emergency-snapshot-the-undo-button">3. Emergency Snapshot (The "Undo" Button)</h4>
+<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">"🛡️ Creating emergency pre-restore snapshot..."</span>
+docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-i<span class="w"> </span><span class="s2">"</span><span class="nv">$PROD_DB_CONTAINER</span><span class="s2">"</span><span class="w"> </span>pg_dump<span class="w"> </span>-U<span class="w"> </span><span class="s2">"</span><span class="nv">$POSTGRES_USER</span><span class="s2">"</span><span class="w"> </span><span class="s2">"</span><span class="nv">$POSTGRES_DB</span><span class="s2">"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>gzip<span class="w"> </span>&gt;<span class="w"> </span><span class="s2">"</span><span class="nv">$BACKUP_DIR</span><span class="s2">/emergency_pre_restore_</span><span class="k">$(</span>date<span class="w"> </span>+%F_%H%M<span class="k">)</span><span class="s2">.sql.gz"</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">"✅ Snapshot saved to: </span><span class="nv">$BACKUP_DIR</span><span class="s2">"</span>
+</code></pre></div>
+<h4 id="4-the-restore-script">4. The Restore Script</h4>
+<div class="highlight"><pre><span></span><code>./run/22-restore_to_production.sh
+</code></pre></div>
+<h4 id="5-production-environment-verification_1">5. Production Environment Verification</h4>
+<div class="admonition note">
+<p class="admonition-title">With a single command, we verify Production environment (see Appendix II).</p>
+</div>
+<div class="highlight"><pre><span></span><code>check-prod<span class="w">              </span><span class="c1"># -- VERIFICATION</span>
+</code></pre></div>
+<h2 id="docker-audit-git-integrity">Docker Audit &amp; Git Integrity</h2>
+<h4 id="security-audit-docker-environment">Security Audit: Docker Environment</h4>
+<div class="admonition tip">
+<p class="admonition-title">A comprehensive diagnostic tool to verify the health, security, and storage efficiency of the Gradewing environment.</p>
+</div>
+<p>Simply run the following command (see Appendix IV) in the terminal:</p>
+<div class="highlight"><pre><span></span><code>docker-audit
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">list of <code>Docker</code> Images and Containers</p>
+</div>
+<p></p><div class="highlight"><pre><span></span><code>docker<span class="w"> </span>images<span class="w">           </span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>ps
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>ps<span class="w"> </span>-a<span class="w"> </span>--filter<span class="w"> </span><span class="s2">"name=Gradewing"</span><span class="w"> </span>--format<span class="w"> </span><span class="s2">"table {{.ID}}\t{{.Names}}\t{{.Image}}\t{{.Status}}"</span><span class="w">    </span><span class="c1"># -- GRADEWING</span>
+</code></pre></div><p></p>
+<h4 id="integrity-check-git-repository">Integrity Check: Git Repository</h4>
+<div class="admonition tip">
+<p class="admonition-title">No Local Software Modifications on Production</p>
+</div>
+<p>Simply run the following command (see Appendix V) in the terminal:</p>
+<div class="highlight"><pre><span></span><code>check-git-integrity
+</code></pre></div>
+<h2 id="miscellaneous-maintenace">Miscellaneous &amp; Maintenace</h2>
+<h4 id="backups-status">Backups Status</h4>
+<div class="admonition note">
+<p class="admonition-title">Show status of the automatic (three per day) Backups.</p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">"--- ESPACIO EN DISCO ---"</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>df<span class="w"> </span>-h<span class="w"> </span>/<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>/<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
+<span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">"\n--- ÚLTIMOS 3 BACKUPS ---"</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>ls<span class="w"> </span>-lh<span class="w"> </span>/root/gradewing/gradewing/db_backups/*.gz<span class="w"> </span><span class="p">|</span><span class="w"> </span>tail<span class="w"> </span>-n<span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
+<span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">"\n--- RESULTADO ÚLTIMO LOG ---"</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>tail<span class="w"> </span>-n<span class="w"> </span><span class="m">10</span><span class="w"> </span>/root/gradewing/gradewing/backups_logs/backup_prod.log<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">"INICIO|✅|ÉXITO"</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Execution permissions. In case it is necessary.</p>
+</div>
+<div class="highlight"><pre><span></span><code>chmod<span class="w"> </span><span class="m">755</span><span class="w"> </span>/root/gradewing/gradewing/run/20-backup_production.sh
+</code></pre></div>
+<h4 id="git-credential-automation-token-storage">Git Credential Automation (Token Storage)</h4>
+<div class="admonition note">
+<p class="admonition-title">Configures the local environment to securely cache GitHub credentials, eliminating the need for manual authentication during Git operations.</p>
+</div>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>credential.helper<span class="w"> </span>store
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Perform this once. The first time you run a <strong><code>git fetch</code></strong> afterward, enter your GitHub Personal Access Token (PAT) as the password. It will be saved indefinitely.</p>
+</div>
+<h4 id="environment-configuration-reload">Environment Configuration Reload</h4>
+<div class="admonition note">
+<p class="admonition-title">Synchronizes the current terminal session with the latest updates made in aliases and functions.</p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="nb">source</span><span class="w"> </span>~/.bashrc
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Execute this command immediately after modifying aliases or custom functions to apply changes without re-establishing the SSH connection.</p>
+</div>
+<h4 id="risk-free-docker-cleanup">Risk-Free Docker Cleanup</h4>
+<div class="admonition note">
+<p class="admonition-title">Removes only "orphaned" data.</p>
+</div>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>volume<span class="w"> </span>prune
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Removes only dangling images.</p>
+</div>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>image<span class="w"> </span>prune
+</code></pre></div>
+<h4 id="code-integrity-reset">Code Integrity Reset</h4>
+<div class="admonition note">
+<p class="admonition-title">To discard any manual changes made on the Hetzner server and force the code to match GitHub exactly.</p>
+</div>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>fetch<span class="w"> </span>origin<span class="w"> </span>main
+git<span class="w"> </span>reset<span class="w"> </span>--hard<span class="w"> </span>origin/main
+git<span class="w"> </span>clean<span class="w"> </span>-fd
+</code></pre></div>
+<h4 id="emergency-log-inspection">Emergency Log Inspection</h4>
+<div class="admonition note">
+<p class="admonition-title">To quickly identify errors in the application or background workers.</p>
+</div>
+<p></p><div class="highlight"><pre><span></span><code>docker<span class="w"> </span>logs<span class="w"> </span>--tail<span class="w"> </span><span class="m">100</span><span class="w"> </span>-f<span class="w"> </span>GradewingDjango_production
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>logs<span class="w"> </span>GradewingDjango_production<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-Ei<span class="w"> </span><span class="s2">"error|critical|exception"</span>
+</code></pre></div><p></p>
+<h2 id="quick-procedures">Quick Procedures</h2>
+<h3 id="remove-git-pre-commit-hook">Remove Git Pre-Commit Hook</h3>
+<div class="admonition warning">
+<p class="admonition-title">Local Git Policy: Branch Protection Hook</p>
+<p>Currently, a <strong>pre-commit hook</strong> is active in this repository to prevent accidental direct commits to the <strong><code>main</code></strong> branch. This ensures that all development follows the standard workflow (Release or Hotfix branches) before merging into production. If you need to deactivate this restriction, follow the standard decommissioning procedure below.</p>
+</div>
+<h5 id="verify-permissions-and-existence">Verify permissions and existence</h5>
+<div class="highlight"><pre><span></span><code>ls<span class="w"> </span>-l<span class="w"> </span>.git/hooks/pre-commit
+</code></pre></div>
+<h5 id="review-the-content-safety-check">Review the content (Safety check)</h5>
+<div class="highlight"><pre><span></span><code>cat<span class="w"> </span>-n<span class="w"> </span>.git/hooks/pre-commit
+</code></pre></div>
+<h5 id="delete-the-hook">Delete the hook</h5>
+<div class="highlight"><pre><span></span><code>rm<span class="w"> </span>.git/hooks/pre-commit
+</code></pre></div>
+<h3 id="incorporate-new-bash-function">Incorporate New Bash Function</h3>
+<p>To add a new <strong><code>function</code></strong> to your environment safely, follow these 3 steps:</p>
+<h5 id="add-the-new-function">Add the new function</h5>
+<div class="admonition note">
+<p class="admonition-title">Open your functions file and paste the new code</p>
+</div>
+<div class="highlight"><pre><span></span><code>nano<span class="w"> </span>~/.bash_functions
+</code></pre></div>
+<h5 id="check-syntax">Check syntax</h5>
+<div class="highlight"><pre><span></span><code>bash<span class="w"> </span>-n<span class="w"> </span>~/.bash_functions
+</code></pre></div>
+<h5 id="activate-the-changes">Activate the changes</h5>
+<div class="highlight"><pre><span></span><code><span class="nb">source</span><span class="w"> </span>~/.bash_functions
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Your new function is now ready to use. You can call it directly from your terminal just like <strong>any other command</strong>.</p>
+</div>
+<h2 id="appendix-shell-aliases-and-functions">Appendix: Shell Aliases and Functions</h2>
+<div class="admonition warning">
+<p class="admonition-title">They will only be used when an alias or function needs to be rebuilt. Initially, this was never supposed to happen.</p>
+</div>
+<h4 id="appendix-i-command-to-create-the-check-stage-alias">Appendix I: Command to create the <code>check-stage</code> alias</h4>
+<p>To simplify the verification of the Stage environment, we use a custom alias that checks build status, images, resources, network, database migrations, Redis, and logs in a single execution.</p>
+<h5 id="installation">Installation</h5>
+<p>Run the following command in your Hetzner terminal to add the alias to your <code>~/.bashrc</code> and activate it:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">"alias check-stage='echo \"\n🔨 --- 1. BUILD STATUS &amp; IMAGE ID ---\" &amp;&amp; docker images | grep staging &amp;&amp; echo \"\n🧹 --- 2. DANGLING IMAGES (Build Junk) ---\" &amp;&amp; docker images -f \"dangling=true\" || echo \"No junk images\" &amp;&amp; echo \"\n📊 --- 3. STAGING RESOURCES ---\" &amp;&amp; docker stats --no-stream | grep staging &amp;&amp; echo \"\n🌐 --- 4. STAGING NETWORK ---\" &amp;&amp; docker network ls | grep staging &amp;&amp; echo \"\n🧼 --- 5. STAGING DB &amp; REDIS ---\" &amp;&amp; docker exec GradewingDjango_staging python manage.py showmigrations | grep \"\[ \]\" || echo \"All migrated in Stage\" &amp;&amp; docker exec GradewingDjango_staging python manage.py shell -c \"from django.core.cache import cache; cache.set('\''test'\'', '\''ok'\'', 5); print('\''Redis Stage Status:'\'', cache.get('\''test'\''))\" &amp;&amp; echo \"\n⚠️ --- 6. BUILD &amp; RUN LOGS ---\" &amp;&amp; docker compose -f docker-compose.staging.yml logs --tail=50 | grep -Ei \"error|critical|fail\" || echo \"No errors in Staging\"'"</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">source</span><span class="w"> </span>~/.bashrc
+</code></pre></div>
+<h4 id="appendix-ii-command-to-create-the-check-prod-alias">Appendix II: Command to create the <code>check-prod</code> alias</h4>
+<p>To ensure the Production environment is running correctly, this custom alias performs a comprehensive check of versions, resources, storage, and database health in a single command.</p>
+<h5 id="installation_1">Installation</h5>
+<p>Run the following command in your Hetzner terminal to add the alias to your <code>~/.bashrc</code> and activate it:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">"alias check-prod='echo \"\n🚀 --- 1. STATUS &amp; VERSIONS ---\" &amp;&amp; docker ps --filter \"name=production\" --format \"table {{.Names}}\t{{.Status}}\t{{.Image}}\" &amp;&amp; echo \"\n📦 --- 2. DOCKER IMAGES (vX.X check) ---\" &amp;&amp; docker images | grep -E \"REPOSITORY|v[0-9]|staging\" | head -n 6 &amp;&amp; echo \"\n📊 --- 3. RESOURCE USAGE (Stats) ---\" &amp;&amp; docker stats --no-stream &amp;&amp; echo \"\n🌐 --- 4. NETWORK ISOLATION ---\" &amp;&amp; docker network ls | grep gradewing &amp;&amp; echo \"\n💾 --- 5. DISK SPACE (Server) ---\" &amp;&amp; df -h / &amp;&amp; echo \"\n📂 --- 6. DOCKER SYSTEM DF ---\" &amp;&amp; docker system df &amp;&amp; echo \"\n🧼 --- 7. REDIS &amp; MIGRATIONS ---\" &amp;&amp; docker exec GradewingDjango_production python manage.py showmigrations | grep \"\\\[ \\\]\" || echo \"All migrated\" &amp;&amp; docker exec GradewingDjango_production python manage.py shell -c \"from django.core.cache import cache; cache.set('\''test'\'', '\''ok'\'', 5); print('\''Redis Status:'\'', cache.get('\''test'\''))\" &amp;&amp; echo \"\n⚠️ --- 8. ERRORS (Last 100 lines) ---\" &amp;&amp; docker compose -f docker-compose.production.yml logs --tail=100 | grep -Ei \"error|critical|fail\" || echo \"No critical errors found\"'"</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">source</span><span class="w"> </span>~/.bashrc
+</code></pre></div>
+<h4 id="appendix-iii-command-to-create-the-untag-gradewing-function">Appendix III: Command to create the <code>untag-gradewing</code> function</h4>
+<h5 id="installation_2">Installation</h5>
+<p>Run the following command in your Hetzner terminal to add the alias to your <code>~/.bashrc</code> and activate it:</p>
+<div class="highlight"><pre><span></span><code>untag-gradewing<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"--- REMOVING ROLLBACKED TAG ---"</span>
+
+<span class="w">    </span><span class="c1"># Standard Docker fields: Repository, Tag, ID, and Created</span>
+<span class="w">    </span>docker<span class="w"> </span>images<span class="w"> </span>gradewing-web<span class="w"> </span>--format<span class="w"> </span><span class="s2">"Tag: {{.Tag}} \t ID: {{.ID}} \t Created: {{.CreatedSince}}"</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"--------------------------------------------------------"</span>
+
+<span class="w">    </span><span class="nb">read</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">"Enter the TAG to remove (e.g., v2.0): "</span><span class="w"> </span>TAG_TO_REMOVE
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="s2">"</span><span class="nv">$TAG_TO_REMOVE</span><span class="s2">"</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"staging"</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s2">"</span><span class="nv">$TAG_TO_REMOVE</span><span class="s2">"</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"v1.0"</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"ERROR: Protection enabled. Cannot remove '</span><span class="nv">$TAG_TO_REMOVE</span><span class="s2">'."</span>
+<span class="w">    </span><span class="k">elif</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-z<span class="w"> </span><span class="s2">"</span><span class="nv">$TAG_TO_REMOVE</span><span class="s2">"</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"Cancelled: No tag entered."</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"Untagging gradewing-web:</span><span class="nv">$TAG_TO_REMOVE</span><span class="s2">..."</span>
+<span class="w">        </span>docker<span class="w"> </span>rmi<span class="w"> </span>gradewing-web:<span class="s2">"</span><span class="nv">$TAG_TO_REMOVE</span><span class="s2">"</span>
+
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"--------------------------------------------------------"</span>
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"Updated Status:"</span>
+<span class="w">        </span>docker<span class="w"> </span>images<span class="w"> </span>gradewing-web<span class="w"> </span>--format<span class="w"> </span><span class="s2">"Tag: {{.Tag}} \t ID: {{.ID}}"</span>
+<span class="w">    </span><span class="k">fi</span>
+<span class="o">}</span>
+</code></pre></div>
+<h4 id="appendix-iv-command-to-create-the-docker-auditfunction">Appendix IV: Command to create the <code>docker-audit</code>function</h4>
+<h5 id="installation_3">Installation</h5>
+<p>Run the following command in your Hetzner terminal to add the alias to your <code>~/.bashrc</code> and activate it:</p>
+<div class="highlight"><pre><span></span><code>docker-audit() {
+    echo -e "🔍 --- DOCKER SYSTEM AUDIT &amp; HEALTH CHECK --- 🔍"
+
+    # 1. CONTAINER HEALTH
+    echo -e "\n⚠️  1. CONTAINER HEALTH"
+    ERRORS=$(docker ps -a --filter "status=restarting" --filter "status=exited" --format "{{.Names}}: {{.Status}}" | grep -vi "Certbot")
+    [ -z "$ERRORS" ] &amp;&amp; echo "✅ Critical containers are Healthy." || echo -e "❌ ALERT: Crashing/Stopped:\n$ERRORS"
+
+    # 2. SSL
+    echo -e "\n🔐 2. SSL CERTIFICATE EXPIRY"
+    SSL_DATE=$(timeout 2s openssl s_client -connect localhost:443 -servername gradewing.com &lt;/dev/null 2&gt;/dev/null | openssl x509 -noout -dates | grep notAfter)
+    echo "${SSL_DATE:-"⚠️ Could not verify SSL (Nginx down?)"}"
+
+    # 3. STORAGE
+    echo -e "\n📊 3. STORAGE &amp; RECLAIMABLE"
+    docker system df
+    HAS_WASTE=$(docker system df | grep -qE "(8[0-9]%|9[0-9]%|100%)" &amp;&amp; echo "YES")
+
+    # 4. VOLUMES
+    echo -e "\n💾 4. ORPHANED VOLUMES"
+    UNUSED_VOLS=$(docker volume ls -f "dangling=true" -q)
+    VOL_COUNT=$(echo "$UNUSED_VOLS" | grep -v '^$' | wc -l)
+    [ "$VOL_COUNT" -eq 0 ] &amp;&amp; echo "✅ No orphaned volumes." || echo "⚠️  WARNING: $VOL_COUNT orphaned volumes found."
+
+    # 5. RECOMMENDATIONS (The Intelligent Part)
+    echo -e "\n💡 --- SMART RECOMMENDATIONS ---"
+    REC_FOUND=0
+
+    if [ "$VOL_COUNT" -gt 0 ]; then
+        echo "- [VOLUMES] Clean $VOL_COUNT orphaned volumes: 'docker volume prune'"
+        REC_FOUND=1
+    fi
+
+    if [ "$HAS_WASTE" == "YES" ]; then
+        echo "- [IMAGES] Recover space from old versions: 'docker image prune -a'"
+        echo "  (Note: Your active 'v1.0' and 'staging' are PROTECTED and won't be deleted)"
+        REC_FOUND=1
+    fi
+
+    if [ -n "$ERRORS" ]; then
+        echo "- [REPAIR] Check logs for crashing containers: 'docker logs [NAME]'"
+        REC_FOUND=1
+    fi
+
+    [ "$REC_FOUND" -eq 0 ] &amp;&amp; echo "✅ System is optimized. No actions required."
+
+    echo -e "\n✅ Audit Complete."
+}
+</code></pre></div>
+<h4 id="appendix-v-command-to-create-the-check-git-integrityfunction">Appendix V: Command to create the <code>check-git-integrity</code>function</h4>
+<h5 id="installation_4">Installation</h5>
+<p>Run the following command in your Hetzner terminal to add the alias to your <code>~/.bashrc</code> and activate it:</p>
+<div class="highlight"><pre><span></span><code>check-git-integrity<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">"🔍 --- GIT REPOSITORY INTEGRITY CHECK --- 🔍"</span>
+
+<span class="w">    </span><span class="c1"># 1. Update the local knowledge of the remote (GitHub)</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"Fetching latest metadata from GitHub..."</span>
+<span class="w">    </span>git<span class="w"> </span>fetch<span class="w"> </span>origin<span class="w"> </span>main<span class="w"> </span>-q
+
+<span class="w">    </span><span class="c1"># 2. Check for "Dirty" Code (Local uncommitted changes)</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">"\n📝 1. LOCAL MODIFICATIONS (Dirty Code)"</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span>git<span class="w"> </span>diff<span class="w"> </span>--quiet<span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"✅ No local modifications found. Code is pristine."</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"❌ ALERT: Local software modifications detected!"</span>
+<span class="w">        </span>git<span class="w"> </span>status<span class="w"> </span>-s
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"💡 Recommendation: Run 'git reset --hard' to discard local changes."</span>
+<span class="w">    </span><span class="k">fi</span>
+
+<span class="w">    </span><span class="c1"># 3. Check for "Drift" (Local main vs Remote main)</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">"\n🚀 2. REMOTE ALIGNMENT (GitHub vs Hetzner)"</span>
+<span class="w">    </span><span class="nv">LOCAL</span><span class="o">=</span><span class="k">$(</span>git<span class="w"> </span>rev-parse<span class="w"> </span>@<span class="k">)</span>
+<span class="w">    </span><span class="nv">REMOTE</span><span class="o">=</span><span class="k">$(</span>git<span class="w"> </span>rev-parse<span class="w"> </span>@<span class="o">{</span>u<span class="o">}</span><span class="k">)</span>
+<span class="w">    </span><span class="nv">BASE</span><span class="o">=</span><span class="k">$(</span>git<span class="w"> </span>merge-base<span class="w"> </span>@<span class="w"> </span>@<span class="o">{</span>u<span class="o">}</span><span class="k">)</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$LOCAL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">$REMOTE</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"✅ Up-to-date: Hetzner is perfectly synced with GitHub."</span>
+<span class="w">    </span><span class="k">elif</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$LOCAL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">$BASE</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"⚠️  BEHIND: GitHub has new commits. Run 'git pull' to update."</span>
+<span class="w">    </span><span class="k">elif</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$REMOTE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">$BASE</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"❌ FORWARD: Hetzner has local commits not on GitHub! (Restricted)"</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"🚨 DIVERGED: Both sides have different changes. Manual fix required."</span>
+<span class="w">    </span><span class="k">fi</span>
+
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">"\n✅ Integrity Check Complete."</span>
+<span class="o">}</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tabs", "navigation.sections", "search.suggest", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
