@@ -160,3 +160,9 @@ We recommend two-year enrolment for IB DP subjects and core components (TOK, CAS
 
 !!! info "IB Core Components"
     TOK, EE and CAS can be assigned as normal subjects in Gradewing. CAS is given a special grading scale (7/7, 6/7 ... 0/7) which reflects the state of completion of the seven CAS learning outcomes.
+
+
+
+---
+
+### IGCSE
