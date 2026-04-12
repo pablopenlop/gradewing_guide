@@ -28,8 +28,11 @@ This project provides documentation and setup instructions for the Gradewing Gui
    ```
 
 ## Deploying to GitHub Pages
+
+Checkout to the `main` or `dev` branch (and pull the latest changes). Then run the following commands to deploy the documentation to GitHub Pages:
     ```
-   mkdocs gh-deploy
+    git fetch origin gh-pages
+    mkdocs gh-deploy
    ```
 Git Hub Pages settings:
 - Source: Deploy from a branch
