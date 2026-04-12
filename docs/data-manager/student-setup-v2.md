@@ -146,7 +146,7 @@ For staged linear & modular subjects, we recommend enrolling students in AS subj
 ---
 
 ### International Baccalaureate (IB) Diploma
-*“Recording a full IB Diploma profile using numerical grading (1-7), HL/SL distinctions, and Core (A–E) components.”*
+We recommend two-year enrolment for IB DP subjects and core components (TOK, CAS and EE) whenever possible.
 
 | Subject title | Enroled in |
 | :--- | :--- |
