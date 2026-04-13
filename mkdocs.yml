@@ -1,5 +1,5 @@
 site_name: Gradewing Guide
-#site_url: http://127.0.0.1:8000/docs123
+site_url: https://pablopenlop.github.io/gradewing_guide/
 
 plugins:
   - search
@@ -34,6 +34,7 @@ nav:
       - Set up:
           - Overview: data-manager/setup.md
           - The Student Setup: data-manager/student-setup.md
+          - The Student Setup v2: data-manager/student-setup-v2.md
       - Gradebooks & Reports: data-manager/gradebook.md
       
   - Teacher's Guide:
