@@ -35,6 +35,7 @@ nav:
           - Overview: data-manager/setup.md
           - The Student Setup: data-manager/student-setup.md
           - The Student Setup v2: data-manager/student-setup-v2.md
+          - Custom Subjects: data-manager/custom-subjects.md
       - Gradebooks & Reports: data-manager/gradebook.md
       
   - Teacher's Guide:

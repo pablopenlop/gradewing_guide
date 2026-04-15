@@ -3,12 +3,15 @@
 
 ## The Student Profile
 
-To register a new student, click the `Add student` button. Then provide the student's First Name and Last Name—these are required fields. Once saved, you will be redirected to the student's profile.
+To register a new student, click the `Add student` button. Then provide the student's First Name and Last Name—these are the only required fields. Once saved, you will be redirected to the student's profile.
 
 
 The student profile consists of **five** sections: **Personal Data**, **Guardians**, **Permanent Group Tags**, **Academic Years** and **Academic Enrolments**. Each section contains specific fields that you need to complete to set up a student's record in Gradewing.
 
 ### 1. Personal Data
+
+
+![Personal Data Card](../assets/images/student_setup/personal_card.png)
 
 This section allows you to review or update the student's information as needed.
 The 'Gender' field is optional, but providing it allows you to compare grades by gender.
@@ -16,16 +19,25 @@ The 'Gender' field is optional, but providing it allows you to compare grades by
 
 ### 2. Guardians (Optional but Recommended)
 
+
+![Guardians Card](../assets/images/student_setup/guardians_card.png)
+
 You should assign at least one guardian to each student to enable secure report sharing. By adding guardians, you enable Gradewing to send reports directly to the appropriate contacts on your behalf. You can add multiple guardians if needed.
 
 
 ### 3. Permanent Group Tags (Optional)
+
+
+![Tags Card](../assets/images/student_setup/tags_card.png)
 
 You can assign any number of **permanent group tags** to the student, which will apply across **all** their academic years. 
 See the [Group Tags](#group-tags) section to learn more.
 
 
 ### 4. Academic Years
+
+
+![Year Enrolments Card](../assets/images/student_setup/year_enrolments_card.png)
 
 The enrolment process requires you to enrol each student in an **Academic Year** and **Year Group**. This step allows you to assign subjects to the chosen academic year. 
 
@@ -36,6 +48,9 @@ You should mark the appropriate **Learner Statuses** (SEN, EAL, G&T...) for the 
 
 
 ### 5. Academic Enrolments
+
+
+![Academic Enrolment Card](../assets/images/student_setup/academic_enrolment_card.png)
 
 You can assign each student to one (and more) programmes. 
 A programme is simply a group of subjects from the same educational system and level that a student takes in one or more academic years. 
@@ -74,6 +89,10 @@ A programme itself is not tied to a specific academic year, but you can only ass
 
 
 #### Subject Enrolment: Standard vs Exam Only
+
+![Enrolment Type](../assets/images/student_setup/enrolment_type.png)
+
+
 There are two ways to enrol a student in a subject:
 
 * **Standard Enrolment**: For students following the regular internal course. 
@@ -93,23 +112,35 @@ Registering KS4 exam results grants GEM the ability to generate accurate **Expec
 
 
 
-## Group Tags
-
-
-
-
 ## Learner Statuses
 
-Learner statuses (also called "flags") help you identify students with specific educational profiles or support needs. When enrolling a student in an Academic Year, you can assign one or more of the following statuses:
+![Flags Card](../assets/images/student_setup/learner_statuses.png)
 
-* **SEN (Special Educational Needs)**: For students requiring special educational provision.
-* **EAL (English as an Additional Language)**: For students whose first language is not English.
-* **LA (Low Attainer)**: For students struggling to meet expected academic standards.
-* **G&T (Gifted & Talented)**: For students demonstrating high ability in academic, creative, or practical areas.
-* **MP (Mobile Pupil)**: For students who joined outside the standard admission cycle.
-* **OAGC (Out of Age Group Cohort)**: For students not in the expected year group for their age.
+Learner statuses (also called "Learner flags") helps you and other users identify and support students with **specific educational needs**. When enrolling a student in an Academic Year, you can assign one or more of the following statuses:
 
-Assigning these statuses ensures teachers and data managers can provide targeted support and track student needs effectively.
+* **SEN**  (Special Educational Needs) [Includes DfE SEN provision and type]
+* **EAL** (English as an Additional Language) [Includes proficiency level]
+* **LA** (Low Attainer)
+* **G&T** (Gifted & Talented)
+* **MP** (Mobile Pupil)
+* **OAGC** (Out of Age Group Cohort)
+
+
+
+## Group Tags
+
+Group tags are custom labels that you can assign to students to group them based on any characteristic you choose. For example, "SEN", "EAL" or "HA" (High Attainer) are common group tags. Gender tags ("M", "F") are automatically created if the student's gender is provided. 
+Group tags are especially useful for comparing academic performance across different student groups in **Group Performance Analysis**, providing valuable insights based on demographics and other characteristics.
+
+A student can have multiple group tags assigned. There are **permanent** group tags that apply across all academic years, and **annual** group tags that are specific to a particular academic year. You can assign both types of tags in the student's profile. Assigning a permanent group tag overrides any annual group tag of the same name. 
+
+
+![Group Tags](../assets/images/student_setup/group_tags.png)
+
+!!! info "Group tags vs Learner statuses"
+    Group tags and learner statuses help identify and support students with specific needs. 
+    However, only group tags are used in group analysis. Tags shared by only a handful of students may not provide meaningful comparisons.
+
 
 
 ## Subject Enrolment Guide
@@ -165,4 +196,68 @@ We recommend two-year enrolment for IB DP subjects and core components (TOK, CAS
 
 ---
 
-### IGCSE
+### IGCSE / GCSE / O levels (Upper Secondary)
+We recommend enroling students in (I)GCSE or O-level subjects for the entire duration of their KS4 (Y10 and Y11).
+
+**Non-examinable** subjects (e.g. PE) should be offered as as a **Custom KS4 Subject**, see the [Custom Subjects Guide](data-manager/custom-subjects.md) for guidance. We recommend your custom KS4 subjects use the **same** Grading Scale as the main (I)GCSE / O-level subjects (i.e., 9–1, A*–G or A*–E) to ensure consistency in reporting and analysis.
+
+
+
+### MYP 4–5 (Upper Secondary)
+We recommend enrolling students in MYP 4+5 subjects for MYP Years 4 and 5 (Y10 and Y11).
+MYP 4+5 subjects not found in out subject qualificaiton library should be offered as **Custom MYP 4+5 Subject**. See the [Custom Subjects Guide](data-manager/custom-subjects.md) for guidance.
+We recommend your Custom MYP 4+5 Subject use the 7-1 MYP grading scale.
+
+
+
+
+
+### KS3 (Lower Secondary)
+We recommend enrolling students in **KS3 Custom Subjects** for the entire duration of their KS3 (Y7, Y8 and Y9). See the [Custom Subjects Guide](data-manager/custom-subjects.md) for guidance.
+We recommend your KS3 Custom Subjects
+
+- use the same grading scale 
+- are offered as a recurring subject across KS3 (Y7, Y8 and Y9)
+
+
+### MYP 1–3 (Lower Secondary)
+We recommend enrolling students in **MYP 1–3 Custom Subjects** for the entire duration of their MYP 1–3 (Y7, Y8 and Y9). See the [Custom Subjects Guide](data-manager/custom-subjects.md) for guidance.
+We recommend your MYP 1–3 Custom Subjects
+
+- use the same grading scale 
+- are offered as a recurring subject across MYP 1–3 (Grades 6–9)
+
+
+
+### International Lower Secondary Programme (Lower Secondary)
+Gradewing's subject qualificaiton library includes a selection of *examinable* subjects, namely:
+
+- Cambridge Lower Secondary Checkpoint subjects and 
+- Pearson Edexcel iLowerSecondary subjects 
+
+On top of these, you can create **Custom International Lower Secondary Subjects** under the following international curriculums:
+
+- Cambridge Lower Secondary
+- Oxford International Lower Secondary
+- Pearson Edexcel iLowerSecondary
+
+If following the **Cambridge Lower Secondary** curriculum, we recommend enroling students in:
+
+- *Custom* Cambridge Lower Secondary subjects for Y7, Y8 and Y9, and 
+- *Checkpoint subjects* as **Exam Only** in Y9 if needed.
+
+If following the **Pearson Edexcel iLowerSecondary** curriculum, we recommend enroling students in:
+
+- *Library* iLowerSecondary subjects for Y7, Y8 and Y9, or
+- *Custom* iLowerSecondary subjects for subjects not found in the library.
+
+
+
+!!! tip "Keep your subjects DRY (Don't Repeat Yourself)"
+    Do not create copies of the same subject for each year of Lower Secondary (KS3). Instead, create a *single* subject and enrol students in it for all three Lower Secondary years. The only reason to create separate copies of subjects for each year of KS3 is if you want to use *different* grading scales for each year, which is not common practice.
+
+
+
+### Subjects without internal assessment
+
+Subjects **without internal assessment** should be enroled as **Pastoral groups**, see the [Pastoral Groups Guide](data-manager/pastoral-groups.md).
