@@ -479,6 +479,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#publishing-gradewing-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Publishing Gradewing Guide
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#miscellaneous-maintenace" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -791,34 +802,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../data-manager/custom-subjects/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Custom Subjects
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1113,6 +1096,17 @@
     <span class="md-ellipsis">
       
         Docker Audit &amp; Git Integrity
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#publishing-gradewing-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Publishing Gradewing Guide
       
     </span>
   </a>
@@ -1628,6 +1622,43 @@ docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </spa
 <p>Simply run the following command (see Appendix V) in the terminal:</p>
 <div class="highlight"><pre><span></span><code>check-git-integrity
 </code></pre></div>
+<h2 id="publishing-gradewing-guide">Publishing Gradewing Guide</h2>
+<h4 id="1-creation-of-a-new-release-branch-on-github-repository-gradewing_guide">1. Creation of a new Release branch on GitHub (Repository: gradewing_guide)</h4>
+<ul>
+<li><strong>Create new Branch</strong></li>
+<li><strong>New Branch name:</strong> Release</li>
+<li><strong>Source:</strong> dev</li>
+</ul>
+<h4 id="2-connection-to-hetzner-and-positioning-in-gradewing_guide-from-the-terminal">2. Connection to Hetzner and positioning in gradewing_guide from the terminal</h4>
+<p>First, log in via SSH to the server:
+</p><div class="highlight"><pre><span></span><code>ssh<span class="w"> </span>root@46.62.132.133
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>gradewing_guide
+</code></pre></div><p></p>
+<div class="admonition note">
+<p class="admonition-title">Once you are positioned at <code>root@gradewing-server:~/gradewing_guide#</code>, you can run the necessary commands to publish the Gradewing Guide.</p>
+</div>
+<h4 id="3-release-deploy-to-hetzner-docs-publish">3. Release deploy to Hetzner + Docs publish</h4>
+<p></p><div class="highlight"><pre><span></span><code><span class="nb">source</span><span class="w"> </span>venv/bin/activate
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>fetch<span class="w"> </span>origin
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>Release
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>mkdocs<span class="w"> </span>gh-deploy
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>main
+git<span class="w"> </span>reset<span class="w"> </span>--hard<span class="w"> </span>Release
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>main<span class="w"> </span>--force
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>branch<span class="w"> </span>-D<span class="w"> </span>Release
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>--delete<span class="w"> </span>Release
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>deactivate
+</code></pre></div><p></p>
+<div class="admonition info">
+<p class="admonition-title">The documentation will be available at https://pablopenlop.github.io/gradewing_guide/</p>
+</div>
 <h2 id="miscellaneous-maintenace">Miscellaneous &amp; Maintenace</h2>
 <h4 id="backups-status">Backups Status</h4>
 <div class="admonition note">
