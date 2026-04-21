@@ -574,6 +574,53 @@ Simply run the following command (see Appendix V) in the terminal:
 check-git-integrity
 ```
 
+## Publishing Gradewing Guide
+
+#### 1. Creation of a new Release branch on GitHub (Repository: gradewing_guide)
+*   **Create new Branch**
+*   **New Branch name:** Release
+*   **Source:** dev
+
+#### 2. Connection to Hetzner and positioning in gradewing_guide from the terminal
+
+First, log in via SSH to the server:
+```bash
+ssh root@46.62.132.133
+```
+```bash
+cd gradewing_guide
+```
+
+!!! note "Once you are positioned at `root@gradewing-server:~/gradewing_guide#`, you can run the necessary commands to publish the Gradewing Guide."
+
+#### 3. Release deploy to Hetzner + Docs publish
+
+```bash
+source venv/bin/activate
+```
+```bash
+git fetch origin
+```
+```bash
+git checkout Release
+```
+```bash
+mkdocs gh-deploy
+```
+```bash
+git checkout main
+git reset --hard Release
+git push origin main --force
+```
+```bash
+git branch -D Release
+git push origin --delete Release
+```
+```bash
+deactivate
+```
+!!! info "The documentation will be available at https://pablopenlop.github.io/gradewing_guide/"
+
 ## Miscellaneous & Maintenace
 
 #### Backups Status
