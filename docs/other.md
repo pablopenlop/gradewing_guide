@@ -623,6 +623,32 @@ deactivate
 
 ## Miscellaneous & Maintenace
 
+#### Production Database Schema 
+
+!!! note "Run this script to inspect your database schema, allowing you to view every table and field structure in your production environment."
+
+```bash
+docker exec -i "$PROD_DB_CONTAINER" psql -U "$POSTGRES_USER" -d "$POSTGRES_DB" -c "
+SELECT 
+    cols.table_name, 
+    cols.column_name, 
+    cols.data_type,
+    cons.constraint_type AS key_type,
+    ccu.table_name AS references_table,
+    ccu.column_name AS references_column
+FROM information_schema.columns cols
+LEFT JOIN information_schema.key_column_usage kcu 
+    ON cols.table_name = kcu.table_name 
+    AND cols.column_name = kcu.column_name
+LEFT JOIN information_schema.table_constraints cons 
+    ON kcu.constraint_name = cons.constraint_name
+LEFT JOIN information_schema.constraint_column_usage ccu
+    ON cons.constraint_name = ccu.constraint_name
+    AND cons.constraint_type = 'FOREIGN KEY'
+WHERE cols.table_schema = 'public' 
+ORDER BY cols.table_name, cols.ordinal_position;"
+```
+
 #### Backups Status
 
 !!!note "Show status of the automatic (three per day) Backups."
