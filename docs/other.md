@@ -629,6 +629,7 @@ deactivate
 
 ```bash
 export $(grep -v '^#' .env | xargs)
+PROD_DB_CONTAINER="GradewingPostgres_production"
 docker exec -i "$PROD_DB_CONTAINER" psql -U "$POSTGRES_USER" -d "$POSTGRES_DB" -c "
 SELECT 
     cols.table_name, 
