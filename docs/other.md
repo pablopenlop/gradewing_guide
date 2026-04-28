@@ -623,11 +623,12 @@ deactivate
 
 ## Miscellaneous & Maintenace
 
-#### Production Database Schema 
+#### Production Database Schema
 
 !!! note "Run this script to inspect your database schema, allowing you to view every table and field structure in your production environment."
 
 ```bash
+export $(grep -v '^#' .env | xargs)
 docker exec -i "$PROD_DB_CONTAINER" psql -U "$POSTGRES_USER" -d "$POSTGRES_DB" -c "
 SELECT 
     cols.table_name, 
