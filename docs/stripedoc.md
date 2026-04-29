@@ -21,6 +21,21 @@
     **Payout schedule:** Manual payouts
     **Payout speed:** Standard payout speed
 
+!!! info "Tax details"
+    **Type of business:** Empresario individual (Autonomo)
+    **The name you provide must exactly match the name associated with your tax ID:** PABLO PEÑAS LOPEZ
+    **Tax identification number:** 53746221M
+    **VAT number (NIF):** ES53746221M
+
+!!! INFO "Branding"
+    **Brand colour:**#ddf3f3
+    **Accent colour:**#2ea1a3
+    **Add your domain:**NO, https://checkout.stripe.com/ wii be used
+    
+
+
+
+
 
 #### Billing
 
