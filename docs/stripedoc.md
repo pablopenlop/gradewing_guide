@@ -27,13 +27,14 @@
     **Tax identification number:** 53746221M
     **VAT number (NIF):** ES53746221M
 
-!!! INFO "Branding"
+!!! info "Branding"
     **Brand colour:**#ddf3f3
     **Accent colour:**#2ea1a3
-    **Add your domain:**NO, https://checkout.stripe.com/ wii be used
+    **Add your domain:**checkout.stripe.com, buy.stripe.com, billing.stripe.com will be used
+
+!!! info "Customer emails"
+    **Default language:** English
     
-
-
 
 
 
