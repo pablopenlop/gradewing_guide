@@ -4,7 +4,7 @@
 
 ### Settings
 
-#### Business
+#### **Business**
 
 !!! info "Account details"
     **Account name:** Gradewing
@@ -28,13 +28,13 @@
     **VAT number (NIF):** ES53746221M
 
 !!! info "Branding"
-    **Brand colour:**#ddf3f3
-    **Accent colour:**#2ea1a3
-    **Add your domain:**checkout.stripe.com, buy.stripe.com, billing.stripe.com will be used
+    **Brand colour:** #ddf3f3
+    **Accent colour:** #2ea1a3
+    **Add your domain:** checkout.stripe.com, buy.stripe.com, billing.stripe.com will be used
 
 !!! info "Customer emails"
     **Default language:** English
-    
+
 
 
 
