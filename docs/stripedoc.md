@@ -27,7 +27,7 @@
         **Terms of service URL:** https://www.gradewing.com/legal/
     **Management and ownership:** Pablo Peñas Lopez - pablopen01@gmail.com - 10/04/1990 - Travesía De Somosierra, 9 2ºB - 53746221M
 
-!!! warning "Eliminados los acentos y dirección siempre exactamente igual."
+!!! warning "Por precaución eliminamos los acentos, por ejemplo de Lopez, y la dirección postal siempre la ponemos exactamente igual. Se mantiene la "ñ" de Peñas."
 
 !!! info "Bank account and currencies"
     **Settlement currencies and bank accounts:** EUR - Santander ...9068
@@ -56,6 +56,18 @@
 
 !!! info "Subscriptions and emails"
     **Email notifications and customer management:** 
+        **Customer emails:** Send emails about upcoming renewals - Send emails about expiring cards - Send emails when card payments fail
+        **Payment method updates:** Use your own custom link: https://www.gradewing.com
+    **Prevent failed payments:** Upcoming renewal events: 3 days
+    **Manage failed payments for subscriptions:** 
+        **Card payments:** Retry 5 days after the previous attempt and Retry 5 days after the previous attempt
+        **Subscription status:** leave the subscription overdue
+        **Invoice status:** leave the invoice overdue
+    **Manage disputed payments:** leave the subscription overdue
+    **Default billing mode:** Flexible
+
+!!! info "Invoices"
+
 
 
 #### Tax
