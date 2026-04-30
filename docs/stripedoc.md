@@ -2,7 +2,7 @@
 
 ## Configuration
 
-### Settings
+### Account Settings
 
 #### **Business**
 
@@ -52,6 +52,45 @@
     **Payments:** Successful payments, Refunds
     **Domain:** stripe.com
 
+### Products: Tax
+
+!!! info "Add Registration"
+    **Choose a location:** Spain
+    **How do you want to register?:** I've already registered
+    **Select the type of registration that's applicable to you:** Domestic
+    **Do you want to collect VAT on the cross-border sales of goods shipped from outside the EU to Spain?:** No
+    **Have your sales of goods or digital services to individuals in other EU countries been less than €10,000 in the current or previous calendar year?:** Yes
+    **Schedule tax collection:** 5/10/2026
+    **Confirm your tax rates in Spain:** SaaS
+
+### Product catalogue
+
+#### **All products**
+
+| Product Name | Amount | Currency | Interval | Interval Count | Usage Type | Tax Behavior |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **Unlimited Plan** | 159,00 | eur | month | 1 | licensed | exclusive |
+| **Unlimited Plan** | 1590,00 | eur | year | 1 | licensed | exclusive |
+| **Higher 40 Plan** | 129,00 | eur | month | 1 | licensed | exclusive |
+| **Higher 40 Plan** | 1290,00 | eur | year | 1 | licensed | exclusive |
+| **Core 20 Plan** | 990,00 | eur | year | 1 | licensed | exclusive |
+| **Core 20 Plan** | 99,00 | eur | month | 1 | licensed | exclusive |
+| **AI Credits - 8000** | 25,00 | eur | | | | exclusive |
+| **AI Credits - 15000** | 45,00 | eur | | | | exclusive |
+
+#### **Coupons**
+!!! info "Create coupon"
+    **Name:** Introductory coupon
+    **Type:** Percentage off
+    **Percentage discount:** 30%
+    **Duration:** 10 months
+    **Redemption limits:** 01/04/2027
+    **Codes:** INT2026
+
+#### **Pricing tables**
+
+### Product Settings
+
 #### **Billing**
 
 !!! info "Subscriptions and emails"
@@ -67,20 +106,31 @@
     **Default billing mode:** Flexible
 
 !!! info "Invoices"
+    **General:**
+        **Invoice numbering:** Sequentially across your accout
+            **Invoice prefix:** INVyyyy
+            **Next live invoice sequence:** 1
+        **Invoice PDFs:** Include pdf links on invoice emails and payment page
+        **Manual tax amount rounding:** At invoice level
+        **Default item prices:** Include inclusive tax
+        **Default payment terms:** Save customer payment information & Ask customers before saving their payment information
+        **Default payment methods:** Default
+        **Adaptive Pricing:** International customers will have the option to pay one-time invoices in their local currency on your payment page.
+        **Reminders and retries:**
+            **Retries for failed card payments:** Retry 5 days after the previous attempt and Retry 5 days after the previous attempt
+        **Invoice finalisation grace period:** Default - 1 hour
+        **Invoice tax information:**
+            **Tax ID:** 
+                **ES NIF:** 53746221M
+                **ES VAT:** ES53746221M 
+    **Templates:** Gradewing_Inv
+
+#### **Tax**
+
+#### **Payments**
 
 
 
-#### Tax
-
-#### Payments
-
-### Product catalogue
-
-#### All products
-
-#### Pricing tables
-
-### Products: Tax
 
 ## Balances: Payouts 
 
