@@ -2,7 +2,7 @@
 
 ## Configuration
 
-### Account Settings
+### Settings/Account Settings
 
 #### **Business**
 
@@ -67,16 +67,16 @@
 
 #### **All products**
 
-| Product Name | Amount | Currency | Interval | Interval Count | Usage Type | Tax Behavior |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Unlimited Plan** | 159,00 | eur | month | 1 | licensed | exclusive |
-| **Unlimited Plan** | 1590,00 | eur | year | 1 | licensed | exclusive |
-| **Higher 40 Plan** | 129,00 | eur | month | 1 | licensed | exclusive |
-| **Higher 40 Plan** | 1290,00 | eur | year | 1 | licensed | exclusive |
-| **Core 20 Plan** | 990,00 | eur | year | 1 | licensed | exclusive |
-| **Core 20 Plan** | 99,00 | eur | month | 1 | licensed | exclusive |
-| **AI Credits - 6250** | 25,00 | eur | | | | exclusive |
-| **AI Credits - 11250** | 45,00 | eur | | | | exclusive |
+| Product Name | Amount | Currency | Interval | Interval Count | Tax Behavior |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Unlimited Plan** | 159,00 | eur | month | 1 | exclusive |
+| **Unlimited Plan** | 1590,00 | eur | year | 1 | exclusive |
+| **Higher 40 Plan** | 129,00 | eur | month | 1 | exclusive |
+| **Higher 40 Plan** | 1290,00 | eur | year | 1 | exclusive |
+| **Core 20 Plan** | 990,00 | eur | year | 1 | exclusive |
+| **Core 20 Plan** | 99,00 | eur | month | 1 | exclusive |
+| **AI Credits - 6250** | 25,00 | eur | | | exclusive |
+| **AI Credits - 11250** | 45,00 | eur | | | exclusive |
 
 #### **Coupons**
 !!! info "Create coupon"
@@ -92,7 +92,7 @@
 
 
 
-### Product Settings
+### Settings/Product Settings
 
 #### **Billing**
 
