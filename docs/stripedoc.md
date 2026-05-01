@@ -75,8 +75,8 @@
 | **Higher 40 Plan** | 1290,00 | eur | year | 1 | licensed | exclusive |
 | **Core 20 Plan** | 990,00 | eur | year | 1 | licensed | exclusive |
 | **Core 20 Plan** | 99,00 | eur | month | 1 | licensed | exclusive |
-| **AI Credits - 8000** | 25,00 | eur | | | | exclusive |
-| **AI Credits - 15000** | 45,00 | eur | | | | exclusive |
+| **AI Credits - 6250** | 25,00 | eur | | | | exclusive |
+| **AI Credits - 11250** | 45,00 | eur | | | | exclusive |
 
 #### **Coupons**
 !!! info "Create coupon"
@@ -88,6 +88,18 @@
     **Codes:** INT2026
 
 #### **Pricing tables**
+
+
+#### **Tax**
+
+!!! info "Business information"
+    **Preset product category:** SaaS
+    **Taxes on shipping:** Never
+    **Include tax in prices:** No
+
+!!! info "Integration"
+    **Tax calculation:** Stripe Tax in use
+    **Dashboard transactions:** Use automatic tax
 
 ### Product Settings
 
@@ -125,12 +137,18 @@
                 **ES VAT:** ES53746221M 
     **Templates:** Gradewing_Inv
 
-#### **Tax**
-
-#### **Payments**
+!!! info "Customer portal"
 
 
+#### **Checkout, Payments metehods and currencies**
 
+!!! info "Payments"
+    **Checkout and Payment Links:** 
+        **Address autocomplete:** with Google Maps
+        **Pricing display:** Monthly terms
+    **Payment methods:** Only Type Cards
+    **Adaptive Pricing:** Enable Adaptive Pricing
+    **Disputes:** Enable auto-submit
 
 ## Balances: Payouts 
 
