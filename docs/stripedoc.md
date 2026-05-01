@@ -90,16 +90,7 @@
 #### **Pricing tables**
 
 
-#### **Tax**
 
-!!! info "Business information"
-    **Preset product category:** SaaS
-    **Taxes on shipping:** Never
-    **Include tax in prices:** No
-
-!!! info "Integration"
-    **Tax calculation:** Stripe Tax in use
-    **Dashboard transactions:** Use automatic tax
 
 ### Product Settings
 
@@ -139,10 +130,20 @@
 
 !!! info "Customer portal"
 
+#### **Tax**
 
-#### **Checkout, Payments metehods and currencies**
+!!! info "Business information"
+    **Preset product category:** SaaS
+    **Taxes on shipping:** Never
+    **Include tax in prices:** No
 
-!!! info "Payments"
+!!! info "Integration"
+    **Tax calculation:** Stripe Tax in use
+    **Dashboard transactions:** Use automatic tax
+
+#### **Payments**
+
+!!! info "Checkout, Payments methods and currencies"
     **Checkout and Payment Links:** 
         **Address autocomplete:** with Google Maps
         **Pricing display:** Monthly terms
