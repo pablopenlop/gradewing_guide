@@ -89,6 +89,25 @@
 
 #### **Pricing tables**
 
+!!! info "Products"
+    | Product Name | Amount | Currency | Interval |
+    | :--- | :--- | :--- | :--- |
+    | **Unlimited Plan** | 159,00 | eur | month |
+    | **Unlimited Plan** | 1590,00 | eur | year |
+    | **Higher 40 Plan** | 129,00 | eur | month |
+    | **Higher 40 Plan** | 1290,00 | eur | year |
+    | **Core 20 Plan** | 990,00 | eur | year |
+    | **Core 20 Plan** | 99,00 | eur | month |
+
+!!! info "Display settings"
+    **Default view:** Yearly
+    **Language:** English
+    **Background colour:** #ffffff
+    **Button colour:** #2fa29a
+    **Font:** Nunito
+    **Button shape:** Rounded
+
+!!! info "Payment settings"
 
 
 
