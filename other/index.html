@@ -11,7 +11,7 @@
         <link rel="prev" href="..">
       
       
-        <link rel="next" href="../data-manager/getting-started/">
+        <link rel="next" href="../stripedoc/">
       
       
         
@@ -211,17 +211,18 @@
     
   
   
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
-        
-  
-  
     
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
   
-  Technical guide
+  
+  Internal docs
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -326,6 +327,63 @@
     
       
       
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked="">
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Internal docs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Internal docs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
   
   
     
@@ -553,6 +611,42 @@
     </ul>
   
 </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stripedoc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stripe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -1660,6 +1754,32 @@ git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </
 <p class="admonition-title">The documentation will be available at https://pablopenlop.github.io/gradewing_guide/</p>
 </div>
 <h2 id="miscellaneous-maintenace">Miscellaneous &amp; Maintenace</h2>
+<h4 id="production-database-schema">Production Database Schema</h4>
+<div class="admonition note">
+<p class="admonition-title">Run this script to inspect your database schema, allowing you to view every table and field structure in your production environment.</p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="k">$(</span>grep<span class="w"> </span>-v<span class="w"> </span><span class="s1">'^#'</span><span class="w"> </span>.env<span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="k">)</span>
+<span class="nv">PROD_DB_CONTAINER</span><span class="o">=</span><span class="s2">"GradewingPostgres_production"</span>
+docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-i<span class="w"> </span><span class="s2">"</span><span class="nv">$PROD_DB_CONTAINER</span><span class="s2">"</span><span class="w"> </span>psql<span class="w"> </span>-U<span class="w"> </span><span class="s2">"</span><span class="nv">$POSTGRES_USER</span><span class="s2">"</span><span class="w"> </span>-d<span class="w"> </span><span class="s2">"</span><span class="nv">$POSTGRES_DB</span><span class="s2">"</span><span class="w"> </span>-c<span class="w"> </span><span class="s2">"</span>
+<span class="s2">SELECT </span>
+<span class="s2">    cols.table_name, </span>
+<span class="s2">    cols.column_name, </span>
+<span class="s2">    cols.data_type,</span>
+<span class="s2">    cons.constraint_type AS key_type,</span>
+<span class="s2">    ccu.table_name AS references_table,</span>
+<span class="s2">    ccu.column_name AS references_column</span>
+<span class="s2">FROM information_schema.columns cols</span>
+<span class="s2">LEFT JOIN information_schema.key_column_usage kcu </span>
+<span class="s2">    ON cols.table_name = kcu.table_name </span>
+<span class="s2">    AND cols.column_name = kcu.column_name</span>
+<span class="s2">LEFT JOIN information_schema.table_constraints cons </span>
+<span class="s2">    ON kcu.constraint_name = cons.constraint_name</span>
+<span class="s2">LEFT JOIN information_schema.constraint_column_usage ccu</span>
+<span class="s2">    ON cons.constraint_name = ccu.constraint_name</span>
+<span class="s2">    AND cons.constraint_type = 'FOREIGN KEY'</span>
+<span class="s2">WHERE cols.table_schema = 'public' </span>
+<span class="s2">ORDER BY cols.table_name, cols.ordinal_position;"</span>
+</code></pre></div>
 <h4 id="backups-status">Backups Status</h4>
 <div class="admonition note">
 <p class="admonition-title">Show status of the automatic (three per day) Backups.</p>
