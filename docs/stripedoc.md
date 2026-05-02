@@ -188,9 +188,18 @@
 
 ## Ongoing Management
 
-### Balances: Payouts 
+### Balances
+
+!!! info "Pay out:"**
+    Amount to pay out
+
+!!! info "Manage payouts"
+    Manage banck account
 
 ### Refunds
+
+!!! info "Trnsactions/Payments"
+    **Actions:** Refund payment
 
 ### Disputes
 
