@@ -190,18 +190,21 @@
 
 ### Balances
 
-!!! info "Pay out:"**
-    Amount to pay out
+!!! info "Pay out:"
+    **Amount to pay out**
 
 !!! info "Manage payouts"
-    Manage banck account
+    **Manage bank account**
 
 ### Refunds
 
-!!! info "Trnsactions/Payments"
+!!! info "Trnsactions/Payments/All"
     **Actions:** Refund payment
 
 ### Disputes
+
+!!! info "Transactions/Payments/Disputed"
+    **Actions:** Submit evidence to counter dispute
 
 ### Exports
 
