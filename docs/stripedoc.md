@@ -108,8 +108,16 @@
     **Button shape:** Rounded
 
 !!! info "Payment settings"
+    Collect tax automatically
+    Allow promotion codes
+    Allow business customer to provide tax IDs
+    Collect billing addresses
+    Collect phone numbers
+    Don't show confirmation page
+    Redirect customers to your website: (https://gradewing.com/app/products/billing/payment-success?session_id={CHECKOUT_SESSION_ID})
 
-
+!!! info "Set up customer portal"
+    **Customer portal:** Allow customer to change products
 
 ### Settings/Product Settings
 
@@ -148,6 +156,14 @@
     **Templates:** Gradewing_Inv
 
 !!! info "Customer portal"
+    **Portal configuration:** Default
+    **Invoices:** Invoices history
+    **Customer information:** Name, Email address, Billing address, Phone number, Tax ID
+    **Payment methods:** Default - Credit and debit cards
+    **Cancel subscription:** At the end of the billing period - Collect a cancelation reason
+    **Subscriptions:** Customers can switch plans
+    **When customers change plans or quantities:** Prorate charges and credits - Invoice proration immediately at time of the update
+    **Downgrades:** Update immediately - Update immediately
 
 #### **Tax**
 
@@ -170,13 +186,15 @@
     **Adaptive Pricing:** Enable Adaptive Pricing
     **Disputes:** Enable auto-submit
 
-## Balances: Payouts 
+## Ongoing Management
 
-## Refunds
+### Balances: Payouts 
 
-## Disputes
+### Refunds
 
-## Exports
+### Disputes
+
+### Exports
 
 
 
