@@ -196,10 +196,20 @@
 !!! info "Manage payouts"
     **Manage bank account**
 
-### Refunds
+### Refunds - Credit notes
 
-!!! info "Trnsactions/Payments/All"
-    **Actions:** Refund payment
+!!! info "Invoices: select an invoice"
+    **Credit notes:** + Credit note
+
+!!! info "Issue a Credit note"
+    **Reason:** Duplicate charge, Order change, Other 
+    **Credit Amoun:** Amount to refund
+    **How to credit:** Refund to Credit(Debit Card)
+    **Issue a credit note**
+
+!!! info "Send receipt to the customer"
+    **Customers:** Select the customer
+    **Payments:** Select the payment refunded - ... Send receipt
 
 ### Disputes
 
