@@ -216,7 +216,31 @@
 !!! info "Transactions/Payments/Disputed"
     **Actions:** Submit evidence to counter dispute
 
-### Exports
+### Libro de Facturas: Invoices and Credit notes
+
+### VIES: VAT Information Exchange System
+
+!!! info "Tax transactions"
+    **Products/Tax/Overview:** Tax collected on paid invoices
+    **Explore:** Choose period, usually from 01/mm/yyyy to 31/mm/yyyy (month)
+    **Summary:** Spain Location
+    **Tax collected on paid invoices in Spain:** "Copy" all the rows, then "Paste" them on corresponding excel workbook.
+
+| Location | Tax collected | Currency | Description | Date |
+| :--- | :--- | :---: | :--- | :--- |
+| Spain | **€27.09** | EUR | `tax_1TSLOsRV6uy3eJFZJDhZnvoX` | 1 May 2026, 18:03 |
+| Spain | **-€6.30** | EUR | `tax_1TSLSQRV6uy3eJFZjrIH2KJg` | 1 May 2026, 18:07 |
+| Spain | **€20.79** | EUR | `tax_1TShFGRV6uy3eJFZxgPBnyhG` | 2 May 2026, 17:23 |
+| Spain | **€20.79** | EUR | `tax_1TShbqRV6uy3eJFZT5n7gUvX` | 2 May 2026, 17:46 |
+| Spain | **€27.09** | EUR | `tax_1TShhoRV6uy3eJFZM7zPAc3L` | 2 May 2026, 17:53 |
+| Spain | **€20.79** | EUR | `tax_1TSiPkRV6uy3eJFZWb0aRxeP` | 2 May 2026, 18:38 |
+| Spain | **-€5.73** | EUR | `tax_1TSivPRV6uy3eJFZD0GGgRMe` | 2 May 2026, 19:10 |
+| Spain | **-€6.93** | EUR | `tax_1TSkkFRV6uy3eJFZd2w9K2IE` | 2 May 2026, 21:06 |
+| Spain | **-€4.34** | EUR | `tax_1TSxLCRV6uy3eJFZucuE1wMy` | 3 May 2026, 10:33 |
+
+!!! warning "Si no hay **Credit Notes**, podria utilizarse directamente el **Export** que aparece en Tax collected on paid invoices in Spain."
+
+### Comisiones Stripe (Gastos deducibles)
 
 
 
