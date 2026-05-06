@@ -191,7 +191,7 @@
 ### Balances
 
 !!! info "Pay out:"
-    **Amount to pay out** Amount
+    **Amount to pay out:** Amount
 
 !!! warning "Normalmente se hará mensualmente, sobre el día 10 de cada mes. Incluirá todas las transacciones del mes previo."
 
@@ -241,7 +241,7 @@
 | INV2026-0057 | TRUE | `sub_1TSLOvRV6uy3eJFZwLgz8g9e` | 129,00 | 0,00 | | 27,09 | | 156,09 |
 | INV2026-0056 | TRUE | `sub_1TSJopRV6uy3eJFZ4ThFWwRg` | 990,00 | 0,00 | | 0,00 | | 990,00 |
   
-!!! info "Crdit notes"
+!!! info "Credit notes"
     **Invoices:** Click refunded invoices
     **Credit note:** Credit note pdf
 
