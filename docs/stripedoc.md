@@ -191,7 +191,7 @@
 ### Balances
 
 !!! info "Pay out:"
-    **Amount to pay out:** Amount
+    **Amount to pay out:** Usually Available Amount
 
 !!! warning "Normalmente se hará mensualmente, sobre el día 10 de cada mes. Incluirá todas las transacciones del mes previo."
 
@@ -221,7 +221,7 @@
 ### Libro de Facturas: Invoices and Credit notes
 
 !!! info "Invoices"
-    **Download pdf** all invoices of the month
+    **Download pdf** All invoices of the month
     **Export Invoices:** Last month - Export
 
 | Number | Paid | Subscription | Subtotal | Total Discount Amount | Applied Coupons | Tax | Tax Percent | Total |
@@ -245,7 +245,7 @@
     **Invoices:** Click refunded invoices
     **Credit note:** Credit note pdf
 
-!!! warning "No es posible hacer un export de las Credit Notes, solamente se pueden descargar los PDFFs."
+!!! warning "No es posible hacer un export de las Credit Notes, solamente se pueden descargar el PDF de cada Credit Note."
 
 ### VIES: VAT Information Exchange System
 
