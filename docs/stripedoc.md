@@ -191,7 +191,9 @@
 ### Balances
 
 !!! info "Pay out:"
-    **Amount to pay out**
+    **Amount to pay out** Amount
+
+!!! warning "Normalmente se hará mensualmente, sobre el día 10 de cada mes. Incluirá todas las transacciones del mes previo."
 
 !!! info "Manage payouts"
     **Manage bank account**
@@ -218,6 +220,33 @@
 
 ### Libro de Facturas: Invoices and Credit notes
 
+!!! info "Invoices"
+    **Download pdf** all invoices of the month
+    **Export Invoices:** Last month - Export
+
+| Number | Paid | Subscription | Subtotal | Total Discount Amount | Applied Coupons | Tax | Tax Percent | Total |
+| :--- | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| INV2026-0069 | TRUE | `sub_1TSiPnRV6uy3eJFZxFMxG6t9` | 99,00 | 0,00 | | 20,79 | | 119,79 |
+| INV2026-0068 | TRUE | `sub_1TSiKhRV6uy3eJFZ497stsGW` | 990,00 | 0,00 | | 0,00 | | 990,00 |
+| INV2026-0067 | TRUE | `sub_1TShn9RV6uy3eJFZmrrnkdHu` | 159,00 | 0,00 | | 0,00 | | 159,00 |
+| INV2026-0066 | TRUE | `sub_1TShhqRV6uy3eJFZcYuq62zQ` | 129,00 | 0,00 | | 27,09 | | 156,09 |
+| INV2026-0065 | TRUE | `sub_1TShbsRV6uy3eJFZPIUQ1suV` | 99,00 | 0,00 | | 20,79 | | 119,79 |
+| INV2026-0064 | TRUE | `sub_1TShY8RV6uy3eJFZBbAtu2ZV` | 99,00 | 0,00 | | 0,00 | | 99,00 |
+| INV2026-0063 | TRUE | `sub_1TShFlRV6uy3eJFZmw9PHlcM` | 99,00 | 0,00 | | 20,79 | | 119,79 |
+| INV2026-0062 | TRUE | `sub_1TSh9BRV6uy3eJFZ3f6neFZo` | 990,00 | 0,00 | | 0,00 | | 990,00 |
+| INV2026-0061 | TRUE | `sub_1TSgxgRV6uy3eJFZE57b9b3d` | 159,00 | 0,00 | | 0,00 | | 159,00 |
+| INV2026-0060 | TRUE | `sub_1TSgoGRV6uy3eJFZWHCgkYme` | 129,00 | 0,00 | | 0,00 | | 129,00 |
+| INV2026-0059 | TRUE | `sub_1TSgZxRV6uy3eJFZtS4CfwwX` | 99,00 | 0,00 | | 0,00 | | 99,00 |
+| INV2026-0058 | TRUE | `sub_1TSLOvRV6uy3eJFZwLgz8g9e` | -30,00 | 0,00 | | -6,30 | | -36,30 |
+| INV2026-0057 | TRUE | `sub_1TSLOvRV6uy3eJFZwLgz8g9e` | 129,00 | 0,00 | | 27,09 | | 156,09 |
+| INV2026-0056 | TRUE | `sub_1TSJopRV6uy3eJFZ4ThFWwRg` | 990,00 | 0,00 | | 0,00 | | 990,00 |
+  
+!!! info "Crdit notes"
+    **Invoices:** Click refunded invoices
+    **Credit note:** Credit note pdf
+
+!!! warning "No es posible hacer un export de las Credit Notes, solamente se pueden descargar los PDFFs."
+
 ### VIES: VAT Information Exchange System
 
 !!! info "Tax transactions"
@@ -242,5 +271,26 @@
 
 ### Comisiones Stripe (Gastos deducibles)
 
+!!! info "Balance"
+    **Report:** Balance summary 
+    **Date range:** 01/mm/yyyy to 31/mm/yyyy - Print
+    **Balance change from activity:** Export
 
-
+| created_utc | available_on_utc | currency | gross | fee | net | reporting_category |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 2026-05-01 16:21:34 | 2026-05-08 00:00:00 | eur | 990.00 | 32.43 | 957.57 | charge |
+| 2026-05-01 18:02:55 | 2026-05-08 00:00:00 | eur | 156.09 | 5.32 | 150.77 | charge |
+| 2026-05-02 16:39:43 | 2026-05-09 00:00:00 | eur | 99.00 | 3.47 | 95.53 | charge |
+| 2026-05-02 16:54:31 | 2026-05-09 00:00:00 | eur | 129.00 | 4.44 | 124.56 | charge |
+| 2026-05-02 17:04:15 | 2026-05-09 00:00:00 | eur | 159.00 | 5.42 | 153.58 | charge |
+| 2026-05-02 17:16:07 | 2026-05-09 00:00:00 | eur | 990.00 | 32.43 | 957.57 | charge |
+| 2026-05-02 17:22:27 | 2026-05-09 00:00:00 | eur | 119.79 | 4.14 | 115.65 | charge |
+| 2026-05-02 17:41:54 | 2026-05-09 00:00:00 | eur | 99.00 | 3.47 | 95.53 | charge |
+| 2026-05-02 17:45:47 | 2026-05-09 00:00:00 | eur | 119.79 | 4.14 | 115.65 | charge |
+| 2026-05-02 17:51:57 | 2026-05-09 00:00:00 | eur | 156.09 | 5.32 | 150.77 | charge |
+| 2026-05-02 17:57:25 | 2026-05-09 00:00:00 | eur | 159.00 | 5.42 | 153.58 | charge |
+| 2026-05-02 18:32:06 | 2026-05-09 00:00:00 | eur | 990.00 | 32.43 | 957.57 | charge |
+| 2026-05-02 18:37:21 | 2026-05-09 00:00:00 | eur | 119.79 | 4.14 | 115.65 | charge |
+| 2026-05-02 19:09:51 | 2026-05-09 00:00:00 | eur | -33.00 | 0.00 | -33.00 | refund |
+| 2026-05-02 21:06:39 | 2026-05-09 00:00:00 | eur | -39.93 | 0.00 | -39.93 | refund |
+| 2026-05-03 10:33:38 | 2026-05-09 00:00:00 | eur | -25.00 | 0.00 | -25.00 | refund |
