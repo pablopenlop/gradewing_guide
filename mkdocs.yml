@@ -29,6 +29,7 @@ nav:
   - Gradewing: index.md
   - Internal docs:
       - Technical guide: other.md
+      - Deployment: internal/deployment.md
       - Stripe: stripedoc.md
   - Data Manager's Guide:
       - Getting Started: data-manager/getting-started.md
