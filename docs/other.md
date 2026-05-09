@@ -574,7 +574,82 @@ Simply run the following command (see Appendix V) in the terminal:
 check-git-integrity
 ```
 
+## Publishing Gradewing Guide
+
+#### 1. Creation of a new Release branch on GitHub (Repository: gradewing_guide)
+*   **Create new Branch**
+*   **New Branch name:** Release
+*   **Source:** dev
+
+#### 2. Connection to Hetzner and positioning in gradewing_guide from the terminal
+
+First, log in via SSH to the server:
+```bash
+ssh root@46.62.132.133
+```
+```bash
+cd gradewing_guide
+```
+
+!!! note "Once you are positioned at `root@gradewing-server:~/gradewing_guide#`, you can run the necessary commands to publish the Gradewing Guide."
+
+#### 3. Release deploy to Hetzner + Docs publish
+
+```bash
+source venv/bin/activate
+```
+```bash
+git fetch origin
+```
+```bash
+git checkout Release
+```
+```bash
+mkdocs gh-deploy
+```
+```bash
+git checkout main
+git reset --hard Release
+git push origin main --force
+```
+```bash
+git branch -D Release
+git push origin --delete Release
+```
+```bash
+deactivate
+```
+!!! info "The documentation will be available at https://pablopenlop.github.io/gradewing_guide/"
+
 ## Miscellaneous & Maintenace
+
+#### Production Database Schema
+
+!!! note "Run this script to inspect your database schema, allowing you to view every table and field structure in your production environment."
+
+```bash
+export $(grep -v '^#' .env | xargs)
+PROD_DB_CONTAINER="GradewingPostgres_production"
+docker exec -i "$PROD_DB_CONTAINER" psql -U "$POSTGRES_USER" -d "$POSTGRES_DB" -c "
+SELECT 
+    cols.table_name, 
+    cols.column_name, 
+    cols.data_type,
+    cons.constraint_type AS key_type,
+    ccu.table_name AS references_table,
+    ccu.column_name AS references_column
+FROM information_schema.columns cols
+LEFT JOIN information_schema.key_column_usage kcu 
+    ON cols.table_name = kcu.table_name 
+    AND cols.column_name = kcu.column_name
+LEFT JOIN information_schema.table_constraints cons 
+    ON kcu.constraint_name = cons.constraint_name
+LEFT JOIN information_schema.constraint_column_usage ccu
+    ON cons.constraint_name = ccu.constraint_name
+    AND cons.constraint_type = 'FOREIGN KEY'
+WHERE cols.table_schema = 'public' 
+ORDER BY cols.table_name, cols.ordinal_position;"
+```
 
 #### Backups Status
 

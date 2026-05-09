@@ -27,7 +27,9 @@ theme:
 
 nav:
   - Gradewing: index.md
-  - Technical guide: other.md
+  - Internal docs:
+      - Technical guide: other.md
+      - Stripe: stripedoc.md
   - Data Manager's Guide:
       - Getting Started: data-manager/getting-started.md
       - The Operational Roadmap: data-manager/operational-roadmap.md
