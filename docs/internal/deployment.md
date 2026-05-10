@@ -52,7 +52,7 @@ chmod +x ./run/*.sh
 
 ---
 
-## Release Deployment: Staging
+## Deploy 'Release' to Staging
 
 ### 1. Create the Release branch
 
@@ -108,7 +108,7 @@ git pull origin Release # Ensure the local branch matches the remote
 ```
 
 ```bash
-./run/21-restore_to_staging.sh   # Optional: seed Staging with current Production data
+./run/21-restore_db_staging.sh   # Optional: seed Staging with current Production data
 ```
 
 ### 4. Clean up Docker resources
@@ -126,7 +126,7 @@ docker image prune
 Verify Staging
 
 ```bash
-./run/31-check_staging.sh
+./run/31-check_stage.sh
 ```
 
 ---
@@ -169,7 +169,7 @@ Expected output:
 
 ---
 
-## Release Deployment: Production
+## Deploy Release to Production
 
 If Staging validation is successful, the Python/Django image from Staging (gradewing-web:staging) can be promoted to Production without rebuilding. This ensures the exact same code is running in both environments.
 
@@ -196,20 +196,26 @@ docker images --format "{{.Tag}}\t{{.CreatedSince}}" gradewing-web | grep "^v"
 
 ### 2. Deploy to Production 
 
-Deploys the tagged image built on Staging — no rebuild occurs:
+Backup current Production data:
+
+```bash
+./run/20-backup_production.sh
+``` 
+
+Deploy the tagged image built on Staging — no rebuild occurs:
 
 ```bash
 ./run/05-start_production.sh
 ```
 
 ```bash
-check-prod
+./run/32-check_prod.sh
 ```
 
 Check state:
 
 ```bash
-./run/32-check_production.sh
+./run/32-check_prod.sh
 ```
 ### 3. Merge Release into `main`
 
@@ -364,10 +370,10 @@ git pull origin Hotfix     # Ensure the local branch matches the remote
 ```
 
 ```bash
-./run/21-restore_to_staging.sh   # Optional: seed Staging with current Production data
+./run/21-restore_db_staging.sh   # Optional: seed Staging with current Production data
 ```
 
-### 6. Clean up Docker resources
+### 5. Clean up Docker resources
 
 Remove orphaned volumes and dangling images left over from the previous build:
 
@@ -385,7 +391,7 @@ Verify Staging
 check-stage
 ```
 
-### 7. Tag the Docker image and create a Git Tag
+### 6. Tag the Docker image and create a Git Tag
 
 List existing image versions. For a Hotfix, increment the **minor** digit (e.g. `v2.3` → `v2.4`):
 
@@ -405,7 +411,7 @@ Confirm the tag was applied:
 docker images --format "{{.Tag}}\t{{.CreatedSince}}" gradewing-web | grep "^v"
 ```
 
-### 9. Deploy to Production and Verify
+### 7. Deploy to Production and Verify
 
 Deploys the tagged image built on Staging — no rebuild occurs:
 
@@ -414,10 +420,10 @@ Deploys the tagged image built on Staging — no rebuild occurs:
 ```
 
 ```bash
-./run/32-check_production.sh
+./run/32-check_prod.sh
 ```
 
-### 10. Merge Hotfix into `main`
+### 8. Merge Hotfix into `main`
 
 ```bash
 git fetch origin
@@ -447,7 +453,7 @@ Push to GitHub:
 git push origin main
 ```
 
-### 11. Merge `main` into `dev`
+### 9. Merge `main` into `dev`
 
 Synchronise the fix into the development branch so it is not lost in future releases.
 
@@ -479,7 +485,7 @@ git merge main             # Merge main's fix commits into dev
 git push origin dev        # Push the updated dev branch to GitHub
 ```
 
-### 12. Delete the Hotfix branch
+### 10. Delete the Hotfix branch
 
 ```bash
 git branch -d Hotfix               # Delete local branch
@@ -489,7 +495,7 @@ git branch -d Hotfix               # Delete local branch
 git push origin --delete Hotfix    # Delete remote branch on GitHub
 ```
 
-### 13. Confirm branch state
+### 11. Confirm branch state
 
 ```bash
 git branch -a
@@ -504,3 +510,21 @@ Expected output:
 ```
 
 
+# Database Backup & Restore
+
+### Backup Production Database
+Dump the current Production database to a timestamped file in the `db_backups/` directory. 
+```bash
+./run/20-backup_production.sh
+```
+### Restore DB to Staging 
+Restore a backup of your choice to Staging. The script will prompt you to select from the available backup files in `db_backups/`:
+
+```bash
+./run/21-restore_db_staging.sh
+```
+### Restore to Production
+Restore a backup of your choice to Production. 
+```bash
+./run/22-restore_db_production.sh
+``` 
