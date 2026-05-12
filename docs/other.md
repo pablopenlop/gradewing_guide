@@ -720,6 +720,18 @@ docker logs --tail 100 -f GradewingDjango_production
 docker logs GradewingDjango_production 2>&1 | grep -Ei "error|critical|exception"
 ```
 
+#### Container Watchdog
+
+```bash
+docker stats --no-stream --format "table {{.Name}}\t{{.CPUPerc}}\t{{.MemUsage}}\t{{.PIDs}}" GradewingDjango_staging GradewingDjango_production
+```
+```bash
+docker exec GradewingDjango_staging netstat -an | grep :8000 | grep ESTABLISHED | wc -l
+```
+```bash
+docker exec GradewingDjango_production netstat -an | grep :8000 | grep ESTABLISHED | wc -l
+```
+
 ## Quick Procedures
 
 ### Remove Git Pre-Commit Hook
