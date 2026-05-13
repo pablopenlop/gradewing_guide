@@ -1,9 +1,7 @@
-# The Data Manager’s Operational Roadmap
 
-
-## Setup
+# Setup
 Initial setup tasks required before the start of the academic cycle.
-### 1.1 School Details
+## School Details & School Years
 
 ### 1.2 Year Groups
 
@@ -14,14 +12,14 @@ You can rename year groups at any time to match your school’s terminology.
 
 Internal grading, student progress reports, and other features operate at year group level.
 
-### 1.2 Academic Year
+## Academic Years
 
 Navigate to: `Setup > Academic years` to add or manage academic years.
 
 An *Academic Year* defines the school’s annual cycle, typically spanning from September to July.
 It serves as the foundational organizational structure for most  academic data.
 
-#### Multi-Year Continuity: 
+### Multi-Year Continuity: 
 Gradewing supports the creation of additional consecutive academic years at any time, all while maintaining the integrity and accessibility of historical data.
 
 !!! note "Understanding Academic Year relationships"
@@ -30,7 +28,7 @@ Gradewing supports the creation of additional consecutive academic years at any 
     However: Teaching groups, pastoral groups, internal grading moments and student progress reports are tied to a **sole** academic year.
 
 
-### 1.4 Custom subjects
+## Custom subjects
 
 Navigate to: `Setup > Custom subjects` to create or manage custom subjects.
 
@@ -50,9 +48,7 @@ Navigate to: `Setup > Custom subjects` to create or manage custom subjects.
 !!! note "Custom Subjects are optional"
     If all your subjects are included in our default subject repository, you do not need to create any custom subjects.
 
-## Phase 2: Populating the System
-
-### 2.1 Students & Enrolments
+##  Students & Enrolments
 
 Navigate to: `Setup > Students` to create student records and manage enrolments.
 
@@ -68,7 +64,7 @@ Student creation includes:
 
 For guidance and tips on managing students, please refer to the [Student Setup Guide](data-manager/student-setup.md).
 
-### 2.2 Teachers
+## Teachers
 
 Navigate to: `Setup > Teachers` to create and manage teacher records.
 
@@ -78,7 +74,7 @@ Teaching and pastoral groups must be assigned to existing teacher records during
 Linking a Teacher record to a User account grants the User access and responsibility for the academic data of their assigned groups.
 
 
-### 2.3 Teaching Groups 
+## Teaching Groups 
 
 Navigate to: `Setup > Teaching groups` to create and manage teaching groups.
 
@@ -95,7 +91,7 @@ For additional guidance and best practices, please refer to the [Teaching Groups
 
 
 
-### 2.4 Pastoral Groups
+## Pastoral Groups
 
 Navigate to: `Setup > Pastoral groups` to create and manage pastoral groups.
 
@@ -110,70 +106,4 @@ Pastoral Groups link students with their assigned Pastoral Teachers, and allow t
 A student may be assigned to multiple pastoral groups.
 For guidance and best practices, please refer to the [Pastoral Groups Setup Guide](data-manager/teaching-groups-setup.md).
 
-### 2.5 User Accounts & Permissions
-
-Navigate to: `Admin > Users` to manage user accounts and permissions.
-
-User accounts are required for staff to access the system and perform their roles.
-Permissions are automatically assigned based on the user’s role (Teacher, Leadership, Data Manager or Admin).
-
-Each User account should be **linked to a unique Teacher record** to ensure proper access and responsibility for academic data. Deleting a Teacher record will not deactivate the linked User account, and vice versa.
-
-<!-- !!! success "User & Teacher linkage"
-    Each User account should be linked to a unique Teacher record to ensure proper access and responsibility for academic data. Deleting a Teacher record will not deactivate the linked User account, and vice versa. -->
-
-
-!!! danger "Data Manager accounts"
-    Data Manager access should be granted only to a limited number of trusted staff members. Users with this permission have **full editing and deletion access** within the system.
-
-## Phase 3: Grading
-
-There are three distinct grading environments in Gradewing, each with its own setup and management process:
-Examination results, Expected grades, and Internal grading moments.
-
-### 3.1  Examination Results 
-Navigate to: `Setup > Examinations` to record official examination results.
-
-Examination results can be recorded for any subject found in our Subject Qualification Repository.
-The Examination Gradebook meets the specific grading needs of each subject, including the recording of component / unit results for linear and modular qualifications.
-
-
-!!! question "Why record Examination Results?"
-    Recording exam grades in Gradewing allows you to:
-
-    1. **Run (Value-Added) Analysis**: Evaluate examination outcomes against Expected Grades,  internal grades and standard benchmarks.
-    2. **Confidently Set Expected Grades**: Gradewing automatically suggests Expected Grades for KS5 (A-level or IB DP) subjects based on KS4 exam data.
-    3. **Maintain a Structured Examination Record**: At no extra cost.
-
-
-
-### 3.2  Expected Grades 
-Navigate to: `Setup > Expected grades` to set up and manage expected grades.
-
-Expected grades are **statistical predictions** of student (final) attainment, based on **prior attainment or baseline assessments**.
-Expected grades are typically set at the start of the academic year.
-
-Gradewing provides a chances table via GEM (Grades Expectations Model) a data-grounded setting for KS5 (A-level or IB DP) subjects based on KS4 exam results. AI analyst to help you set the correct expected grade
-
-
-
-
-
-!!! question "Why record Expected Grades?"
-    They serve as benchmarks for student performance and form the baseline of **Value-Added** analysis.
-     Progress vs. Expected grades can also be showcased in Student Progress reports.
-  
-
-
-### 3.3  Internal Grading Moments & Gradebooks
-
-Navigate to: `Setup > Grading moments` to create and manage internal grading moments.
-Internal grading moments are custom assessment points defined by the school, such as mock exams, end-of-term assessments, or any other internal evaluation.
-### 3.4  Grade Entry & Management
-
-## Phase 4: Reporting 
-
-### 4.1  Report Generation
-
-### 4.2  Report Management & Distribution
 

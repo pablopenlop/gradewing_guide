@@ -20,31 +20,26 @@ theme:
     accent: indigo
   features:
     - navigation.instant
-    - navigation.tabs # Top-level categories
+    #- navigation.tabs # Top-level categories
     - navigation.sections # Sidebar organization
     - search.suggest
     - content.code.copy
 
 nav:
   - Gradewing: index.md
+  - Data Manager's Guide:
+      - Getting Started: data-manager/getting-started.md
+      - Setup: data-manager/setup.md
+      - User accounts: data-manager/users.md
+      - Student Setup: data-manager/student-setup-v2.md
+      - Grading: data-manager/grading.md
+      # - Reporting: data-manager/reporting.md
+      
   - Internal docs:
       - Technical guide: other.md
       - Deployment: internal/deployment.md
       - Stripe: stripedoc.md
-  - Data Manager's Guide:
-      - Getting Started: data-manager/getting-started.md
-      - The Operational Roadmap: data-manager/operational-roadmap.md
-      - Set up:
-          - Overview: data-manager/setup.md
-          - The Student Setup: data-manager/student-setup.md
-          - The Student Setup v2: data-manager/student-setup-v2.md
-          - Custom Subjects: data-manager/custom-subjects.md
-      - Gradebooks & Reports: data-manager/gradebook.md
-      
-  - Teacher's Guide:
-      - Getting Started: teacher/getting-started.md
-      - Gradebooks & Reports: teacher/gradebook.md
-      - Student & Learner Records: teacher/record.md
+  
 
 markdown_extensions:
   - admonition
@@ -59,10 +54,5 @@ markdown_extensions:
   - toc:
       toc_depth: 3
 
-extra_javascript:
-  - https://unpkg.com
 
-extra_css:
-  #- https://cdnjs.cloudflare.com
-  - stylesheets/extra.css
 

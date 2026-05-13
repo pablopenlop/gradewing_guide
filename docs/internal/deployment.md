@@ -509,6 +509,7 @@ Expected output:
   remotes/origin/main
 ```
 
+---
 
 # Database Backup & Restore
 
